@@ -1,7 +1,12 @@
 package java_thread;
 
-public class ThreadConcurrentTest {
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ThreadLockTest {
 	public static void main(String[] args) {
+		//创建锁
+		Lock lock = new ReentrantLock();
 		final Hero3 gareen = new Hero3();
 		gareen.name = "盖伦";
 		gareen.hp = 10000;
@@ -19,10 +24,11 @@ public class ThreadConcurrentTest {
 				@Override
 				public void run(){
 					//同步加
-					synchronized(gareen){
-						gareen.recover();
-					}
-
+					//上锁
+					lock.lock();
+					gareen.recover();
+					//解锁
+					lock.unlock();
 					try {
 						Thread.sleep(1);
 					} catch (InterruptedException e) {
@@ -41,9 +47,11 @@ public class ThreadConcurrentTest {
 				@Override
 				public void run(){
 					//同步减
-					synchronized(gareen){
-						gareen.hurt();
-					}
+					//上锁
+					lock.lock();
+					gareen.hurt();
+					//解锁
+					lock.unlock();
 					try {
 						Thread.sleep(1);
 					} catch (InterruptedException e) {

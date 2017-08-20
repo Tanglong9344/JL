@@ -23,6 +23,15 @@ public class StringBufferTest {
 		sb.insert(sb.length(), ",good day! ");
 		System.out.println(sb.toString());
 
+
+		//在最前面插入数据
+		sb.insert(0, "We are ");
+		System.out.println(sb.toString());
+
+		//在最后面插入数据
+		sb.insert(sb.length(), ",good day! ");
+		System.out.println(sb.toString());
+
 		//删除数据
 		sb.delete(0,sb.length());
 		System.out.println(sb.toString());

@@ -4,7 +4,7 @@ public class StringTest {
 	public static void main(String[] args) {
 		String str1 = "the light";
 		String str2 = new String(str1);
-		// ==用于判断是否是同一个字符串对象
+		// '=='用于判断是否是同一个字符串对象
 		System.out.print("str1 == str2:");
 		System.out.println(str1 == str2);
 		String str11 = "the light";

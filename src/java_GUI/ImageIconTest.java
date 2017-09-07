@@ -12,11 +12,11 @@ public class ImageIconTest {
 		f.setLayout(null);
 
 		JLabel l = new JLabel();
-		//根据图片创建ImageIcon对象
+		// 根据图片创建ImageIcon对象
 		ImageIcon i = new ImageIcon("F:\\dianzan.gif");
-		//设置ImageIcon
+		// 设置ImageIcon
 		l.setIcon(i);
-		//label的大小设置为ImageIcon,否则显示不完整
+		// label的大小设置为ImageIcon,否则显示不完整
 		l.setBounds(0, 0, i.getIconWidth(), i.getIconHeight());
 		f.add(l);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

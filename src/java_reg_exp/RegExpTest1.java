@@ -1,9 +1,9 @@
-package java_core_basic;
+package java_reg_exp;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegExpTest {
+public class RegExpTest1 {
 	private static final String REGEX = "\\bcat\\b";//\b Æ¥ÅäÒ»¸ö×Ö±ß½ç
 	private static final String INPUT = "cat cat cat cattie cat";
 	public static void main( String args[] ){

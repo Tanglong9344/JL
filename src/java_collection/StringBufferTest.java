@@ -32,6 +32,9 @@ public class StringBufferTest {
 		sb.insert(sb.length(), ",good day! ");
 		System.out.println(sb.toString());
 
+		//×ªÖÃ
+		System.out.println(sb.reverse().toString());
+
 		//É¾³ýÊý¾Ý
 		sb.delete(0,sb.length());
 		System.out.println(sb.toString());

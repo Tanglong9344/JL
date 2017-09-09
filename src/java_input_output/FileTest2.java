@@ -1,4 +1,4 @@
-package java_core_basic;
+package java_input_output;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class FileTest {
+public class FileTest2 {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		File f= new File("f:/hello.txt");
@@ -20,10 +20,12 @@ public class FileTest {
 			Date d = sdf.parse("2016-06-03");
 			System.out.println("日期为:"+d);
 		} catch (FileNotFoundException | ParseException e) {
-			if (e instanceof FileNotFoundException)
-			System.out.println("f:/hello.txt");
-			if (e instanceof ParseException)
-			System.out.println("日期格式解析错误");
+			if (e instanceof FileNotFoundException) {
+				System.out.println("f:/hello.txt");
+			}
+			if (e instanceof ParseException) {
+				System.out.println("日期格式解析错误");
+			}
 			e.printStackTrace();
 		}
 		finally{

@@ -42,5 +42,10 @@ public class StringTest {
 		}
 		//matches()方法
 		System.out.println(splitStr.matches("^Wo\\.shi[a-z(\\.)]*$"));
+
+		//startsWith前缀
+		System.out.println(splitStr.startsWith("Wo."));
+		//endsWith后缀
+		System.out.println(splitStr.endsWith(".en."));
 	}
 }

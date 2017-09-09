@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayListTest {
-	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 		ArrayList<String> heros = new ArrayList<String>();
 		long i = 10;

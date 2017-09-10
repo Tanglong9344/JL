@@ -45,16 +45,18 @@ public class WhoseFish {
 	private int[][] pet_Array; // 宠物数组
 
 	private static int total = 0;
+	final int N = 5;//操作的元素数目
 
 	public static void main(String args[]) {
-		WhoseFish test = new WhoseFish(); // 实例化对象
+		WhoseFish test = new WhoseFish();
 		test.lookUp(); // 调用方法进行计算统计
 		System.out.println("\n\t\t\t共计算出" + total + "组符合题意的答案。");
 	}
 
 	// 查找符合题意的答案
 	public void lookUp() {
-		init(); // 调用方法实始化数据
+		// 调用方法实始化数据
+		init();
 		for (int num1 = 0; num1 < co_Array.length; num1++) {
 			if (!case4(num1)) {
 				continue;
@@ -117,22 +119,22 @@ public class WhoseFish {
 	// 计算一组数据的组合方式
 	public void init() {
 		ArrayList<int[]> array = new ArrayList<int[]>();
-		for (int num1 = 0; num1 < 5; num1++) {
-			for (int num2 = 0; num2 < 5; num2++) {
+		int num1,num2,num3,num4,num5;
+		for (num1 = 0; num1 < N; num1++) {
+			for (num2 = 0; num2 < N; num2++) {
 				if (num2 == num1) {
 					continue;
 				}
-				for (int num3 = 0; num3 < 5; num3++) {
+				for (num3 = 0; num3 < N; num3++) {
 					if (num3 == num2 || num3 == num1) {
 						continue;
 					}
-					for (int num4 = 0; num4 < 5; num4++) {
+					for (num4 = 0; num4 < N; num4++) {
 						if (num4 == num3 || num4 == num2 || num4 == num1) {
 							continue;
 						}
-						for (int num5 = 0; num5 < 5; num5++) {
-							if (num5 == num4 || num5 == num3 || num5 == num2
-									|| num5 == num1) {
+						for (num5 = 0; num5 < N; num5++) {
+							if (num5 == num4 || num5 == num3 || num5 == num2 || num5 == num1) {
 								continue;
 							}
 							int oneArray[] = { num1, num2, num3, num4, num5 };
@@ -142,7 +144,7 @@ public class WhoseFish {
 				}
 			}
 		}
-		co_Array = new int[array.size()][5]; // 创建颜色的二维数组
+		co_Array = new int[array.size()][N]; // 创建颜色的二维数组
 		for (int count = 0; count < array.size(); count++) { // 循环数组实始化房颜色数据
 			co_Array[count] = array.get(count);
 		}
@@ -154,7 +156,7 @@ public class WhoseFish {
 
 	// 英国人住红色房子
 	public boolean case1(int cy, int cl) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (pe_Array[cl][i] == 0) {
 				if (co_Array[cy][i] == 0) {
 					return true;
@@ -168,7 +170,7 @@ public class WhoseFish {
 
 	// 瑞典人养狗
 	public boolean case2(int cy, int p) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (pe_Array[cy][i] == 1) {
 				if (pet_Array[p][i] == 0) {
 					return true;
@@ -182,7 +184,7 @@ public class WhoseFish {
 
 	// 丹麦人喝茶
 	public boolean case3(int cy, int d) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (pe_Array[cy][i] == 2) {
 				if (dr_Array[d][i] == 0) {
 					return true;
@@ -198,7 +200,7 @@ public class WhoseFish {
 	public boolean case4(int cl) {
 		int white = 0; // 白房子
 		int green = 0; // 绿房子
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (co_Array[cl][i] == 1) {
 				white = i;
 			}
@@ -215,7 +217,7 @@ public class WhoseFish {
 
 	// 绿色房子主人喝咖啡
 	public boolean case5(int cl, int d) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (co_Array[cl][i] == 2) {
 				if (dr_Array[d][i] == 1) {
 					return true;
@@ -229,7 +231,7 @@ public class WhoseFish {
 
 	// 抽PallMall香烟的人养鸟
 	public boolean case6(int s, int p) {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			if (cg_Array[s][i] == 0) {
 				if (pet_Array[p][i] == 1) {
 					return true;
@@ -243,9 +245,9 @@ public class WhoseFish {
 
 	// 黄色房子主人抽Dunhill香烟
 	public boolean case7(int cl, int s) {
-		for (int i = 0; i < 5; i++) {
-			if (co_Array[cl][i] == 4) {
-				if (cg_Array[s][i] == 1) {
+		for (int i = 0; i < N; i++) {
+			if (4 == co_Array[cl][i]) {
+				if (1 == cg_Array[s][i]) {
 					return true;
 				} else {
 					break;
@@ -257,7 +259,7 @@ public class WhoseFish {
 
 	// 住在中间房子的人喝牛奶
 	public boolean case8(int cy) {
-		if (pe_Array[cy][0] == 3) {
+		if (3 == pe_Array[cy][0]) {
 			return true;
 		} else {
 			return false;
@@ -275,12 +277,12 @@ public class WhoseFish {
 
 	// 抽Blends香烟的人住在养猫的人隔壁
 	public boolean case10(int s, int p) {
-		for (int i = 0; i < 5; i++) {
-			if (cg_Array[s][i] == 4) {
-				if (i < 4 && pet_Array[p][i + 1] == 2) {
+		for (int i = 0; i < N; i++) {
+			if (4 == cg_Array[s][i]) {
+				if (i < 4 && 2 == pet_Array[p][i + 1]) {
 					return true;
 				}
-				if (i > 0 && pet_Array[p][i - 1] == 2) {
+				if (i > 0 && 2 == pet_Array[p][i - 1]) {
 					return true;
 				}
 				break;
@@ -291,12 +293,12 @@ public class WhoseFish {
 
 	// 养马的人住抽Dunhill香烟的人隔壁
 	public boolean case11(int p, int s) {
-		for (int i = 0; i < 5; i++) {
-			if (pet_Array[p][i] == 3) {
-				if (i < 4 && cg_Array[s][i + 1] == 1) {
+		for (int i = 0; i < N; i++) {
+			if (3 == pet_Array[p][i]) {
+				if (i < 4 && 1 == cg_Array[s][i + 1]) {
 					return true;
 				}
-				if (i > 0 && cg_Array[s][i - 1] == 1) {
+				if (i > 0 && 1 == cg_Array[s][i - 1]) {
 					return true;
 				}
 				break;
@@ -307,9 +309,9 @@ public class WhoseFish {
 
 	// 抽BlueMaster的人喝啤酒
 	public boolean case12(int s, int d) {
-		for (int i = 0; i < 5; i++) {
-			if (cg_Array[s][i] == 2) {
-				if (dr_Array[d][i] == 3) {
+		for (int i = 0; i < N; i++) {
+			if (2 == cg_Array[s][i]) {
+				if (3 == dr_Array[d][i]) {
 					return true;
 				} else {
 					break;
@@ -321,9 +323,9 @@ public class WhoseFish {
 
 	// 德国人抽Prince香烟
 	public boolean case13(int cy, int s) {
-		for (int i = 0; i < 5; i++) {
-			if (pe_Array[cy][i] == 4) {
-				if (cg_Array[s][i] == 3) {
+		for (int i = 0; i < N; i++) {
+			if (4 == pe_Array[cy][i]) {
+				if (3 == cg_Array[s][i]) {
 					return true;
 				} else {
 					break;
@@ -335,7 +337,7 @@ public class WhoseFish {
 
 	// 挪威人住蓝色房子隔壁
 	public boolean case14(int c) {
-		if (co_Array[c][1] == 3) {
+		if (3 == co_Array[c][1]) {
 			return true;
 		} else {
 			return false;
@@ -344,12 +346,12 @@ public class WhoseFish {
 
 	// 抽Blends香烟的人有一个喝水的邻居
 	public boolean case15(int s, int d) {
-		for (int i = 0; i < 5; i++) {
-			if (cg_Array[s][i] == 4) {
-				if (i < 4 && dr_Array[d][i + 1] == 4) {
+		for (int i = 0; i < N; i++) {
+			if (4 == cg_Array[s][i]) {
+				if (i < 4 && 4 == dr_Array[d][i + 1]) {
 					return true;
 				}
-				if (i > 0 && dr_Array[d][i - 1] == 4) {
+				if (i > 0 && 4 == dr_Array[d][i - 1]) {
 					return true;
 				}
 				break;
@@ -362,27 +364,27 @@ public class WhoseFish {
 	public void answer(int n1, int n2, int n3, int n4, int n5) {
 		System.out.println("第" + total + "组答案->:");
 		System.out.println("1\t\t2\t\t3\t\t4\t\t5\t\t");
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			// 循环显示房子数组数据
 			System.out.print(FIVEHOUSES[co_Array[n1][i]] + "\t\t");
 		}
 		System.out.println();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			// 循环显示人员数组数据
 			System.out.print(FIVEPERSONS[pe_Array[n2][i]] + "\t\t");
 		}
 		System.out.println();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			// 循环显示饮料数组数据
 			System.out.print(FIVEDRINKS[dr_Array[n3][i]] + "\t\t");
 		}
 		System.out.println();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			// 循环显示烟数组数据
 			System.out.print(FIVESMOKES[cg_Array[n4][i]] + "\t\t");
 		}
 		System.out.println();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < N; i++) {
 			// 循环显示宠物数组数据
 			System.out.print(FIVEPETS[pet_Array[n5][i]] + "\t\t");
 		}

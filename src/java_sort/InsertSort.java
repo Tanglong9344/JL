@@ -2,7 +2,7 @@ package java_sort;
 
 import java.util.Random;
 
-public class SelectSort {
+public class InsertSort {
 	public static void main(String[] args) {
 		final int LENGTH=10;//数组长度
 		final int RANGE =100;//数据范围
@@ -18,36 +18,32 @@ public class SelectSort {
 			System.out.print(i+" ");
 		}
 		System.out.println();
-		//选择排序
-		selectSort(intArr);
-		//选择排序后
-		System.out.println("选择排序后:");
+		//插入排序
+		insertSort(intArr);
+		//插入排序后
+		System.out.println("插入排序后:");
 		for(int i : intArr){
 			System.out.print(i+" ");
 		}
 		System.out.println();
 	}
-	//选择排序实现方法
-	static void selectSort(int [] intArr){
-		int i,j,swap;
+	//插入排序实现方法
+	static void insertSort(int[] intArr){
+		int i,j;
 		int l=intArr.length;
-		int minPos;//记录某一趟操作下的最小值位置
-		//进行n-1趟操作
-		for(i=0;i<l-1;i++){
-			minPos=i;
-			for(j=i+1;j<l;j++){
-				//升序
-				if(intArr[j]<intArr[minPos]){
-					minPos=j;
-				}
+		int tmp;
+		for(i=1;i<l;i++){
+			tmp=intArr[i];
+			//数据移动
+			for(j=i-1;j>=0&&intArr[j]>tmp;j--){
+				intArr[j+1]=intArr[j];
 			}
-			//是否需要交换
-			if(minPos != i){
-				swap=intArr[i];
-				intArr[i]=intArr[minPos];
-				intArr[minPos]=swap;
+			intArr[j+1]=tmp;
+			System.out.printf("第%d次操作：%n",i);
+			for(int v : intArr){
+				System.out.print(v+" ");
 			}
+			System.out.println();
 		}
-		System.out.printf("共进行%d趟操作%n",i);
 	}
 }

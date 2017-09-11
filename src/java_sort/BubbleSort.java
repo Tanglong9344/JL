@@ -5,7 +5,7 @@ import java.util.Random;
 public class BubbleSort {
 	public static void main(String[] args) {
 		final int LENGTH=10;//数组长度
-		final int RANGE =5;//数据范围
+		final int RANGE =100;//数据范围
 		int [] intArr = new int [LENGTH];
 		//冒泡排序1
 		//数据初始化
@@ -16,15 +16,15 @@ public class BubbleSort {
 		//排序前
 		System.out.println("排序前:");
 		for(int i : intArr){
-			System.out.println(i);
+			System.out.print(i+" ");
 		}
 		System.out.println();
 		//冒泡排序1
-		intArr = bubbleSort1(intArr);
+		bubbleSort1(intArr);
 		//冒泡排序1排序后后
 		System.out.println("冒泡排序1后:");
 		for(int i : intArr){
-			System.out.println(i);
+			System.out.print(i+" ");
 		}
 		System.out.println();
 
@@ -36,20 +36,20 @@ public class BubbleSort {
 		//排序前
 		System.out.println("排序前:");
 		for(int i : intArr){
-			System.out.println(i);
+			System.out.print(i+" ");
 		}
 		System.out.println();
 		//冒泡排序2
-		intArr = bubbleSort2(intArr);
+		bubbleSort2(intArr);
 		//冒泡排序2排序后后
 		System.out.println("冒泡排序2后:");
 		for(int i : intArr){
-			System.out.println(i);
+			System.out.print(i+" ");
 		}
 		System.out.println();
 	}
 	//冒泡排序实现方法1
-	static int[] bubbleSort1(int [] intArr){
+	static void bubbleSort1(int [] intArr){
 		int i,j,swap;
 		int l=intArr.length;
 		boolean stop = false;//如果已经有序则停止操作
@@ -67,11 +67,10 @@ public class BubbleSort {
 			}
 		}
 		System.out.printf("共进行%d趟操作%n",i);
-		return intArr;
 	}
 
 	//冒泡排序实现方法2
-	static int[] bubbleSort2(int [] intArr){
+	static void bubbleSort2(int [] intArr){
 		int i,j,swap;
 		int l=intArr.length;
 		boolean stop = false;//如果已经有序则停止操作
@@ -89,6 +88,5 @@ public class BubbleSort {
 			}
 		}
 		System.out.printf("共进行%d趟操作%n",i);
-		return intArr;
 	}
 }

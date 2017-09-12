@@ -18,8 +18,11 @@ public class SelectSort {
 			System.out.print(i+" ");
 		}
 		System.out.println();
+		long begin = System.nanoTime();
 		//选择排序
 		selectSort(intArr);
+		long end = System.nanoTime();
+		System.out.printf("选择排序共耗时%f纳秒%n",(end-begin)/10.0);
 		//选择排序后
 		System.out.println("选择排序后:");
 		for(int i : intArr){

@@ -18,8 +18,11 @@ public class InsertSort {
 			System.out.print(i+" ");
 		}
 		System.out.println();
+		long begin = System.nanoTime();
 		//插入排序
 		insertSort(intArr);
+		long end = System.nanoTime();
+		System.out.printf("插入排序共耗时%f纳秒%n",(end-begin)/10.0);
 		//插入排序后
 		System.out.println("插入排序后:");
 		for(int i : intArr){
@@ -39,6 +42,7 @@ public class InsertSort {
 				intArr[j+1]=intArr[j];
 			}
 			intArr[j+1]=tmp;
+			//显示每次操作的结果
 			System.out.printf("第%d次操作：%n",i);
 			for(int v : intArr){
 				System.out.print(v+" ");

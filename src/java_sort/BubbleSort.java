@@ -19,8 +19,11 @@ public class BubbleSort {
 			System.out.print(i+" ");
 		}
 		System.out.println();
+		long begin = System.nanoTime();
 		//ц╟ещеепР1
 		bubbleSort1(intArr);
+		long end = System.nanoTime();
+		System.out.printf("ц╟ещеепР1╧╡╨дй╠%fдицК%n",(end-begin)/10.0);
 		//ц╟ещеепР1еепР╨С╨С
 		System.out.println("ц╟ещеепР1╨С:");
 		for(int i : intArr){
@@ -39,8 +42,11 @@ public class BubbleSort {
 			System.out.print(i+" ");
 		}
 		System.out.println();
+		begin = System.nanoTime();
 		//ц╟ещеепР2
 		bubbleSort2(intArr);
+		end = System.nanoTime();
+		System.out.printf("ц╟ещеепР2╧╡╨дй╠%fдицК%n",(end-begin)/10.0);
 		//ц╟ещеепР2еепР╨С╨С
 		System.out.println("ц╟ещеепР2╨С:");
 		for(int i : intArr){

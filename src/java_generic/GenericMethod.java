@@ -1,6 +1,6 @@
 package java_generic;
 
-public class GenericTest {
+public class GenericMethod {
 
 	public static void main(String[] args) {
 		Integer[] intArr = {1,34,55,6,889,66,4};
@@ -13,7 +13,7 @@ public class GenericTest {
 		printArr(cArr);
 	}
 	//·ºÐÍ·½·¨
-	public static <A> void printArr(A [] aArr){
+	private static <A> void printArr(A [] aArr){
 		for(A a:aArr) {
 			System.out.print(a+"   ");
 		}

@@ -1,4 +1,4 @@
-package something_interesting;
+package java_applet;
 
 import java.applet.Applet;
 import java.awt.BasicStroke;

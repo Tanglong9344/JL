@@ -19,6 +19,7 @@ public class KeyAdapterTest extends KeyAdapter implements ActionListener {
 	JLabel label = null;
 	JTextField tField = null;
 	String keyString = "";
+	@SuppressWarnings("deprecation")
 	public KeyAdapterTest() {
 		f = new JFrame("键盘监听");// 为这个JFrame设置一个标题
 		Container contentPane = f.getContentPane();
@@ -49,6 +50,7 @@ public class KeyAdapterTest extends KeyAdapter implements ActionListener {
 		tField.requestFocus();
 	}
 	//输入字母"O"之后，会产生新窗口
+	@SuppressWarnings("deprecation")
 	@Override
 	public void keyTyped(KeyEvent e) {
 		char c = e.getKeyChar();/* 注意getKeyChar()的用法 */

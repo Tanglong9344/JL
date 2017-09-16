@@ -15,6 +15,7 @@ public class EventTest2 extends WindowAdapter implements MouseListener {
 	JFrame f = null;
 	JButton b1 = null;
 	JLabel label = null;
+	@SuppressWarnings("deprecation")
 	public EventTest2() {
 		f = new JFrame("EventTest2");
 		Container contentPane = f.getContentPane();

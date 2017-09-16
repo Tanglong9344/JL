@@ -1,4 +1,4 @@
-package something_interesting;
+package java_applet;
 
 import java.awt.Color;
 import java.awt.Dimension;

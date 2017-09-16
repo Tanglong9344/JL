@@ -1,11 +1,18 @@
 package something_interesting;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 
 public class Universe extends java.applet.Applet implements Runnable {
 	private static final long serialVersionUID = 1L;
+	static final int THE_SPEED_INIT = 125;//速度默认值
+	static final int THE_STARTS_INIT = 6250;//星星数量默认值
+	static final int DEPTH = 250;//星星深度
+	static final int POSITION_X = 0;//画面初始位置x坐标
+	static final int POSITION_Y = 0;//画面初始位置y坐标
 	int Width, Height;// 定义小程序的长和宽
 	Thread thread = null;// 声明一个线程对象
 	boolean suspend = false;// 是否暂停
@@ -21,14 +28,18 @@ public class Universe extends java.applet.Applet implements Runnable {
 		rot = 0;
 		dx = 0;
 		ddx = 0;
-		Width = 300;
-		Height = 300;
-		String theSpeed = "125";
+		Toolkit kit = Toolkit.getDefaultToolkit(); //定义工具包
+		Dimension screenSize = kit.getScreenSize(); //获取屏幕的尺寸
+		Width = (int) screenSize.getWidth();//获取屏幕宽度
+		Height = (int) screenSize.getHeight();//获取屏幕高度
+		//Width = this.getWidth();//获取当前窗口的宽度
+		//Height = this.getHeight();//获取当前窗口的高度
+		String theSpeed = "";
 		Show("speed", theSpeed);
-		speed = (null == theSpeed) ? 50 : Integer.valueOf(theSpeed).intValue();
-		String theStars = "1250";
+		speed = (null == theSpeed || "".equals(theSpeed) ) ? THE_SPEED_INIT : Integer.valueOf(theSpeed).intValue();
+		String theStars = "";
 		Show("stars", theStars);
-		stars = (theStars == null) ? 30 : Integer.valueOf(theStars).intValue();
+		stars = (null == theStars || "".equals(theStars)) ? THE_STARTS_INIT : Integer.valueOf(theStars).intValue();
 		try {
 			im = createImage(Width, Height);
 			graphics = im.getGraphics();
@@ -37,15 +48,16 @@ public class Universe extends java.applet.Applet implements Runnable {
 		}
 		pol = new Star[stars];
 		for (int i = 0; i < stars; i++) {
-			pol[i] = new Star(Width, Height, 150, type);
+			pol[i] = new Star(Width, Height,DEPTH, type);
 		}
 		System.out.println(Width + "," + Height);
 	}
 	@Override
-	public void paint(Graphics g) {// 绘制组件
-		if (graphics != null) {
+	// 绘制组件
+	public void paint(Graphics g) {
+		if (null != graphics) {
 			paintStart(graphics);
-			g.drawImage(im, 0, 0, this);
+			g.drawImage(im, POSITION_X, POSITION_Y, this);
 		} else {
 			paintStart(g);
 		}
@@ -58,22 +70,26 @@ public class Universe extends java.applet.Applet implements Runnable {
 		}
 	}
 	@Override
-	public void start() {// 启动Applet小程序
-		if (thread == null) {
+	// 启动Applet小程序
+	public void start() {
+		if (null == thread) {
 			thread = new Thread(this);
 			thread.start();// 启动线程
 		}
 	}
+	@SuppressWarnings("deprecation")
 	@Override
-	public void stop() {// 停止运行Applet小程序
+	// 停止运行Applet小程序
+	public void stop() {
 		if (thread != null) {
 			thread.stop();
 			thread = null;
 		}
 	}
 	@Override
-	public void run() {// 运行线程
-		while (thread != null) {
+	// 运行线程
+	public void run() {
+		while (null != thread) {
 			rot += dx;
 			dx += ddx;
 			if (dx > max) {
@@ -90,7 +106,8 @@ public class Universe extends java.applet.Applet implements Runnable {
 		}
 	}
 	@Override
-	public void update(Graphics g) {// 重新绘制组伯
+	// 重新绘制组伯
+	public void update(Graphics g) {
 		paint(g);
 	}
 	//在终端显示相应
@@ -105,7 +122,7 @@ public class Universe extends java.applet.Applet implements Runnable {
 
 /**
  * 星星类
- * @author li.jie
+ * @author tanglong
  */
 class Star {
 	int H, V;
@@ -173,9 +190,9 @@ class Star {
 	 * @param g
 	 */
 	public void setColor(Graphics g) {
-		if (z > 50) {
+		if (z > 55) {
 			g.setColor(Color.GREEN);
-		} else if (z > 25) {
+		} else if (z > 30) {
 			g.setColor(Color.BLUE);
 		} else {
 			g.setColor(Color.YELLOW);

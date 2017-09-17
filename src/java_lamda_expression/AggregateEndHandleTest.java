@@ -18,10 +18,12 @@ import java.util.Random;
  */
 
 public class AggregateEndHandleTest {
+	static final int N = 5;
 	public static void main(String[] args) {
 		Random r = new Random();
 		List<Hero> heros = new ArrayList<Hero>();
-		for (int i = 0; i < 5; i++) {
+		//初始化
+		for (int i = 0; i < N; i++) {
 			heros.add(new Hero("hero " + i, r.nextInt(1000), r.nextInt(100)));
 		}
 		//forEach() 遍历每个元素

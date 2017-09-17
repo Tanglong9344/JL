@@ -1,4 +1,4 @@
-package java_core_basic;
+package java_web_programming;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

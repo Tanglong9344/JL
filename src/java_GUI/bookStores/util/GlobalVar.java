@@ -1,4 +1,4 @@
-package util;
+package java_GUI.bookStores.util;
 
 public class GlobalVar {
 	//系统登录用户

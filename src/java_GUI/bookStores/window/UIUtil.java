@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.util.Enumeration;
 

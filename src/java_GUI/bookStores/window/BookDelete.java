@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -19,9 +19,9 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import data.BookDao;
-import entity.Book;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.data.BookDao;
+import java_GUI.bookStores.entity.Book;
 
 public class BookDelete extends JFrame {
 	private static final long serialVersionUID = 1L;

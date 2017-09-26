@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -19,10 +19,10 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import data.ReaderDao;
-import entity.Reader;
-import util.Constant;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.data.ReaderDao;
+import java_GUI.bookStores.entity.Reader;
+import java_GUI.bookStores.util.Constant;
 
 public class ReaderUpdate extends JFrame {
 	private static final long serialVersionUID = 1L;

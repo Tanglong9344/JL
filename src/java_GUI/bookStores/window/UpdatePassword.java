@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -18,8 +18,8 @@ import javax.swing.JPasswordField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import util.GlobalVar;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.util.GlobalVar;
 
 public class UpdatePassword extends JFrame {
 	private static final long serialVersionUID = 1L;

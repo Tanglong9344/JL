@@ -1,4 +1,4 @@
-package entity;
+package java_GUI.bookStores.entity;
 
 import java.sql.Date;
 

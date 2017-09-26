@@ -1,4 +1,4 @@
-package util;
+package java_GUI.bookStores.util;
 
 public class Constant {
 	//Í¼ÊéÀà±ğ

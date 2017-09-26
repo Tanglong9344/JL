@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -20,9 +20,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
-import data.BookDao;
-import data.ReaderDao;
-import entity.Book;
+import java_GUI.bookStores.data.BookDao;
+import java_GUI.bookStores.data.ReaderDao;
+import java_GUI.bookStores.entity.Book;
 
 public class BookQuery extends JFrame {
 	private static final long serialVersionUID = 1L;

@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -19,20 +19,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import data.BookDao;
-import entity.Book;
-import util.Constant;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.util.Constant;
 
-public class BookUpdate extends JFrame {
+public class BookAdd extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel dialogPane;
 	private JPanel contentPanel;
-	private JLabel lb_cx_id;
-	private JTextField tf_cx_id;
-	private JButton btn_query;
-	private JLabel label12;
 	private JLabel lb_id;
 	private JTextField tf_id;
 	private JLabel lb_name;
@@ -55,7 +49,7 @@ public class BookUpdate extends JFrame {
 	private JButton btn_save;
 	private JButton btn_close;
 
-	public BookUpdate() {
+	public BookAdd() {
 		initComponents();
 	}
 
@@ -63,10 +57,6 @@ public class BookUpdate extends JFrame {
 	private void initComponents() {
 		dialogPane = new JPanel();
 		contentPanel = new JPanel();
-		lb_cx_id = new JLabel();
-		tf_cx_id = new JTextField();
-		btn_query = new JButton();
-		label12 = new JLabel();
 		lb_id = new JLabel();
 		tf_id = new JTextField();
 		lb_name = new JLabel();
@@ -89,7 +79,7 @@ public class BookUpdate extends JFrame {
 		btn_save = new JButton();
 		btn_close = new JButton();
 
-		setTitle("修改图书信息");
+		setTitle("添加图书");
 		setResizable(false);
 		Container contentPane = getContentPane();
 		contentPane.setLayout(new BorderLayout());
@@ -97,37 +87,25 @@ public class BookUpdate extends JFrame {
 			dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
 			dialogPane.setLayout(new BorderLayout());
 			{
-				contentPanel.setLayout(new GridLayout(6, 4, 6, 6));
-				lb_cx_id.setText("图书编号：");
-				lb_cx_id.setHorizontalAlignment(SwingConstants.RIGHT);
-				contentPanel.add(lb_cx_id);
-				contentPanel.add(tf_cx_id);
-
-				btn_query.setText("查询");
-				btn_query.addActionListener(new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						btn_queryActionPerformed(e);
-					}
-				});
-				contentPanel.add(btn_query);
-
-				label12.setText("text");
-				label12.setVisible(false);
-				contentPanel.add(label12);
-
+				contentPanel.setLayout(new GridLayout(5, 4, 6, 6));
 				lb_id.setText("图书编号：");
 				lb_id.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_id);
-
-				tf_id.setEditable(false);
 				contentPanel.add(tf_id);
+				lb_publisher.setText("出版社：");
+				lb_publisher.setHorizontalAlignment(SwingConstants.RIGHT);
+				contentPanel.add(lb_publisher);
+				contentPanel.add(tf_publisher);
 
 				lb_name.setText("图书名称：");
 				lb_name.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_name);
 				contentPanel.add(tf_name);
 
+				lb_publish_time.setText("出版时间：");
+				lb_publish_time.setHorizontalAlignment(SwingConstants.RIGHT);
+				contentPanel.add(lb_publish_time);
+				contentPanel.add(tf_publish_time);
 				lb_type.setText("图书类别：");
 				lb_type.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_type);
@@ -137,26 +115,15 @@ public class BookUpdate extends JFrame {
 				lb_author.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_author);
 				contentPanel.add(tf_author);
+				lb_price.setText("价格：");
+				lb_price.setHorizontalAlignment(SwingConstants.RIGHT);
+				contentPanel.add(lb_price);
+				contentPanel.add(tf_price);
 
 				lb_translator.setText("译者：");
 				lb_translator.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_translator);
 				contentPanel.add(tf_translator);
-
-				lb_publisher.setText("出版社：");
-				lb_publisher.setHorizontalAlignment(SwingConstants.RIGHT);
-				contentPanel.add(lb_publisher);
-				contentPanel.add(tf_publisher);
-
-				lb_publish_time.setText("出版时间：");
-				lb_publish_time.setHorizontalAlignment(SwingConstants.RIGHT);
-				contentPanel.add(lb_publish_time);
-				contentPanel.add(tf_publish_time);
-
-				lb_price.setText("价格：");
-				lb_price.setHorizontalAlignment(SwingConstants.RIGHT);
-				contentPanel.add(lb_price);
-				contentPanel.add(tf_price);
 
 				lb_stock.setText("库存数量：");
 				lb_stock.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -216,41 +183,31 @@ public class BookUpdate extends JFrame {
 		String stock = tf_stock.getText();
 
 		// 拼接sql
-		String sql = "update book set name='" + name + "',type='" + type
-				+ "',author='" + author + "',translator='" + translator
-				+ "',publisher='" + publisher + "',publish_time='"
-				+ java.sql.Date.valueOf(publish_time) + "',price="
-				+ Double.parseDouble(price) + ",stock=" + stock + " where id='"
-				+ id + "'";
-
+		String sql = "insert into book(id,name,type,author,translator,publisher,publish_time,price,stock) values('"
+				+ id
+				+ "','"
+				+ name
+				+ "','"
+				+ type
+				+ "','"
+				+ author
+				+ "','"
+				+ translator
+				+ "','"
+				+ publisher
+				+ "','"
+				+ publish_time
+				+ "',"
+				+ price + "," + stock + ")";
 		// 执行数据库操作
 		int i = BaseDao.executeUpdate(sql);
 		if (i == 1) {
-			JOptionPane.showMessageDialog(null, "修改成功");
+			JOptionPane.showMessageDialog(null, "添加成功");
 			dispose();
-		}
-	}
-
-	private void btn_queryActionPerformed(ActionEvent e) {
-		String id = tf_cx_id.getText(); // 图书编号
-		Book book = BookDao.selectBook(id); // 根据编号查询图书信息
-
-		// 设置图书信息
-		if (book != null) {
-			tf_id.setText(book.getId());
-			tf_name.setText(book.getName());
-			cb_type.setSelectedItem(book.getType());
-			tf_author.setText(book.getAuthor());
-			tf_translator.setText(book.getTranslator());
-			tf_publisher.setText(book.getPublisher());
-			tf_publish_time.setText(book.getPublish_time().toString());
-			tf_price.setText(String.valueOf(book.getPrice()));
-			tf_stock.setText(String.valueOf(book.getStock()));
 		}
 	}
 
 	private void btn_closeActionPerformed(ActionEvent e) {
 		dispose();
 	}
-
 }

@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -19,14 +19,19 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import util.Constant;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.data.ReaderDao;
+import java_GUI.bookStores.entity.Reader;
 
-public class ReaderAdd extends JFrame {
+public class ReaderDelete extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel dialogPane;
 	private JPanel contentPanel;
+	private JLabel label1;
+	private JTextField tf_cx_id;
+	private JButton button1;
+	private JTextField textField2;
 	private JLabel lb_id;
 	private JTextField tf_id;
 	private JLabel lb_name;
@@ -40,10 +45,10 @@ public class ReaderAdd extends JFrame {
 	private JLabel lb_dars;
 	private JTextField tf_days;
 	private JPanel buttonBar;
-	private JButton btn_save;
+	private JButton btn_del;
 	private JButton btn_close;
 
-	public ReaderAdd() {
+	public ReaderDelete() {
 		initComponents();
 	}
 
@@ -51,23 +56,27 @@ public class ReaderAdd extends JFrame {
 	private void initComponents() {
 		dialogPane = new JPanel();
 		contentPanel = new JPanel();
+		label1 = new JLabel();
+		tf_cx_id = new JTextField();
+		button1 = new JButton();
+		textField2 = new JTextField();
 		lb_id = new JLabel();
 		tf_id = new JTextField();
 		lb_name = new JLabel();
 		tf_name = new JTextField();
 		lb_type = new JLabel();
-		cb_type = new JComboBox<Object>(Constant.READER_TYPES);
+		cb_type = new JComboBox<Object>();
 		lb_sex = new JLabel();
-		cb_sex = new JComboBox<Object>(Constant.SEX);
+		cb_sex = new JComboBox<Object>();
 		lb_max_num = new JLabel();
-		tf_max_num = new JTextField("3");
+		tf_max_num = new JTextField();
 		lb_dars = new JLabel();
-		tf_days = new JTextField("60");
+		tf_days = new JTextField();
 		buttonBar = new JPanel();
-		btn_save = new JButton();
+		btn_del = new JButton();
 		btn_close = new JButton();
 
-		setTitle("添加新用户");
+		setTitle("删除用户信息");
 		setResizable(false);
 		Container contentPane = getContentPane();
 		contentPane.setLayout(new BorderLayout());
@@ -77,7 +86,24 @@ public class ReaderAdd extends JFrame {
 			dialogPane.setLayout(new BorderLayout());
 
 			{
-				contentPanel.setLayout(new GridLayout(3, 4, 6, 6));
+				contentPanel.setLayout(new GridLayout(4, 4, 6, 6));
+
+				label1.setText("用户编号：");
+				label1.setHorizontalAlignment(SwingConstants.RIGHT);
+				contentPanel.add(label1);
+				contentPanel.add(tf_cx_id);
+
+				button1.setText("查询");
+				button1.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						button1ActionPerformed(e);
+					}
+				});
+				contentPanel.add(button1);
+
+				textField2.setVisible(false);
+				contentPanel.add(textField2);
 
 				lb_id.setText("用户编号：");
 				lb_id.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -89,7 +115,7 @@ public class ReaderAdd extends JFrame {
 				contentPanel.add(lb_name);
 				contentPanel.add(tf_name);
 
-				lb_type.setText("用户级别:");
+				lb_type.setText("用户类型:");
 				lb_type.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_type);
 				contentPanel.add(cb_type);
@@ -99,12 +125,12 @@ public class ReaderAdd extends JFrame {
 				contentPanel.add(lb_sex);
 				contentPanel.add(cb_sex);
 
-				lb_max_num.setText("可借数量：");
+				lb_max_num.setText("可借数量");
 				lb_max_num.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_max_num);
 				contentPanel.add(tf_max_num);
 
-				lb_dars.setText("可借天数：");
+				lb_dars.setText("可借天数");
 				lb_dars.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_dars);
 				contentPanel.add(tf_days);
@@ -119,14 +145,14 @@ public class ReaderAdd extends JFrame {
 				((GridBagLayout) buttonBar.getLayout()).columnWeights = new double[] {
 						1.0, 0.0, 0.0 };
 
-				btn_save.setText("保存");
-				btn_save.addActionListener(new ActionListener() {
+				btn_del.setText("删除");
+				btn_del.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						btn_saveActionPerformed(e);
 					}
 				});
-				buttonBar.add(btn_save, new GridBagConstraints(1, 0, 1, 1, 0.0,
+				buttonBar.add(btn_del, new GridBagConstraints(1, 0, 1, 1, 0.0,
 						0.0, GridBagConstraints.CENTER,
 						GridBagConstraints.BOTH, new Insets(0, 0, 0, 5), 0, 0));
 
@@ -144,34 +170,31 @@ public class ReaderAdd extends JFrame {
 			dialogPane.add(buttonBar, BorderLayout.SOUTH);
 		}
 		contentPane.add(dialogPane, BorderLayout.CENTER);
-		setSize(450, 175);
+		setSize(450, 200);
 		setLocationRelativeTo(getOwner());
 		show();
 	}
 
+	private void button1ActionPerformed(ActionEvent e) {
+		String id = tf_cx_id.getText();
+		Reader reader = ReaderDao.selectReader(id);
+		if (reader != null) {
+			tf_id.setText(reader.getId());
+			tf_name.setText(reader.getName());
+			cb_type.setSelectedItem(reader.getType());
+			cb_sex.setSelectedItem(reader.getSex());
+			tf_max_num.setText(reader.getMax_num());
+			tf_days.setText(String.valueOf(reader.getDays_num()));
+		}
+	}
+
 	private void btn_saveActionPerformed(ActionEvent e) {
-		// 获取用户输入信息
-		String id = tf_id.getText();
-		String name = tf_name.getText();
-		String type = cb_type.getSelectedItem().toString();
-		String sex = cb_sex.getSelectedItem().toString();
-		String max_num = tf_max_num.getText();
-		String days = tf_days.getText();
-		// 拼接sql
-		String sql = "insert into reader(id,name,type,sex,max_num,days_num) values('"
-				+ id
-				+ "','"
-				+ name
-				+ "','"
-				+ type
-				+ "','"
-				+ sex
-				+ "',"
-				+ max_num + "," + days + ")";
+		String id = tf_id.getText(); // 获取图书编号
+		String sql = "delete from reader  where id='" + id + "'"; // 删除指定编号的图书
 		// 执行数据库操作
 		int i = BaseDao.executeUpdate(sql);
 		if (i == 1) {
-			JOptionPane.showMessageDialog(null, "添加成功");
+			JOptionPane.showMessageDialog(null, "删除成功");
 			dispose();
 		}
 	}

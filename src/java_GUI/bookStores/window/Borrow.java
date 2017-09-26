@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -21,14 +21,14 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-import data.BaseDao;
-import data.BookDao;
-import data.ReaderDao;
-import entity.Book;
-import entity.Reader;
-import util.DateUtils;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.data.BookDao;
+import java_GUI.bookStores.data.ReaderDao;
+import java_GUI.bookStores.entity.Book;
+import java_GUI.bookStores.entity.Reader;
+import java_GUI.bookStores.util.DateUtils;
 
-public class Back extends JFrame {
+public class Borrow extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel dialogPane;
@@ -54,10 +54,10 @@ public class Back extends JFrame {
 	private JLabel lb_back;
 	private JLabel lb_back_date;
 	private JPanel buttonBar;
-	private JButton btn_back;
+	private JButton btn_borrow;
 	private JButton btn_close;
 
-	public Back() {
+	public Borrow() {
 		initComponents();
 	}
 
@@ -86,24 +86,22 @@ public class Back extends JFrame {
 		lb_back = new JLabel();
 		lb_back_date = new JLabel();
 		buttonBar = new JPanel();
-		btn_back = new JButton();
+		btn_borrow = new JButton();
 		btn_close = new JButton();
-
-		setTitle("还书");
+		// ======== this ========
+		setTitle("借书");
 		setResizable(false);
 		Container contentPane = getContentPane();
 		contentPane.setLayout(new BorderLayout());
-
+		// ======== dialogPane ========
 		{
 			dialogPane.setBorder(new EmptyBorder(12, 12, 12, 12));
 			dialogPane.setLayout(new BorderLayout());
 			{
 				contentPanel.setLayout(new GridLayout(5, 4, 6, 6));
-
 				lb_book_id.setText("图书编号：");
 				lb_book_id.setHorizontalAlignment(SwingConstants.RIGHT);
 				contentPanel.add(lb_book_id);
-
 				tf_book_id.addKeyListener(new KeyAdapter() {
 					@Override
 					public void keyTyped(KeyEvent e) {
@@ -169,7 +167,7 @@ public class Back extends JFrame {
 
 				lb_borrow.setText("借书时间：");
 				lb_borrow.setHorizontalAlignment(SwingConstants.RIGHT);
-				lb_borrow.setForeground(SystemColor.blue);
+				lb_borrow.setForeground(SystemColor.red);
 				contentPanel.add(lb_borrow);
 
 				lb_borrow_date.setHorizontalAlignment(SwingConstants.CENTER);
@@ -178,11 +176,11 @@ public class Back extends JFrame {
 
 				lb_back.setText("还书时间：");
 				lb_back.setHorizontalAlignment(SwingConstants.RIGHT);
-				lb_back.setForeground(SystemColor.blue);
+				lb_back.setForeground(SystemColor.red);
 				contentPanel.add(lb_back);
 
 				lb_back_date.setHorizontalAlignment(SwingConstants.CENTER);
-				lb_back_date.setForeground(SystemColor.desktop);
+				lb_back_date.setForeground(SystemColor.red);
 				contentPanel.add(lb_back_date);
 			}
 			dialogPane.add(contentPanel, BorderLayout.CENTER);
@@ -195,15 +193,15 @@ public class Back extends JFrame {
 				((GridBagLayout) buttonBar.getLayout()).columnWeights = new double[] {
 						1.0, 0.0, 0.0 };
 
-				btn_back.setText("确定");
-				btn_back.addActionListener(new ActionListener() {
+				btn_borrow.setText("确定");
+				btn_borrow.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						btn_backActionPerformed(e);
+						btn_borrowActionPerformed(e);
 					}
 				});
-				buttonBar.add(btn_back, new GridBagConstraints(1, 0, 1, 1, 0.0,
-						0.0, GridBagConstraints.CENTER,
+				buttonBar.add(btn_borrow, new GridBagConstraints(1, 0, 1, 1,
+						0.0, 0.0, GridBagConstraints.CENTER,
 						GridBagConstraints.BOTH, new Insets(0, 0, 0, 5), 0, 0));
 
 				btn_close.setText("关闭");
@@ -261,18 +259,26 @@ public class Back extends JFrame {
 		}
 	}
 
-	private void btn_backActionPerformed(ActionEvent e) {
+	private void btn_borrowActionPerformed(ActionEvent e) {
 		String book_id = tf_book_id.getText(); // 获取图书编号
-		String reader_id = tf_reader_id.getText(); // 删除指定编号的图书
+		String reader_id = tf_reader_id.getText(); // 获取读者编号
+		String borrow_date = lb_borrow_date.getText(); // 获取借出日期
+		String back_date = lb_back_date.getText(); // 获取还书日期
 
 		// 拼sql语句
-		String sql = "update borrow set is_back=1 where book_id='" + book_id
-				+ "' and reader_id='" + reader_id + "'";
+		String sql = "insert into borrow(book_id,reader_id,borrow_date,back_date,is_back) values('"
+				+ book_id
+				+ "','"
+				+ reader_id
+				+ "','"
+				+ borrow_date
+				+ "','"
+				+ back_date + "',0)";
 
 		// 执行数据库操作
 		int i = BaseDao.executeUpdate(sql);
 		if (i == 1) {
-			JOptionPane.showMessageDialog(null, "还书成功");
+			JOptionPane.showMessageDialog(null, "借书成功");
 			dispose();
 		}
 	}
@@ -280,4 +286,5 @@ public class Back extends JFrame {
 	private void btn_closeActionPerformed(ActionEvent e) {
 		dispose();
 	}
+
 }

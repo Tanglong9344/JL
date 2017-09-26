@@ -1,10 +1,10 @@
-package data;
+package java_GUI.bookStores.data;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import entity.Reader;
+import java_GUI.bookStores.entity.Reader;
 
 public class ReaderDao {
 	//根据读者编号，获得单个读者实体

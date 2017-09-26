@@ -1,4 +1,4 @@
-package window;
+package java_GUI.bookStores.window;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -16,8 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.plaf.FontUIResource;
 
-import data.BaseDao;
-import util.GlobalVar;
+import java_GUI.bookStores.data.BaseDao;
+import java_GUI.bookStores.util.GlobalVar;
 
 public class Login extends JFrame {
 	private static final long serialVersionUID = 1L;

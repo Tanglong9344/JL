@@ -1,4 +1,4 @@
-package entity;
+package java_GUI.bookStores.entity;
 
 public class Reader {
 	private String id;//∂¡’ﬂ±‡∫≈

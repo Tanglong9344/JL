@@ -16,5 +16,7 @@
 	<classpathentry kind="lib" path="src/java_GUI/bookStores/lib/aspectjrt-1.6.11.jar"/>
 	<classpathentry kind="lib" path="src/java_GUI/bookStores/lib/mysql-connector-java-3.1.14-bin-g.jar"/>
 	<classpathentry kind="lib" path="src/java_GUI/bookStores/lib/mysql-connector-java-3.1.14-bin.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb-impl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

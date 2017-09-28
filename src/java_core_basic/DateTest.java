@@ -14,13 +14,13 @@ public class DateTest {
 
 		Date date = new Date();
 		//当前日期
-		System.out.println("日期:"+date);
+		System.out.println("当前日期:"+date);
 		//年月日
-		System.out.println("日期格式化1:"+sf1.format(date));
+		System.out.println("日期格式化(yyyy-MM-dd):"+sf1.format(date));
 		//年月日 时分秒
-		System.out.println("日期格式化2:"+sf2.format(date));
+		System.out.println("日期格式化(yyyy-MM-dd HH:mm:ss):"+sf2.format(date));
 		//月日年
-		System.out.println("日期格式化3:"+sf3.format(date));
+		System.out.println("日期格式化(MM/dd/yyyy):"+sf3.format(date));
 		// System.currentTimeMillis()
 		System.out.println("System.currentTimeMillis():"+System.currentTimeMillis());
 		//getTime()

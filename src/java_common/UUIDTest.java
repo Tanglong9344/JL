@@ -1,4 +1,4 @@
-package java_core_basic;
+package java_common;
 
 import java.util.ArrayList;
 import java.util.List;

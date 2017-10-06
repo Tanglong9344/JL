@@ -1,8 +1,6 @@
 package java_core_basic;
 
 /**
- *
- * @author tanglong
  * 静态初始化执行顺序
  * 标号代表执行次序
  */

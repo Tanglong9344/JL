@@ -5,7 +5,7 @@ package java_core_basic;
  * 标号代表执行次序
  */
 
-public class StaticInitBlock {
+public class InitStaticBlock {
 	public static void main(String[] args) {
 		System.out.println("main()");//10
 		Tools.t1.f(1);//11

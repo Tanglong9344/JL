@@ -165,6 +165,6 @@ public class JAXPTest {
 						+ "\t更喜岷山千里雪， 三军过后尽开颜 。")){
 			app.printMsg();
 		}
-
+		app.printMsg();
 	}
 }

@@ -1,4 +1,4 @@
-package java_collection;
+package java_collection_map;
 
 public class CollectionTest {
 	public static void main(String[] args) {

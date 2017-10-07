@@ -1,4 +1,4 @@
-package java_collection;
+package java_collection_map;
 
 public class TwoDimensionalArrayTest {
 	public static void main(String[] args) {

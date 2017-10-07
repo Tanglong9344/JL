@@ -1,4 +1,4 @@
-package java_collection;
+package java_collection_map;
 
 import java.io.FileDescriptor;
 import java.io.FileInputStream;

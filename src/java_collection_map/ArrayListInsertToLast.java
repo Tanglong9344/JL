@@ -2,7 +2,7 @@
  * ArrayList 和 LinkedList 在最后插入数据对比
  */
 
-package java_collection;
+package java_collection_map;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

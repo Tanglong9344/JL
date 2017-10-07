@@ -1,4 +1,4 @@
-package java_collection;
+package java_collection_map;
 
 /**
  * StringBuilder 不是线程安全的，因此在操作上会比线程安全的StringBuffer快

@@ -1,12 +1,15 @@
 package java_core_basic;
 
-public class Polymorphism {
+public class PolymorphismAndChangedParameters {
 	public static void main(String[] args) {
-		Polymorphism p = new Polymorphism();
+		PolymorphismAndChangedParameters p = new PolymorphismAndChangedParameters();
 		System.out.println("---------多态---------");
 		System.out.println(p.add(1));
 		System.out.println(p.add(1,2));
 		System.out.println(p.add(1,2,3));
+		System.out.println(p.adds(1));
+		System.out.println(p.adds(1,2,3));
+		System.out.println(p.adds(1,2,3,4,5,6,7,8,9));
 	}
 
 	//add(int a)
@@ -25,5 +28,15 @@ public class Polymorphism {
 	public int add(int a,int b,int c){
 		System.out.println("add(int a,int b,int c): three parameters");
 		return a + b + c;
+	}
+
+	//可变参数列表
+	public int adds(int...ints){
+		System.out.println("adds(int...ints):" + ints.length);
+		int sum = 0;
+		for(int i:ints){
+			sum += i;
+		}
+		return sum;
 	}
 }

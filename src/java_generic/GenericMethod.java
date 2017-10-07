@@ -1,5 +1,7 @@
 package java_generic;
 
+import java.util.Arrays;
+
 public class GenericMethod {
 
 	public static void main(String[] args) {
@@ -7,6 +9,8 @@ public class GenericMethod {
 		Float[] floatArr = {(float) 1.2,(float) 23,(float) 33};
 		String [] stringArr = {"hello","你好","**&）（","EE"};
 		Character[] cArr = {'x','6',',','O','?'};
+
+		//使用泛型方法
 		printArr(intArr);
 		printArr(floatArr);
 		printArr(stringArr);
@@ -14,9 +18,6 @@ public class GenericMethod {
 	}
 	//泛型方法
 	private static <A> void printArr(A [] aArr){
-		for(A a:aArr) {
-			System.out.print(a+"   ");
-		}
-		System.out.println();
+		System.out.println(Arrays.toString(aArr));
 	}
 }

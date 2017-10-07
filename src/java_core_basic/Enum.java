@@ -8,7 +8,7 @@ public class Enum {
 		System.out.println("ËÄ¼¾£º" + Arrays.toString(seasons));
 
 		System.out.println("ÐÇÆÚ£º" + Arrays.toString(Weekend.values()));
-
+		//²âÊÔ
 		for(Season s:seasons){
 			switch(s){
 			case ´º¼¾:

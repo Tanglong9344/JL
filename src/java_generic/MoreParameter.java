@@ -10,8 +10,8 @@ public class MoreParameter<T,V> {
 	}
 	// 显示T和V的类型
 	void printTypes() {
-		System.out.println("参数T的对象类型为： " + t.getClass().getName());
-		System.out.println("参数V的对象类型为： " + v.getClass().getName());
+		System.out.println("参数T的对象类型为:" + t.getClass().getName());
+		System.out.println("参数V的对象类型为:" + v.getClass().getName());
 	}
 
 	T getT() {
@@ -22,13 +22,12 @@ public class MoreParameter<T,V> {
 		return v;
 	}
 
+	//测试
 	public static void main(String args[]) {
 		// 指定类型参数的实际类型
 		MoreParameter<Integer, Double> tv= new MoreParameter<Integer, Double>(100, 12.56);
 		tv.printTypes();
-		int num = tv.getT();
-		System.out.println("num变量中的值为: " + num);
-		double dou = tv.getV();
-		System.out.println("dou变量中的值为:" + dou);
+		System.out.println("T变量中的值为:" + tv.getT());
+		System.out.println("V变量中的值为:" + tv.getV());
 	}
 }

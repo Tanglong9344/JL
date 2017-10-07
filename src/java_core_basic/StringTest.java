@@ -16,6 +16,7 @@ public class StringTest {
 		//equals 用于判断字符串的值
 		System.out.println("str111.equals(str222):" + str111.equals(str222));
 		System.out.println("str111.equalsIgnoreCase(str222):" + str111.equalsIgnoreCase(str222));// 忽略大小写进行比较
+		//CompareTo()返回从左到右第一对不同字符间的Unicode的差值
 		System.out.println("str111.str111.compareTo(str222):" + str111.compareTo(str222));
 		System.out.println("str111.compareToIgnoreCase(str222):" + str111.compareToIgnoreCase(str222));
 		System.out.println("str111.startsWith(\"the\"):" + str111.startsWith("the"));
@@ -48,5 +49,29 @@ public class StringTest {
 		System.out.println(splitStr.startsWith("Wo."));
 		//endsWith后缀
 		System.out.println(splitStr.endsWith(".en."));
+
+		String strTest = " I am TangLong,I'm from China. ";
+		System.out.println("strTest:" + strTest);
+		//toLowerCase
+		System.out.println("strTest.toLowerCase():" + strTest.toLowerCase());
+		//toUpperCase
+		System.out.println("strTest.toUpperCase():" + strTest.toUpperCase());
+		//trim
+		System.out.println("strTest.trim():" + strTest.trim());
+		//replace
+		System.out.println("strTest.replace('L', 'l'):" + strTest.replace('L', 'l'));
+		//lastIndexOf
+		System.out.println("lastIndexOf():"+strTest.substring(strTest.lastIndexOf("T"),strTest.lastIndexOf(",")));
+		//toCharArray()
+		char [] charArray = strTest.toCharArray();
+		System.out.println("strTest.toCharArray():");
+		for(char ch:charArray){
+			System.out.print(ch+" ");
+		}
+		System.out.println();
+
+		//format
+		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\", 'c',true,32,Math.PI):\n"
+				+ String.format("ch=%c,isTrue=%b,num=%d,double=%f.", 'c',true,32,Math.PI));
 	}
 }

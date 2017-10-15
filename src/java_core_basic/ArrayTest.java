@@ -13,10 +13,11 @@ package java_core_basic;
 import java.util.Arrays;
 
 public class ArrayTest {
+	static final int N =10;
 	public static void main(String[] args) {
-		//整型数组
+		//一维整型数组
 		//数据初始化
-		int[] intArr = new int[10];
+		int[] intArr = new int[N];
 		for (int i = 0; i < intArr.length; i++) {
 			intArr[i] = (int) (Math.random() * 10);
 		}
@@ -36,5 +37,11 @@ public class ArrayTest {
 		//param:查找数值
 		//找到则返回数值所在的最后一个位置，未找到则返回负数
 		System.out.println(Arrays.binarySearch(intArr, 0,intArr.length,5));
+
+		//二维数组
+		int[][] tdArr = new int[N][N];
+		for(int i=0;i<N;i++){
+			System.out.printf("tdArr[%d]:%s%n",i,tdArr[i].toString());
+		}
 	}
 }

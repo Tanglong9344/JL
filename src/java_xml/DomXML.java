@@ -1,4 +1,12 @@
-package java_jaxp;
+/**
+ * DOM方式解析XML Dom解析是将xml文件全部载入到内存,
+ * 组装成一颗dom树，m然后通过节点以及节点之间的关系来解析
+ * xml文件,与平台无关,java提供的一种基础的解析XML文件
+ * 的API,理解较简单，但是由于整个文档都需要载入内存,不适
+ * 用于文档较大时。
+ */
+
+package java_xml;
 
 import java.io.File;
 
@@ -19,14 +27,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
-public class JAXPTest {
+public class DomXML {
 	private String fileName = "XML/poem.xml";
 	private Document doc = null;
 
 	/**
 	 * xml文档解析
 	 */
-	public JAXPTest() {
+	public DomXML() {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			//DOM 解析器
@@ -146,7 +154,7 @@ public class JAXPTest {
 
 	//主程序测试
 	public static void main(String[] args) {
-		JAXPTest app = new JAXPTest();
+		DomXML app = new DomXML();
 		//添加一首春望
 		//添加成功则输出诗词信息
 		if(1 == app.addPoem("杜甫", "唐", "春望",

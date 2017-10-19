@@ -34,6 +34,7 @@ public class Dom4jXML {
 	 */
 	public void printMsg(){
 		Element poems = document.getRootElement();
+		System.out.println(poems.getName());
 		printElement(poems);
 	}
 
@@ -60,7 +61,7 @@ public class Dom4jXML {
 				System.out.print(poElement.getText());
 			}
 			System.out.println();
-			// loop
+			// print children element
 			printElement(poElement);
 		}
 	}

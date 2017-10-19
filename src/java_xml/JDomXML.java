@@ -32,7 +32,7 @@ public class JDomXML {
 	 */
 	public void printMsg(){
 		Element rootElement = document.getRootElement();
-		System.out.println(rootElement);
+		System.out.println(rootElement.getName());
 		// get children nodes as list
 		List<Element> poemList = rootElement.getChildren();
 		// print children elements info
@@ -52,7 +52,7 @@ public class JDomXML {
 		System.out.println();
 		// print text that is empty
 		if(!(e.getTextTrim().equals(""))){
-			System.out.print(e.getTextTrim());
+			System.out.println(e.getTextTrim());
 		}
 		// loop for children nodes
 		List<Element> poemList = e.getChildren();

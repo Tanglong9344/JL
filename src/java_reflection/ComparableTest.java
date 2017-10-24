@@ -8,6 +8,7 @@ import java.util.Random;
 public class ComparableTest {
 	public static void main(String[] args) {
 		Random r =new Random();
+		//Hero2¼Ì³ÐComparable<>½Ó¿Ú
 		List<Hero2> heros = new ArrayList<Hero2>();
 
 		for (int i = 0; i < 10; i++) {

@@ -1,5 +1,7 @@
 package java_core_basic;
 
+import java.util.Arrays;
+
 public class StringTest {
 	public static void main(String[] args) {
 		String str1 = "the light";
@@ -26,13 +28,15 @@ public class StringTest {
 		int i;
 		//charAt()
 		for(i=0;i<week.length();i++){
-			System.out.println(week.charAt(i));
+			System.out.print(week.charAt(i)+" ");
 		}
+		System.out.println();
 
 		//subString()
 		for(i=0;i<week.length();i++){
-			System.out.println(week.substring(i,i+1));
+			System.out.print(week.substring(i,i+1)+" ");
 		}
+		System.out.println();
 
 		//split()方法
 		String splitStr="Wo.shi.zh.o.ng.r.en.";
@@ -40,8 +44,10 @@ public class StringTest {
 		String [] splitStrArr = splitStr.split("\\.");//.是转义字符，必须加上\\
 		System.out.println("数组长度："+splitStrArr.length);
 		for(i=0;i<splitStrArr.length;i++){
-			System.out.println(splitStrArr[i]);
+			System.out.print(splitStrArr[i]+" ");
 		}
+		System.out.println();
+
 		//matches()方法
 		System.out.println(splitStr.matches("^Wo\\.shi[a-z(\\.)]*$"));
 
@@ -63,12 +69,7 @@ public class StringTest {
 		//lastIndexOf
 		System.out.println("lastIndexOf():"+strTest.substring(strTest.lastIndexOf("T"),strTest.lastIndexOf(",")));
 		//toCharArray()
-		char [] charArray = strTest.toCharArray();
-		System.out.println("strTest.toCharArray():");
-		for(char ch:charArray){
-			System.out.print(ch+" ");
-		}
-		System.out.println();
+		System.out.println("strTest.toCharArray():"+Arrays.toString(strTest.toCharArray()));
 
 		//format
 		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\", 'c',true,32,Math.PI):\n"

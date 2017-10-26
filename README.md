@@ -4,8 +4,7 @@
 //Source file
 public class HelloJava {
 	public static void main(String args[]){
-		String str="Hello Java!";
-		System.out.println(str);
+		System.out.println(Hello Java!);
 	}
 }
 ```

@@ -96,4 +96,19 @@ SourceFile: "HelloJava.java"
 	+ jar xf myjar.jar(显示解压详细信息)
 ---
 ![decompression.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/decompression.png)
-
+---
++ 带参执行
+---
+```
+//source file
+public class Param {
+	public static void main(String[] args) {
+		int len=args.length;
+		for(int i=0;i<len;i++){
+			System.out.printf("args[%d]=%s%n",i,args[i]);
+		}
+	}
+}
+```
+---
+![param.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/param.png)

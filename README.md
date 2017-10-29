@@ -1,6 +1,8 @@
 # JavaScoreBasic
 ![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
+---
 ### The first program in Java
+---
 ```
 //Source file
 public class HelloJava {
@@ -10,9 +12,9 @@ public class HelloJava {
 }
 ```
 ---
-+ Compile:javac HelloJava.java
-+ Interpret:java HelloJava
-+ View code of HelloJava.class:javap -verbose HelloJava.class
++ Compile:ç¼–è¯‘HelloJava.javaæ–‡ä»¶ javac HelloJava.java
++ Interpret:è§£é‡ŠHelloJava.classæ–‡ä»¶ java HelloJava
++ View code of HelloJava.class:æŸ¥çœ‹HelloJava.classå†…å®¹ javap -verbose HelloJava.class
 ---
 ![HelloJava.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/HelloJava.png)
 ```
@@ -81,17 +83,17 @@ Constant pool:
 SourceFile: "HelloJava.java"
 ```
 ---
-+ compress:compress Hello.java file as myjar.jar
-	+ jar cf myjar.jar Hello.jar(²»ÏÔÊ¾´¦ÀíĞÅÏ¢)
-	+ jar cvf myjar.jar Hello.jar(ÏÔÊ¾´ò°üÏêÏ¸ĞÅÏ¢)
-	+ jar tf myjar.jar Hello.jar(ÏÔÊ¾jarÎÄ¼şÄ¿Â¼ºÍÎÄ¼şÁĞ±íĞÅÏ¢)
-	+ jar tvf myjar.jar Hello.jar(ÏÔÊ¾jarÎÄ¼şÄ¿Â¼ºÍÎÄ¼şÁĞ±íĞÅÏ¢ºÍÎÄ¼ş´óĞ¡£¬´´½¨Ê±¼äÏêÏ¸ĞÅÏ¢)
++ Compress:å°†Hello.javaå‹ç¼©ä¸ºmyjar.jar
+	+ jar cf myjar.jar Hello.jar(ä¸æ˜¾ç¤ºå¤„ç†ä¿¡æ¯)
+	+ jar cvf myjar.jar Hello.jar(æ˜¾ç¤ºæ‰“åŒ…è¯¦ç»†ä¿¡æ¯)
+	+ jar tf myjar.jar Hello.jar(æ˜¾ç¤ºjaræ–‡ä»¶ç›®å½•å’Œæ–‡ä»¶åˆ—è¡¨ä¿¡æ¯)
+	+ jar tvf myjar.jar Hello.jar(æ˜¾ç¤ºjaræ–‡ä»¶ç›®å½•å’Œæ–‡ä»¶åˆ—è¡¨ä¿¡æ¯å’Œæ–‡ä»¶å¤§å°ï¼Œåˆ›å»ºæ—¶é—´è¯¦ç»†ä¿¡æ¯)
 ---
 ![jar.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/jar.png)
 ---
-+ decompression:½âÑ¹myjar.jarÎÄ¼ş
-	+ jar xf myjar.jar(²»ÏÔÊ¾½âÑ¹ĞÅÏ¢)
-	+ jar xf myjar.jar(ÏÔÊ¾½âÑ¹ÏêÏ¸ĞÅÏ¢)
++ Decompression:è§£å‹myjar.jaræ–‡ä»¶
+	+ jar xf myjar.jar(ä¸æ˜¾ç¤ºè§£å‹ä¿¡æ¯)
+	+ jar xf myjar.jar(æ˜¾ç¤ºè§£å‹è¯¦ç»†ä¿¡æ¯)
 ---
 ![decompression.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/decompression.png)
 

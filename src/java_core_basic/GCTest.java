@@ -1,22 +1,23 @@
 /**
- * Java GC机制
+ * Java 垃圾回收机制
  */
 
 package java_core_basic;
 
 public class GCTest {
-	private String str = "Garbage Collection.";
+	static final int N = 5;
 	public static void main(String[] args) throws InterruptedException {
-		GCTest gc = new GCTest();
-		System.out.println("调用System.gc()之前："+gc.str);
-		System.gc();//发起回收请求
-		//Thread.sleep(1000);//暂停1s
-		System.out.println("调用System.gc()之后："+gc.str);
-		try {
-			gc.finalize();
-		} catch (Throwable e) {
-			e.printStackTrace();
+		for(int i=0;i<N;i++){
+			new GCTest();
 		}
-		System.out.println("调用finalize()之后："+gc.str);
+		System.gc();//向垃圾回收方法发出垃圾回收请求
+		Thread.sleep(500);//暂停0.5s
+		System.out.println("The program is over!");
+	}
+
+	//finalize方法，在对象被垃圾回收方法回收之前执行
+	@Override
+	public void finalize(){
+		System.out.println("Garbage Collection!");
 	}
 }

@@ -9,9 +9,11 @@ public class HelloJava {
 	}
 }
 ```
+---
 + Compile:javac HelloJava.java
 + Interpret:java HelloJava
 + View code of HelloJava.class:javap -verbose HelloJava.class
+---
 ![HelloJava.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/HelloJava.png)
 ```
 Classfile /F:/HelloJava.class
@@ -78,3 +80,18 @@ Constant pool:
 }
 SourceFile: "HelloJava.java"
 ```
+---
++ compress:compress Hello.java file as myjar.jar
+	+ jar cf myjar.jar Hello.jar(不显示处理信息)
+	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
+	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
+	+ jar tvf myjar.jar Hello.jar(显示jar文件目录和文件列表信息和文件大小，创建时间详细信息)
+---
+![jar.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/jar.png)
+---
++ decompression:解压myjar.jar文件
+	+ jar xf myjar.jar(不显示解压信息)
+	+ jar xf myjar.jar(显示解压详细信息)
+---
+![decompression.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/decompression.png)
+

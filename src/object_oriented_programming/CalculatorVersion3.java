@@ -11,13 +11,13 @@ public class CalculatorVersion3 {
 		double opNumA=Math.random()*CommonFinal.RANGE;//操作数1
 		double opNumB=Math.random()*CommonFinal.RANGE;//操作数2
 		char op = CommonFinal.OPERATIONS[(int)(Math.random()*4)];//运算符
-		Operation operation = findOperation(opNumA,opNumB,op);//获取运算对象
+		Operation operation = createOperation(opNumA,opNumB,op);//获取运算对象
 		double result=operation.getResult();//运算结果
 		System.out.printf("%.2f%c%.2f=%.2f%n",opNumA,op,opNumB,result);
 	}
 
 	//获取运算对象
-	private static Operation findOperation(double opNumA,double opNumB,char op){
+	private static Operation createOperation(double opNumA,double opNumB,char op){
 		switch(op){
 		case '+':
 			return new Add(opNumA,opNumB);

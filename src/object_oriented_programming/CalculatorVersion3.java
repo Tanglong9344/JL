@@ -20,13 +20,13 @@ public class CalculatorVersion3 {
 	private static Operation createOperation(double opNumA,double opNumB,char op){
 		switch(op){
 		case '+':
-			return new Add(opNumA,opNumB);
+			return new OpAdd(opNumA,opNumB);
 		case '-':
-			return new Minus(opNumA,opNumB);
+			return new OpMinus(opNumA,opNumB);
 		case '*':
-			return new Multiple(opNumA,opNumB);
+			return new OpMultiple(opNumA,opNumB);
 		case '/':
-			return new Divide(opNumA,opNumB);
+			return new OpDivide(opNumA,opNumB);
 		default:
 			return new Operation(opNumA,opNumB);
 		}
@@ -68,8 +68,8 @@ class Operation{
 }
 
 //加法类
-class Add extends Operation{
-	public Add(double opNumA, double opNumB) {
+class OpAdd extends Operation{
+	public OpAdd(double opNumA, double opNumB) {
 		super(opNumA,opNumB);//调用父类的构造方法
 	}
 
@@ -80,8 +80,8 @@ class Add extends Operation{
 }
 
 //减法类
-class Minus extends Operation{
-	public Minus(double opNumA, double opNumB) {
+class OpMinus extends Operation{
+	public OpMinus(double opNumA, double opNumB) {
 		super(opNumA, opNumB);
 	}
 
@@ -92,8 +92,8 @@ class Minus extends Operation{
 }
 
 //乘法类
-class Multiple extends Operation{
-	public Multiple(double opNumA, double opNumB) {
+class OpMultiple extends Operation{
+	public OpMultiple(double opNumA, double opNumB) {
 		super(opNumA, opNumB);
 	}
 
@@ -104,8 +104,8 @@ class Multiple extends Operation{
 }
 
 //除法类
-class Divide extends Operation{
-	public Divide(double opNumA, double opNumB) {
+class OpDivide extends Operation{
+	public OpDivide(double opNumA, double opNumB) {
 		super(opNumA, opNumB);
 	}
 

@@ -1,10 +1,3 @@
-package java_lamda_expression;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 /**
  * 当进行结束操作后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。 结束操作不会返回Stream，但是会返回int、float、String、 Collection或者像forEach，什么都不返回,。
  * 结束操作才真正进行遍历行为，前面的中间操作也在这个时候，才真正的执行。
@@ -16,6 +9,13 @@ import java.util.Random;
  * count() 总数
  * findFirst() 第一个元素
  */
+
+package java_lamda_expression;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class AggregateEndHandleTest {
 	static final int N = 5;

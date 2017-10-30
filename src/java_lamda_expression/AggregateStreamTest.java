@@ -1,14 +1,13 @@
+/**
+ * 管道源
+ */
+
 package java_lamda_expression;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-
-/**
- * 管道源
- * @author 唐龙
- */
 
 public class AggregateStreamTest {
 	public static void main(String[] args) {

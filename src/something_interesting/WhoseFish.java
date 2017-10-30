@@ -1,7 +1,3 @@
-package something_interesting;
-
-import java.util.ArrayList;
-
 /**
  * 问题描述
  * 有一排五间房子，每一间房子的颜色都不同。在这些房子里住着五个不同国籍的人。
@@ -25,6 +21,10 @@ import java.util.ArrayList;
  * 问题：
  * 谁家养鱼？
  */
+
+package something_interesting;
+
+import java.util.ArrayList;
 
 public class WhoseFish {
 	// 定义5种不同颜色的房子

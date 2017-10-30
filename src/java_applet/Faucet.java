@@ -1,3 +1,7 @@
+/**
+ * 水流下落效果
+ */
+
 package java_applet;
 
 import java.applet.Applet;
@@ -5,9 +9,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 
-/**
- * 水流下落效果
- */
 public class Faucet extends Applet implements Runnable {
 	private static final long serialVersionUID = 1L;
 	private static final int MAX_DROP = 1500;// 水滴的最大个数

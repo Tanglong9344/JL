@@ -1,9 +1,3 @@
-package java_lamda_expression;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 /**
  * 每个中间操作，又会返回一个Stream，比如.filter()又返回一个Stream, 中间操作是“懒”操作，并不会真正进行遍历。
  * 中间操作比较多，主要分两类
@@ -21,6 +15,13 @@ import java.util.Random;
  * mapToDouble 转换为double的流
  * map 转换为任意类型的流
  */
+
+package java_lamda_expression;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 
 public class AggregateMiddleHandleTest {
 	public static void main(String[] args) {

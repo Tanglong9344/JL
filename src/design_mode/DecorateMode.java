@@ -1,6 +1,8 @@
 /**
  * 装饰模式
  * 动态地给一个对象添加一些额外的功能
+ * 有效的将类的核心功能和装饰功能分离
+ * 将装饰功能放在单独的类中，根据需要进行动态装饰。
  */
 
 package design_mode;
@@ -43,8 +45,6 @@ abstract class Decorator implements Component{
 	public void Operation(){
 		if(component!=null){
 			component.Operation();
-		}else{
-			System.out.println("组件类为空。");
 		}
 	}
 }

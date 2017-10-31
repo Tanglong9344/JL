@@ -1,5 +1,5 @@
 /**
- * 工厂模式
+ * 工厂模式(简单工厂模式)
  * 实现加减乘除简易计算器
  * 由操作工厂根据不同运算符创建相应的操作类
  */
@@ -69,7 +69,7 @@ class OpMinus extends Operation{
 }
 
 //乘法类
-class OpMultiple extends Operation{
+class OpMultiply extends Operation{
 	@Override
 	public double getResult() {
 		return getOpNumA()*getOpNumB();
@@ -102,7 +102,7 @@ class OperationFactory{
 			operation=new OpMinus();
 			break;
 		case '*':
-			operation=new OpMultiple();
+			operation=new OpMultiply();
 			break;
 		case '/':
 			operation=new OpDivide();

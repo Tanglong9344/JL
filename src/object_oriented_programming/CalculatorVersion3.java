@@ -24,7 +24,7 @@ public class CalculatorVersion3 {
 		case '-':
 			return new OpMinus(opNumA,opNumB);
 		case '*':
-			return new OpMultiple(opNumA,opNumB);
+			return new OpMultiply(opNumA,opNumB);
 		case '/':
 			return new OpDivide(opNumA,opNumB);
 		default:
@@ -92,8 +92,8 @@ class OpMinus extends Operation{
 }
 
 //≥À∑®¿‡
-class OpMultiple extends Operation{
-	public OpMultiple(double opNumA, double opNumB) {
+class OpMultiply extends Operation{
+	public OpMultiply(double opNumA, double opNumB) {
 		super(opNumA, opNumB);
 	}
 

@@ -1,10 +1,10 @@
-# 璁捐妯″紡
-+ [鍗曚緥妯″紡](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/SingleInstance.java)
-+ [宸ュ巶妯″紡](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/FactoryMode.java)
-+ [绛栫暐妯″紡](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/StrategyMode.java)
-+ []()
-+ []()
-+ []()
+# 设计模式
++ [单例模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/SingleInstance.java)
++ [工厂模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/FactoryMode.java)
++ [工厂方法模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/FactoryMethodMode.java)
++ [策略模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/StrategyMode.java)
++ [装饰模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/DecorateMode.java)
++ [代理模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/ProxyMode.java)
 + []()
 + []()
 + []()
@@ -23,5 +23,6 @@
 + []()
 + []()
 ---
-# [璁捐鍘熷垯](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/principles.md)
-# [渚濊禆娉ㄥ叆](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/dependencyInjection.md)
+# [设计原则](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/principles.md)
+# [依赖注入](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/dependencyInjection.md)
+jection.md)

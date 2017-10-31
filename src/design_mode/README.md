@@ -1,4 +1,4 @@
-# 设计模式
+# [设计模式]()
 + [单例模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/SingleInstance.java)
 + [工厂模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/FactoryMode.java)
 + [策略模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/StrategyMode.java)

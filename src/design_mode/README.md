@@ -21,6 +21,7 @@
 1. []()
 1. []()
 1. []()
+1. []()
 ---
-# [设计原则](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/principles.md)
-# [依赖注入](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/dependencyInjection.md)
+# [璁捐鍘熷垯](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/principles.md)
+# [渚濊禆娉ㄥ叆](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/dependencyInjection.md)

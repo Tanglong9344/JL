@@ -16,11 +16,11 @@ public class StateMode {
 	//This is a test
 	public static void main(String[] args) {
 		//初始状态为A
-		ContextState ContextState=new ContextState(new SpecificStateA());
-		//不断更新状态
-		ContextState.reauest();
-		ContextState.reauest();
-		ContextState.reauest();
+		ContextState contextState=new ContextState(new SpecificStateA());
+		//不断更新状态(在A,B,C之间不断切换)
+		for(int i=0;i<10;i++){
+			contextState.reauest();
+		}
 	}
 }
 
@@ -33,7 +33,8 @@ abstract class State{
 class SpecificStateA extends State{
 	@Override
 	public void handle(ContextState ContextState) {
-		//设置下一个状态是B
+		System.out.println("当前状态：状态A");
+		//转换到下一个状态
 		ContextState.setState(new SpecificStateB());
 	}
 }
@@ -42,7 +43,18 @@ class SpecificStateA extends State{
 class SpecificStateB extends State{
 	@Override
 	public void handle(ContextState ContextState) {
-		//设置下一个状态是A
+		System.out.println("当前状态：状态B");
+		//转换到下一个状态
+		ContextState.setState(new SpecificStateC());
+	}
+}
+
+//具体状态转换类C
+class SpecificStateC extends State{
+	@Override
+	public void handle(ContextState ContextState) {
+		System.out.println("当前状态：状态C");
+		//转换到下一个状态
 		ContextState.setState(new SpecificStateA());
 	}
 }
@@ -56,7 +68,6 @@ class ContextState{
 	}
 
 	public void setState(State state) {
-		System.out.println("当前状态"+state);
 		this.state = state;
 	}
 

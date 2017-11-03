@@ -28,3 +28,9 @@
 + [排序](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_sort)
 + [面向对象编程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/object_oriented_programming)
 + [设计模式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/design_mode)
+
+----
+### 优秀书籍
++ Think in Java
++ Effective Java
++ 大话设计模式

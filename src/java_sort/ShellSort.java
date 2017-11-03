@@ -1,61 +1,55 @@
+/**
+ * å¸Œå°”æ’åº
+ * æ—¶é—´å¤æ‚åº¦<O(n2),ç©ºé—´å¤æ‚åº¦O(1)
+ */
+
 package java_sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ShellSort {
 	public static void main(String[] args) {
-		final int LENGTH=10;//Êı×é³¤¶È
-		final int RANGE =100;//Êı¾İ·¶Î§
-		int [] intArr = new int [LENGTH];
-		//Êı¾İ³õÊ¼»¯
+		int [] intArr = new int [CommonFinal.LENGTH];
+		//æ•°æ®åˆå§‹åŒ–
 		Random rd = new Random();
-		for(int i=0;i<LENGTH;i++){
-			intArr[i]=rd.nextInt(RANGE);
+		for(int i=0;i<CommonFinal.LENGTH;i++){
+			intArr[i]=rd.nextInt(CommonFinal.RANGE);
 		}
-		//ÅÅĞòÇ°
-		System.out.println("ÅÅĞòÇ°:");
-		for(int i : intArr){
-			System.out.print(i+" ");
-		}
-		System.out.println();
+		//æ’åºå‰
+		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//Ï£¶ûÅÅĞò
+		//å¸Œå°”æ’åº
 		shellSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("Ï£¶ûÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/10.0);
-		//Ï£¶ûÅÅĞòºó
-		System.out.println("Ï£¶ûÅÅĞòºó:");
-		for(int i : intArr){
-			System.out.print(i+" ");
-		}
-		System.out.println();
+		System.out.printf("å¸Œå°”æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
+		//å¸Œå°”æ’åºå
+		System.out.println("å¸Œå°”æ’åºå:"+Arrays.toString(intArr));
 	}
-	//Ï£¶ûÅÅĞòÊµÏÖ·½·¨
+	//å¸Œå°”æ’åºå®ç°æ–¹æ³•
 	static void shellSort(int[] intArr){
 		int i,j,k;
 		int len=intArr.length;
-		double len2 = intArr.length;
-		len2=Math.ceil(len2);
+		int gap=len;//æ¯ä¸ªåˆ†ç»„é—´çš„å¢é‡
 		int tmp;
-		//·Ö×é³¤¶ÈÎª1Ê±ÖÕÖ¹²Ù×÷
-		while(1 != (len=(int)len2)){
-			len2=Math.ceil(len2/2);
-			//¸÷¸ö·Ö×éÊ¹ÓÃ²åÈëÅÅĞò
-			for(k=0;k<len;k++){
-				for(i=k+len;i<intArr.length;i+=len){
+		//åˆ†ç»„é•¿åº¦ä¸º1æ—¶ç»ˆæ­¢æ“ä½œ
+		while(gap>1){
+			//å¢é‡å‡åŠ
+			gap=(int) Math.ceil(gap/2);
+			//å„ä¸ªåˆ†ç»„ä½¿ç”¨æ’å…¥æ’åº
+			for(k=0;k<gap;k++){
+				for(i=k+gap;i<intArr.length;i+=gap){
 					tmp=intArr[i];
-					for(j=i-len;j>=0&&tmp<intArr[j];j-=len){
-						intArr[j+len]=intArr[j];
+					//ç§»åŠ¨
+					for(j=i-gap;j>=k&&tmp<intArr[j];j-=gap){
+						intArr[j+gap]=intArr[j];
 					}
-					intArr[j+len]=tmp;
-					//ÏÔÊ¾Ã¿´Î²Ù×÷µÄ½á¹û
-					System.out.printf("µÚ%dÀà·Ö×éÅÅĞò½á¹û£º%n",len);
-					for(int v : intArr){
-						System.out.print(v+" ");
-					}
-					System.out.println();
+					//æ’å…¥
+					intArr[j+gap]=tmp;
 				}
 			}
+			//æ˜¾ç¤ºæ¯æ¬¡æ“ä½œçš„ç»“æœ
+			System.out.printf("ç¬¬%2dç±»åˆ†ç»„æ’åºç»“æœï¼š%s%n",gap,Arrays.toString(intArr));
 		}
 	}
 }

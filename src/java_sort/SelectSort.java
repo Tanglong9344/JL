@@ -1,56 +1,53 @@
+/**
+ * é€‰æ‹©æ’åº
+ * æ—¶é—´å¤æ‚åº¦O(n2),ç©ºé—´å¤æ‚åº¦O(1)
+ */
+
 package java_sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class SelectSort {
 	public static void main(String[] args) {
-		final int LENGTH=10;//Êı×é³¤¶È
-		final int RANGE =100;//Êı¾İ·¶Î§
-		int [] intArr = new int [LENGTH];
-		//Êı¾İ³õÊ¼»¯
+		int [] intArr = new int [CommonFinal.LENGTH];
+		//æ•°æ®åˆå§‹åŒ–
 		Random rd = new Random();
-		for(int i=0;i<LENGTH;i++){
-			intArr[i]=rd.nextInt(RANGE);
+		for(int i=0;i<CommonFinal.LENGTH;i++){
+			intArr[i]=rd.nextInt(CommonFinal.RANGE);
 		}
-		//ÅÅĞòÇ°
-		System.out.println("ÅÅĞòÇ°:");
-		for(int i : intArr){
-			System.out.print(i+" ");
-		}
-		System.out.println();
+		//æ’åºå‰
+		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//Ñ¡ÔñÅÅĞò
+		//é€‰æ‹©æ’åº
 		selectSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("Ñ¡ÔñÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/10.0);
-		//Ñ¡ÔñÅÅĞòºó
-		System.out.println("Ñ¡ÔñÅÅĞòºó:");
-		for(int i : intArr){
-			System.out.print(i+" ");
-		}
-		System.out.println();
+		System.out.printf("é€‰æ‹©æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
+		//é€‰æ‹©æ’åºå
+		System.out.println("é€‰æ‹©æ’åºå:"+Arrays.toString(intArr));
 	}
-	//Ñ¡ÔñÅÅĞòÊµÏÖ·½·¨
+	//é€‰æ‹©æ’åºå®ç°æ–¹æ³•
 	static void selectSort(int [] intArr){
 		int i,j,swap;
 		int l=intArr.length;
-		int minPos;//¼ÇÂ¼Ä³Ò»ÌË²Ù×÷ÏÂµÄ×îĞ¡ÖµÎ»ÖÃ
-		//½øĞĞn-1ÌË²Ù×÷
+		int minPos;//è®°å½•æŸä¸€è¶Ÿæ“ä½œä¸‹çš„æœ€å°å€¼ä½ç½®
+		//è¿›è¡Œn-1è¶Ÿæ“ä½œ
 		for(i=0;i<l-1;i++){
 			minPos=i;
 			for(j=i+1;j<l;j++){
-				//ÉıĞò
+				//å‡åº
 				if(intArr[j]<intArr[minPos]){
 					minPos=j;
 				}
 			}
-			//ÊÇ·ñĞèÒª½»»»
+			//æ˜¯å¦éœ€è¦äº¤æ¢
 			if(minPos != i){
 				swap=intArr[i];
 				intArr[i]=intArr[minPos];
 				intArr[minPos]=swap;
 			}
+			//æ˜¾ç¤ºæ¯è¶Ÿæ“ä½œçš„ç»“æœ
+			System.out.printf("ç¬¬%2dè¶Ÿæ“ä½œ:%s%n",i+1,Arrays.toString(intArr));
 		}
-		System.out.printf("¹²½øĞĞ%dÌË²Ù×÷%n",i);
 	}
 }

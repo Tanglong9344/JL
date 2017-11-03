@@ -24,6 +24,8 @@ public class MediatorMode {
 		//发送消息
 		colleagueA.send("今天学的是什么？");
 		colleagueB.send("学的是设计模式之中介者模式。");
+		colleagueA.send("奥，你能给我讲讲吗？");
+		colleagueB.send("那现在就开始吧。");
 	}
 }
 
@@ -77,7 +79,7 @@ class SpecificColleagueA extends Colleague{
 
 	//显示信息
 	public void show(String message){
-		System.out.println(this+"收到信息："+message);
+		System.out.println(ObjectSimplify.getObjectId(this)+":\n信息->"+message);
 	}
 }
 
@@ -94,6 +96,6 @@ class SpecificColleagueB extends Colleague{
 
 	//显示信息
 	public void show(String message){
-		System.out.println(this+"收到信息："+message);
+		System.out.println(ObjectSimplify.getObjectId(this)+":\n信息->"+message);
 	}
 }

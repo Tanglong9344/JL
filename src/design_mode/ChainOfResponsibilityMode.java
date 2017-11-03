@@ -57,7 +57,7 @@ class SpecificHandlerB extends Handler{
 	@Override
 	public void handlerRequest(int request) {
 		if(request>=10 && request<20){
-			System.out.println(this+"处理请求。"+request);
+			System.out.println(ObjectSimplify.getObjectId(this)+"处理请求。"+request);
 		}else if(successor!=null){
 			successor.handlerRequest(request);
 		}
@@ -69,7 +69,7 @@ class SpecificHandlerC extends Handler{
 	@Override
 	public void handlerRequest(int request) {
 		if(request>=20 && request<30){
-			System.out.println(this+"处理请求。"+request);
+			System.out.println(ObjectSimplify.getObjectId(this)+"处理请求。"+request);
 		}else if(successor!=null){
 			successor.handlerRequest(request);
 		}

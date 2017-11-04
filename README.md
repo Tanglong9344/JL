@@ -1,5 +1,4 @@
-# JavaScoreBasic
-![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
+# JavaScoreBasic ![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
 ---
 ### 目录
 + [java program in CMD](https://github.com/Tanglong9344/JavaBasic/blob/master/cmd.md)

@@ -11,9 +11,9 @@ public class HelloJava {
 }
 ```
 ---
-+ Compile:缂栬瘧HelloJava.java鏂囦欢 javac HelloJava.java
-+ Interpret:瑙ｉ噴HelloJava.class鏂囦欢 java HelloJava
-+ View code of HelloJava.class:鏌ョ湅HelloJava.class鍐呭 javap -verbose HelloJava.class
++ Compile:编译HelloJava.java文件 javac HelloJava.java
++ Interpret:解释HelloJava.class文件 java HelloJava
++ View code of HelloJava.class:查看HelloJava.class内容 javap -verbose HelloJava.class
 ---
 ![HelloJava.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/HelloJava.png)
 ```
@@ -82,21 +82,21 @@ Constant pool:
 SourceFile: "HelloJava.java"
 ```
 ---
-+ Compress:灏咹ello.java鍘嬬缉涓簃yjar.jar
-	+ jar cf myjar.jar Hello.jar(涓嶆樉绀哄鐞嗕俊鎭�)
-	+ jar cvf myjar.jar Hello.jar(鏄剧ず鎵撳寘璇︾粏淇℃伅)
-	+ jar tf myjar.jar Hello.jar(鏄剧ずjar鏂囦欢鐩綍鍜屾枃浠跺垪琛ㄤ俊鎭�)
-	+ jar tvf myjar.jar Hello.jar(鏄剧ずjar鏂囦欢鐩綍鍜屾枃浠跺垪琛ㄤ俊鎭拰鏂囦欢澶у皬锛屽垱寤烘椂闂磋缁嗕俊鎭�)
++ Compress:将Hello.java压缩为myjar.jar
+	+ jar cf myjar.jar Hello.jar(不显示处理信息)
+	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
+	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
+	+ jar tvf myjar.jar Hello.jar(显示jar文件目录和文件列表信息和文件大小，创建时间详细信息)
 ---
 ![jar.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/jar.png)
 ---
-+ Decompression:瑙ｅ帇myjar.jar鏂囦欢
-	+ jar xf myjar.jar(涓嶆樉绀鸿В鍘嬩俊鎭�)
-	+ jar xf myjar.jar(鏄剧ず瑙ｅ帇璇︾粏淇℃伅)
++ Decompression:解压myjar.jar文件
+	+ jar xf myjar.jar(不显示解压信息)
+	+ jar xf myjar.jar(显示解压详细信息)
 ---
 ![decompression.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/decompression.png)
 ---
-+ 甯﹀弬鎵ц
++ 带参执行
 ---
 ```
 //source file

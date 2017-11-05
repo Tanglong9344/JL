@@ -5,7 +5,7 @@
 
 package bit_operation;
 
-public class BitMove {
+public class BitMove{
 	public static void main(String[] args) {
 		//³Ë·¨
 		System.out.println("9*8  = " + 9*8);

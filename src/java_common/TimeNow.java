@@ -11,7 +11,6 @@ import java.util.Date;
 public class TimeNow {
 	public static String getTimeNow(){
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date date = new Date();
-		return sdf.format(date);
+		return sdf.format(new Date());
 	}
 }

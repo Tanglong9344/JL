@@ -5,14 +5,13 @@ import java.util.LinkedList;
 /**
  * 自定义线程池
  */
-
-public class ThreadPoolUserDefined {
+public class ThreadPoolSelfDefined {
 	// 线程池大小
 	int threadPoolSize;
 	// 任务容器
 	LinkedList<Runnable> tasks = new LinkedList<Runnable>();
-	// 试图消费任务的线程
-	public ThreadPoolUserDefined() {
+	//试图消费任务的线程
+	public ThreadPoolSelfDefined() {
 		threadPoolSize = 10;
 		// 启动10个任务消费者线程
 		synchronized (tasks) {
@@ -21,7 +20,8 @@ public class ThreadPoolUserDefined {
 			}
 		}
 	}
-	//生产者
+
+	//生产者线程
 	public void add(Runnable r) {
 		synchronized (tasks) {
 			tasks.add(r);
@@ -29,6 +29,7 @@ public class ThreadPoolUserDefined {
 			tasks.notifyAll();
 		}
 	}
+
 	//消费者线程
 	class TaskConsumeThread extends Thread {
 		public TaskConsumeThread(String name) {
@@ -51,9 +52,10 @@ public class ThreadPoolUserDefined {
 					// 允许添加任务的线程可以继续添加任务
 					tasks.notifyAll();
 				}
-				System.out.println(this.getName() + " 获取到任务，并执行");
+				System.out.print(this.getName() + " 获取到任务，并执行：");
 				task.run();
 			}
 		}
 	}
+
 }

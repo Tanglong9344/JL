@@ -3,7 +3,6 @@ package java_core_basic;
 /**
  * <b>System.getProperty 方法</b><br/>
  */
-
 public class SystemGetPropertyTest {
 	public static void main(String args[]) {
 		// Java 运行时环境版本

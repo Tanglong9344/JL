@@ -7,7 +7,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class SetList {
-	public static void main(String[] args) { // java程序主入口处
+	public static void main(String[] args) {
 		hashSetResult();
 		treeSetResult();
 		linkedHashSetResult();
@@ -41,7 +41,7 @@ public class SetList {
 		// 调用方法初始化元素
 		addSetElement(treeSet);
 		System.out.println("TreeSet存储的数据元素：");
-		// 调用方法显示元素
+		//调用方法显示元素
 		showElement(treeSet);
 	}
 

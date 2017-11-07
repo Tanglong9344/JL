@@ -14,16 +14,23 @@ public class ArrayConvertList {
 		String[] strs = {"AAA","BBB","CCC"};
 		//数组转为集合
 		List<String> list = Arrays.asList(strs);
-		list.forEach(s->System.out.print(s+" "));
+		//将数组转为集合后使用forEach方法
+		Arrays.asList(strs).forEach(s->System.out.println(s));
+		//注意：Arrays.asList体现的是适配器模式，只是转换接口，后台的数据仍是数组
+		//list.add("DDD");//报错：java.lang.UnsupportedOperationException
+		//数组数值改变对应的集合数值也会改变
+		strs[0]="aaa";
+		list.forEach(s->System.out.println(s));
 
 		List<String> lists = new ArrayList<String>();
 		lists.add("XXX");
 		lists.add("YYY");
 		lists.add("ZZZ");
-		//建立数组
+		//必须先根据集合大小新建数组，不能使用无参转换方法lists.toArray()
 		String[] str = new String[lists.size()];
 		//集合转数组
 		lists.toArray(str);
+		lists.remove(0);//集合操作不会影响数组
 		System.out.println("\n"+Arrays.toString(str));
 	}
 }

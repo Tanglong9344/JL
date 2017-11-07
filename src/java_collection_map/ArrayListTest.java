@@ -8,13 +8,11 @@ public class ArrayListTest {
 		ArrayList<String> heros = new ArrayList<String>();
 		long i = 10;
 		while ((i--) > 0) {
-			// 添加元素
 			if (i > 5) {
-				heros.add("盖伦");
+				heros.add("盖伦");// 添加元素
 			}
-			// 移除元素
 			else {
-				heros.remove((i + 5));
+				heros.remove((i + 5));// 移除元素
 			}
 			System.err.println("数组大小:" + heros.size());
 		}
@@ -24,13 +22,11 @@ public class ArrayListTest {
 
 		List<Object> hero = new ArrayList<>();
 		while (i++ < 10) {
-			// 添加元素
 			if (i < 5) {
-				hero.add("盖伦");
+				hero.add("盖伦");// 添加元素
 			}
-			// 移除元素
 			else {
-				hero.add((new Hero("hero" + i, 12)));
+				hero.add((new Hero("hero" + i, 12)));// 移除元素
 			}
 			System.err.println("数组大小:" + hero.size());
 			System.out.println(hero + "\n");

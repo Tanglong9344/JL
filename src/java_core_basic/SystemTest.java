@@ -3,7 +3,7 @@ package java_core_basic;
 public class SystemTest {
 	public static void main(String[] args) {
 		//arraycopy()
-		char[] charr2 = new char[] { '四', '大', '名', '猪' };
+		char[] charr2 = new char[] {'四', '大', '名', '猪'};
 		for (int i = 0; i < charr2.length; i++) {
 			System.out.printf("charr2[%d]:%c%n", i, charr2[i]);
 			if (i == charr2.length - 1) {

@@ -116,3 +116,20 @@ public class Param {
 ---
 ![javadoc.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/javadoc.png)
 ---
+### 源文件text.txt
+```
+//text.txt
+我是唐龙
+```
++ native2ascii text.txt test.txt 将text.txt的内容转为本地编码并存储到test.txt文件中
+---
+```
+//test.txt
+\u6211\u662f\u5510\u9f99
+```
+---
++ native2ascii -encoding gbk text.txt test.txt 将text.txt的内容转换为gbk编码并存储到test.txt文件中(此时本地编码是gbk)
+```
+//test.txt
+\u6211\u662f\u5510\u9f99
+```

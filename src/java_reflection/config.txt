@@ -1,0 +1,2 @@
+class=java_reflection.Hero
+method=toString

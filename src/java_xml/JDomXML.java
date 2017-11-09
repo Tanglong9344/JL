@@ -15,7 +15,7 @@ import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
 
 public class JDomXML {
-	private String fileName = "XML/poem.xml";
+	private String fileName = "src/java_xml/poem.xml";
 	Document document = null;
 
 	public JDomXML(){

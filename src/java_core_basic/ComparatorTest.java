@@ -4,31 +4,55 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class ComparatorTest {
-	static final int N = 10;
 	public static void main(String[] args) {
-		List<String> strs = new ArrayList<String>(N);
-		//初始化数组
-		for(int i=0;i<N;i++){
-			strs.add(String.valueOf(Math.floor(Math.random()*100)));
+		Random r =new Random();
+		List<Hero> heros = new ArrayList<Hero>();
+		//通过随机值实例化hero的hp和damage
+		for (int i=0;i<10;i++) {
+			heros.add(new Hero("hero-"+ i, r.nextInt(100), r.nextInt(100)));
 		}
-		//排序前
-		System.out.println("排序前:");
-		for(String str : strs){
-			System.out.println(str);
-		}
-		//使用比较器排序
-		Collections.sort(strs,new Comparator<String>(){
+		System.out.println("初始化后的集合:\n"+heros);
+		//直接调用sort会出现编译错误，因为Hero有各种属性
+		//Collections.sort(heros);
+		//引入Comparator，指定比较的算法
+		Comparator<Hero> c = new Comparator<Hero>() {
 			@Override
-			public int compare(String o1, String o2) {
-				return o1.compareTo(o2);
+			public int compare(Hero h1,Hero h2) {
+				//按照hp从低到高进行排序
+				if(h1.hp>=h2.hp) {
+					return 1;
+				} else {
+					return -1;
+				}
 			}
-		});
-		//排序后
-		System.out.println("排序后:");
-		for(String str : strs){
-			System.out.println(str);
-		}
+		};
+		Collections.sort(heros,c);
+		System.out.println("按照血量低高排序后的集合：\n"+heros);
+	}
+}
+
+/**
+ * hero 类
+ * 拥有姓名，血量，伤害度三个属性
+ * @author 唐龙
+ */
+class Hero {
+	public String name;
+	public float hp;
+	public int damage;
+
+	public Hero(String name, int hp, int damage) {
+		this.name = name;
+		this.hp = hp;
+		this.damage = damage;
+	}
+
+	//重写toString方法
+	@Override
+	public String toString(){
+		return "name="+name+" hp="+hp+" damage="+damage+"\n";
 	}
 }

@@ -1,2 +1,0 @@
-class=java_reflection.Service1
-method=doService1

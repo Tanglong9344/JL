@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class SaxXML{
-	private static String fileName = "XML/poem.xml";
+	private static String fileName = "src/java_xml/poem.xml";
 	private static SAXParser parser = null;
 	private static SaxParseHandle handle= null;
 

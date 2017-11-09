@@ -14,7 +14,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 public class Dom4jXML {
-	private String fileName = "XML/poem.xml";
+	private String fileName = "src/java_xml/poem.xml";
 	private Document document = null;
 
 	/**

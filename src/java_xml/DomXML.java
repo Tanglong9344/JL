@@ -28,7 +28,7 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
 public class DomXML {
-	private String fileName = "XML/poem.xml";
+	private String fileName = "src/java_xml/poem.xml";
 	private Document doc = null;
 
 	/**

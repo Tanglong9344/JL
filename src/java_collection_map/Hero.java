@@ -15,6 +15,7 @@ public class Hero {
 		this.name = name;
 	}
 	// ÷ÿ–¥toString∑Ω∑®
+	@Override
 	public String toString() {
 		return name;
 	}

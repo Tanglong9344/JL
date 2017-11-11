@@ -11,9 +11,7 @@ public class ConnectionCloseTest {
 		Statement s = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			c = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?"
-					+ "characterEncoding=UTF-8"
-					, "root","12345678");
+			c = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test?"+ "characterEncoding=UTF-8", "root","12345678");
 			s = c.createStatement();
 			//插入数据
 			String sql = "insert into hero values(null," + "'阿拉丁'" + "," + 313.0f + "," + 50 + ")";

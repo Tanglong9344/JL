@@ -133,3 +133,6 @@ public class Param {
 //test.txt
 \u6211\u662f\u5510\u9f99
 ```
++ JDK 打包命令：jar cvf 目标文件名.jar 需要打包的文件
+  例如：将tree.txt 打包为tree.jar的命令，jar cvf tree.jar tree.txt
+---

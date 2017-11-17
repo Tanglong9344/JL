@@ -31,6 +31,3 @@
 + [设计模式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/design_mode)
 
 ----
-### 优秀书籍
-+ 大话设计模式
-+ 编程规范:阿里巴巴Java开发手册

@@ -1,10 +1,16 @@
 package java_generic;
 
-public class MoreParameter<T,V> {
+/**
+ * 泛型类
+ * @author 唐龙
+ * @param <T>
+ * @param <V>
+ */
+public class GenericClass<T,V> {
 	T t;
 	V v;
 	//两个类型参数
-	MoreParameter(T t1, V v1) {
+	GenericClass(T t1, V v1) {
 		t = t1;
 		v = v1;
 	}
@@ -25,7 +31,7 @@ public class MoreParameter<T,V> {
 	//测试
 	public static void main(String args[]) {
 		// 指定类型参数的实际类型
-		MoreParameter<Integer, Double> tv= new MoreParameter<Integer, Double>(100, 12.56);
+		GenericClass<Integer,Double> tv= new GenericClass<Integer,Double>(100,12.56);
 		tv.printTypes();
 		System.out.println("T变量中的值为:" + tv.getT());
 		System.out.println("V变量中的值为:" + tv.getV());

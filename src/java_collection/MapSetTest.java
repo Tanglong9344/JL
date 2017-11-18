@@ -3,7 +3,9 @@ package java_collection;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.function.BiConsumer;
 
 public class MapSetTest {
 	static final int N = 5;
@@ -13,14 +15,25 @@ public class MapSetTest {
 		for(int i=1;i<=N;i++) {
 			hashMap.put("0"+i,"数值"+i);
 		}
-		System.out.println(hashMap);
+		System.out.println("hashMap:"+hashMap);
+		//使用Map的foreach方法遍历
+		hashMap.forEach(new BiConsumer<String,String>() {
+			@Override
+			public void accept(String k, String v) {
+				System.out.print(k + ":" + v + " ");
+			}
+		});
+		System.out.println();
 
-		//get keySet
-		Set<String> set = hashMap.keySet();
-		System.out.println(set);
+		//get keySet with keySet
+		Set<String> keyset = hashMap.keySet();
+		System.out.println("keyset:"+keyset);
+		//get entry with entrySet
+		Set<Entry<String, String>> entryset = hashMap.entrySet();
+		System.out.println("entrySet:"+entryset);
 		//contains()
-		System.out.println("set.contains(\"01\"):"+set.contains("01"));
-		System.out.println("set.contains(\"10\"):"+set.contains("10"));
+		System.out.println("set.contains(\"01\"):"+keyset.contains("01"));
+		System.out.println("set.contains(\"10\"):"+keyset.contains("10"));
 
 		//get values
 		Collection<String> values = hashMap.values();

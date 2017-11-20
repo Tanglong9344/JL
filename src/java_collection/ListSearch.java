@@ -2,31 +2,48 @@ package java_collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 比较ArrayList和LinkedList的平均查找时间
+ * @author 唐龙
+ */
 public class ListSearch {
 	public static void main(String[] args) {
-		List<Hero> heros = new ArrayList<Hero>();
+		System.out.println("-------ArrayList Search------");
+		search("ArrayList");
+		System.out.println("-------LinkedList Search------");
+		search("LinkedList");
+	}
 
-		for (int j = 0; j < 2000000; j++) {
-			Hero h = new Hero("Hero" + j);
-			heros.add(h);
+	//测试方法
+	public static void search(String choose){
+		final int M = 1000_000;//元素个数
+		final int N = 100;//查找次数
+		//创建集合并初始化
+		List<String> strs = null;
+		if("ArrayList".equals(choose)){
+			strs = new ArrayList<String>();
+		}else if("LinkedList".equals(choose)){
+			strs = new LinkedList<String>();
 		}
-		// 进行10次查找，观察大体的平均值
-		for (int i = 0; i < 10; i++) {
-			// 打乱heros中元素的顺序
-			Collections.shuffle(heros);
+		for (int j = 0; j < M; j++) {
+			strs.add("str-"+j);
+		}
+		// 进行N次查找并统计查找时间平均值
+		int avg = 0;
+		for (int i = 0; i < N; i++) {
+			// 打乱strs中元素的顺序
+			Collections.shuffle(strs);
 			long start = System.currentTimeMillis();
-			String target = "Hero1000000";
-			for (Hero hero : heros) {
-				if (hero.name.equals(target)) {
-					System.out.println("找到了 hero!" );
-					break;
-				}
+			String target = "str-10000";
+			for (String str : strs) {
+				if (target.equals(str)) {break;}
 			}
 			long end = System.currentTimeMillis();
-			long elapsed = end - start;
-			System.out.println("第"+(i+1)+"次,一共花了：" + elapsed + " 毫秒");
-	}
+			avg += end - start;
+		}
+		System.out.printf("对%d个元素查找%d次,平均花费%d毫秒%n",M,N,avg);
 	}
 }

@@ -1,10 +1,9 @@
+package bit_operation;
+
 /**
  * 位移与乘除
  * 位移的效率要比直接进行乘除运算的效率高
  */
-
-package bit_operation;
-
 public class BitMove{
 	public static void main(String[] args) {
 		//乘法

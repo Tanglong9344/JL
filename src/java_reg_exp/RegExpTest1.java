@@ -3,6 +3,10 @@ package java_reg_exp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 正则表达式
+ * @author 唐龙
+ */
 public class RegExpTest1 {
 	private static final String REGEX = "\\bcat\\b";//\b 匹配一个字边界
 	private static final String INPUT = "cat cat cat cattie cat";

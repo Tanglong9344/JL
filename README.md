@@ -16,6 +16,7 @@
 + [日志](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
 + [JDBC](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_jdbc)
 + [XML文件处理](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_xml)
++ [Java 连接 Redis](https://github.com/Tanglong9344/JL/tree/master/src/java_redis)
 + [注解](https://github.com/Tanglong9344/JavaBasic/tree/master/src/hibernate_annotation_test)
 + [循环优化](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_optimization)
 + [位运算](https://github.com/Tanglong9344/JavaBasic/tree/master/src/bit_operation)

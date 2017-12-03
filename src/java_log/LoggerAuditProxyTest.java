@@ -13,7 +13,6 @@ public class LoggerAuditProxyTest {
 		//通过代理类实现日志和具体业务分离
 		new AuditProxy(new AuditInterfaceImplA()).doAudit("唐龙");
 		new AuditProxy(new AuditInterfaceImplB()).doAudit("唐龙");
-
 	}
 }
 

@@ -9,6 +9,7 @@ public class LogTest {
 		LogTest lt = new LogTest();
 		lt.loggerTest("Logger");
 	}
+
 	private Logger logger = Logger.getLogger(this.getClass().getName());
 
 	public void loggerTest(String name){

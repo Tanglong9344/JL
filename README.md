@@ -22,7 +22,7 @@
 + [排序](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_sort)
 + [面向对象编程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/object_oriented_programming)
 # 进阶
-+ [JVM](https://github.com/Tanglong9344/JL/tree/master)
++ [JVM](https://github.com/Tanglong9344/JL/tree/master/jvm.md)
 + [日志](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
 + [反射](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reflection)
 + [泛型](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_generic)

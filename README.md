@@ -1,4 +1,4 @@
-# JavaScoreBasic ![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
+# Java Learning ![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
 ---
 ### 基础
 + [java program in CMD](https://github.com/Tanglong9344/JavaBasic/blob/master/cmd.md)
@@ -9,10 +9,6 @@
 + [正则表达式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reg_exp)
 + [Lamda 表达式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_lamda_expression)
 + [网络编程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_web_programming)
-+ [反射](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reflection)
-+ [泛型](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_generic)
-+ [Java序列化](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_serializable)
-+ [日志](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
 + [注解](https://github.com/Tanglong9344/JavaBasic/tree/master/src/hibernate_annotation_test)
 + [循环优化](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_optimization)
 + [位运算](https://github.com/Tanglong9344/JavaBasic/tree/master/src/bit_operation)
@@ -27,9 +23,13 @@
 + [面向对象编程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/object_oriented_programming)
 # 进阶
 + [JVM](https://github.com/Tanglong9344/JL/tree/master)
++ [日志](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
++ [反射](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reflection)
++ [泛型](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_generic)
++ [Java序列化](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_serializable)
 + [Java Native](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_native)
 + [设计模式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/design_mode)
-# 总结
+# 专题
 + [JDBC](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_jdbc)
 + [Excel 读写](https://github.com/Tanglong9344/JL/tree/master/src/java_excel)
 + [XML文件处理](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_xml)

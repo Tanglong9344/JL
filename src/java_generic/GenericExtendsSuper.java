@@ -9,6 +9,7 @@ import java.util.List;
  * @author 唐龙
  */
 public class GenericExtendsSuper{
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		//上界类型通配符（?extends）
 		//eList存储Parent及其子类对象

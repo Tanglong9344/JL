@@ -8,6 +8,7 @@ import java.util.List;
  * @author 唐龙
  */
 public class GenericWildCard {
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		//?泛型通配符，表示任意泛型
 		//?的缺陷1： ?代表任意泛型，即你不知道这个容器里面是什么类型

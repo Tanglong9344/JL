@@ -26,13 +26,13 @@ public class HashMapAndHashTable {
 		mapReverse(hashMap);
 		System.out.println("·­×ªºó:"+hashMap);
 	}
-	
+
 	public static void mapReverse(Map<String, String> map){
 		Set<String> keys = map.keySet();
 		Collection<String> values = map.values();
-		
+
 		System.out.println("½¡:"+keys);
 		System.out.println("Öµ:"+values);
-		
+
 	}
 }

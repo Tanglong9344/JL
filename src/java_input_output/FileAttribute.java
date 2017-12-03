@@ -3,9 +3,13 @@ package java_input_output;
 import java.io.File;
 import java.text.SimpleDateFormat;
 
-public class FileTest1 {
+/**
+ * File Attributes
+ * @author 唐龙
+ */
+public class FileAttribute {
 	public static void main(String[] args) {
-		File file = new File("F:\\file.txt");// 根据指定的路径创建一个File对象
+		File file = new File(CommonFileName.fileName);// 根据指定的路径创建一个File对象
 		System.out.println("文件名为：" + file.getName());// 获取该File对象的名字
 		System.out.println("绝对路径为：" + file.getAbsolutePath());// 获取该File对象的绝对路径
 		System.out.println("路径为：" + file.getPath());// 获取该File对象的相对路径

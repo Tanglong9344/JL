@@ -7,6 +7,7 @@
 + [多线程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_thread)
 + [Java I/O](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_input_output)
 + [正则表达式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reg_exp)
++ [序列化](https://github.com/Tanglong9344/JL/tree/master/src/java_serializable)
 + [Lamda 表达式](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_lamda_expression)
 + [网络编程](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_web_programming)
 + [注解](https://github.com/Tanglong9344/JavaBasic/tree/master/src/hibernate_annotation_test)

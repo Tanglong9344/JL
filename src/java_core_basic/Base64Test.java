@@ -2,6 +2,10 @@ package java_core_basic;
 
 import java.util.Base64;
 
+/**
+ * Java ±àÂëºÍ½âÂë
+ * @author ÌÆÁú
+ */
 public class Base64Test {
 	public static void main(String[] args) {
 		String base64String="Base64String";

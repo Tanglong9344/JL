@@ -4,6 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
+/**
+ * try...catch
+ * “Ï≥£¥¶¿Ì
+ * @author Ã∆¡˙
+ */
 public class TryAndCatchTest {
 	public static void main(String[] args) {
 		method1();

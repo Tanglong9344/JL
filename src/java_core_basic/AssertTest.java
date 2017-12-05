@@ -1,10 +1,9 @@
+package java_core_basic;
+
 /**
  * eclipse 默认关闭断言，使用前需要先开启断言
  * @http://jingyan.baidu.com/article/6f2f55a156b2d0b5b93e6cc2.html
  */
-
-package java_core_basic;
-
 public class AssertTest {
 	public static void main(String[] args) {
 		final int N = 10;

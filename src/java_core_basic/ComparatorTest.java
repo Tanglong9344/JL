@@ -6,6 +6,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * 通过Comparator类完成对象之间的比较
+ * @author 唐龙
+ */
 public class ComparatorTest {
 	public static void main(String[] args) {
 		Random r =new Random();

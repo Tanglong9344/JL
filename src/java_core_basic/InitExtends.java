@@ -1,9 +1,10 @@
 package java_core_basic;
 
 /**
- * 继承初始化执行顺序
- * 标号代表执行次序
- * 按照先静态再继承的顺序初始化
+ * 初始化执行顺序
+ *  标号代表执行次序
+ *  按照先静态再继承的顺序初始化
+ * @author 唐龙
  */
 public class InitExtends {
 	public static void main(String[] args) {
@@ -33,8 +34,6 @@ class Child extends Father{
 	Child(){
 		System.out.println("类Child的构造方法。");//9
 	}
-
-
 }
 
 /**
@@ -56,7 +55,6 @@ class Father{
 		this.age = age;
 		System.out.println("类Father的构造方法Father(int)。");//6
 	}
-
 
 	public int getAge() {
 		return age;

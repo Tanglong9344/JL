@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * 常用System 方法
+ * @author 唐龙
+ */
 public class SystemTest {
 	public static void main(String[] args) {
 		//arraycopy()

@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * 实现Comparable接口完成对象之间的比较
+ * @author 唐龙
+ */
 public class ComparableTest {
 	public static void main(String[] args) {
 		Random r = new Random();

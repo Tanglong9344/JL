@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * 运算符优先级
+ * @author 唐龙
+ */
 public class OperatorPriority {
 	public static void main(String[] args) {
 		int a = 0;

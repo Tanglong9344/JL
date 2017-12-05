@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * Java ²¼¶ûÀàĞÍ
+ * @author ÌÆÁú
+ */
 public class BooleanTest {
 	public static void main(String[] args) {
 		Boolean b1 = true;

@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * Number ºÍ String
+ * @author ÌÆÁú
+ */
 public class NumberAndString {
 	public static void main(String[] args) {
 		int i = 5;

@@ -1,6 +1,10 @@
 package java_core_basic;
 
-public class DataTypeTest {
+/**
+ * 8种基本数据类型
+ * @author 唐龙
+ */
+public class BasicDataTypeTest {
 	public static void main(String[] args) {
 		//正无穷大和负无穷大
 		System.out.println("POSITIVE_INFINITY:"+Double.POSITIVE_INFINITY);

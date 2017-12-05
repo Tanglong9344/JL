@@ -2,6 +2,10 @@ package java_core_basic;
 
 import java.util.Arrays;
 
+/**
+ * String¿‡
+ * @author Ã∆¡˙
+ */
 public class StringTest {
 	public static void main(String[] args) {
 		String str1 = "the light";
@@ -74,5 +78,8 @@ public class StringTest {
 		//format
 		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\", 'c',true,32,Math.PI):\n"
 				+ String.format("ch=%c,isTrue=%b,num=%d,double=%f.", 'c',true,32,Math.PI));
+
+		// hashcode
+		System.out.println("hashcode:"+str1.hashCode());
 	}
 }

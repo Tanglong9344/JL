@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * Java Char
+ * @author ÌÆÁú
+ */
 public class CharTest {
 	public static void main(String[] args) {
 		char c = 'a';// Ó¢ÎÄ×Ö·û£¬aa·Ç·¨

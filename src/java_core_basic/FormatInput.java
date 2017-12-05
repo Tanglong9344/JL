@@ -2,6 +2,10 @@ package java_core_basic;
 
 import java.util.Locale;
 
+/**
+ * 格式化输出
+ * @author 唐龙
+ */
 public class FormatInput {
 	public static void main(String[] args) {
 		String name = "盖伦";

@@ -3,6 +3,10 @@ package java_core_basic;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+/**
+ * Java BigNumber
+ * @author ÌÆÁú
+ */
 public class BigNumber {
 	static final int N = 10;
 	public static void main(String[] args) {

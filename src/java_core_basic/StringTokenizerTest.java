@@ -1,12 +1,14 @@
-/**
- * 和String.split()方法相比
- * StringTokenizer在截取字符串中的效率最高。
- */
-
 package java_core_basic;
 
 import java.util.StringTokenizer;
 
+/**
+ * StringTokenizer类
+ *
+ * 与String.split()方法相比
+ * StringTokenizer在截取字符串中的效率最高。
+ * @author 唐龙
+ */
 public class StringTokenizerTest {
 	public static void main(String[] args) {
 		String str="qq,qe e,w dh,bj,d, k,ck,h iw,kz, xc n";

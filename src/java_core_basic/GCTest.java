@@ -1,9 +1,9 @@
-/**
- * Java 垃圾回收机制
- */
-
 package java_core_basic;
 
+/**
+ * Java 垃圾回收机制
+ * @author 唐龙
+ */
 public class GCTest {
 	static final int N = 5;
 	public static void main(String[] args) throws InterruptedException {

@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * 常用方法
+ * @author 唐龙
+ */
 public class CommonUsedMethod {
 	public static void main(String[] args) {
 		char ch1 = '3';

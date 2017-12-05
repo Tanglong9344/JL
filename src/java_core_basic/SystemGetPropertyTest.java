@@ -2,6 +2,7 @@ package java_core_basic;
 
 /**
  * <b>System.getProperty ·½·¨</b><br/>
+ * @author ÌÆÁú
  */
 public class SystemGetPropertyTest {
 	public static void main(String args[]) {

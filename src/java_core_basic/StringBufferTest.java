@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * StringBufferÀà
+ * @author ÌÆÁú
+ */
 public class StringBufferTest {
 	public static void main(String[] args) {
 		StringBuffer strBuffer = new StringBuffer();

@@ -2,6 +2,10 @@ package java_core_basic;
 
 import java.util.Random;
 
+/**
+ * Java 随机数
+ * @author 唐龙
+ */
 public class RandomTest {
 	public static void main(String[] args) {
 		//随机函数Math.Random()

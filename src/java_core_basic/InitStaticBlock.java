@@ -3,8 +3,8 @@ package java_core_basic;
 /**
  * 静态初始化执行顺序
  * 标号代表执行次序
+ * @author 唐龙
  */
-
 public class InitStaticBlock {
 	public static void main(String[] args) {
 		System.out.println("main()");//10

@@ -1,9 +1,12 @@
 package java_core_basic;
 
+/**
+ * Java Clone
+ * @author 唐龙
+ */
 public class ObjectClone {
 	public static void main(String[] args) throws CloneNotSupportedException{
 		A a1 = new A(1);
-
 		//自比
 		a1.compare(a1);
 		//clone()
@@ -64,15 +67,3 @@ class A implements Cloneable{
 		System.out.println("------------------------------");
 	}
 }
-
-/* 测试结果
-	15db9742和15db9742引用同一对象。
-	15db9742和15db9742中内容相同。
-	------------------------------
-	15db9742和6d06d69c引用不同对象。
-	15db9742和6d06d69c中内容相同。
-	------------------------------
-	15db9742和7852e922引用不同对象。
-	15db9742和7852e922中内容不同。
-	------------------------------
- */

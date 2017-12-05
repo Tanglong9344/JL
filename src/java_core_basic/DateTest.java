@@ -5,6 +5,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * Date类
+ * @author 唐龙
+ */
 public class DateTest {
 	public static void main(String[] args) {
 		//时间格式化

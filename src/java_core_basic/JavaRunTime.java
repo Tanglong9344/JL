@@ -1,9 +1,9 @@
-﻿/**
+﻿package java_core_basic;
+
+/**
  * 获取当前运行环境并执行cmd命令
+ * @author 唐龙
  */
-
-package java_core_basic;
-
 public class JavaRunTime {
 	public static void main(String[] args) {
 		Process p=null;//创建进程

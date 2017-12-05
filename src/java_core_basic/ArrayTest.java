@@ -1,3 +1,7 @@
+package java_core_basic;
+
+import java.util.Arrays;
+
 /**
  * Java 数组
  * 数组一旦创建，
@@ -6,12 +10,8 @@
  *
  * 而集合对象的容量可以根据需要自动扩展，
  * 集合只能容纳对象而不能容纳基本数据类型数据。
+ * @author 唐龙
  */
-
-package java_core_basic;
-
-import java.util.Arrays;
-
 public class ArrayTest {
 	static final int N =10;
 	public static void main(String[] args) {

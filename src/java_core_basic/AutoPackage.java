@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * 自动装箱和拆箱
+ * @author 唐龙
+ */
 public class AutoPackage {
 	public static void main(String[] args) {
 		//自动装箱

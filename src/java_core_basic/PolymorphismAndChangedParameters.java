@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * Java ¶àÌ¬
+ * @author ÌÆÁú
+ */
 public class PolymorphismAndChangedParameters {
 	public static void main(String[] args) {
 		PolymorphismAndChangedParameters p = new PolymorphismAndChangedParameters();

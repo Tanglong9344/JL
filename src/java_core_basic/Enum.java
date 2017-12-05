@@ -2,6 +2,10 @@ package java_core_basic;
 
 import java.util.Arrays;
 
+/**
+ * JavaÃ¶¾Ù
+ * @author ÌÆÁú
+ */
 public class Enum {
 	public static void main(String[] args) {
 		Season[] seasons = Season.values();

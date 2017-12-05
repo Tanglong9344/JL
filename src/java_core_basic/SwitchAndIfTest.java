@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * if 和 switch 语句
+ * @author 唐龙
+ */
 public class SwitchAndIfTest {
 	public static void main(String[] args) {
 		// 如果使用if else

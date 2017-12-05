@@ -4,6 +4,10 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+/**
+ * GregorianCalendar¿‡
+ * @author Ã∆¡˙
+ */
 public class GregorianCalendarTest {
 	public static void main(String[] args) {
 		DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL);

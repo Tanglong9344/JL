@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * 对象之间的转换
+ * @author 唐龙
+ */
 public class ObjectChangeTest {
 	public static void main(String[] args) {
 		//字符串到整数的转换

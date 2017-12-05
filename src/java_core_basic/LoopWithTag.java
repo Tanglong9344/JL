@@ -1,5 +1,9 @@
 package java_core_basic;
 
+/**
+ * Java±êÇ©
+ * @author ÌÆÁú
+ */
 public class LoopWithTag {
 	public static void main(String[] args) throws InterruptedException {
 		int i=0;

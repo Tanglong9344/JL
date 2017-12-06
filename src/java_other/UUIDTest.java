@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Java UUID
+ * @author ÌÆÁú
+ */
 public class UUIDTest {
 	public static void main(String[] args) {
 		final int N = 10;

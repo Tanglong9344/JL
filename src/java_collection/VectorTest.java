@@ -2,6 +2,10 @@ package java_collection;
 
 import java.util.Vector;
 
+/**
+ * Vector
+ * @author 唐龙
+ */
 public class VectorTest {
 	public static void main(String[] args) {
 		// 创建一个Vector对象,容量初始化为5

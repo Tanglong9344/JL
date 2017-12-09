@@ -1,13 +1,13 @@
-/**
- * ArrayList 和 LinkedList 在最后插入数据对比
- */
-
 package java_collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * ArrayList 和  LinkedList在最后插入数据对比
+ * @author 唐龙
+ */
 public class ArrayListInsertToLast {
 	public static void main(String[] args) {
 		List<Integer> intList;
@@ -17,9 +17,11 @@ public class ArrayListInsertToLast {
 
 		intList = new LinkedList<>();
 		//LinkedList测试，易于插入数据
-		insertFirst(intList, "LinkedList"); 
-		}
-		private static void insertFirst(List<Integer> intList, String type) {
+		insertFirst(intList, "LinkedList");
+	}
+
+	// 测试方法
+	private static void insertFirst(List<Integer> intList, String type) {
 		int total = 100 * 1000;
 		final int number = 5;
 		long start = System.currentTimeMillis();

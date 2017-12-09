@@ -5,8 +5,8 @@ import java.util.Deque;
 
 /**
  * Ë«¶Ë¶ÓÁĞ
+ * @author ÌÆÁú
  */
-
 public class DequeTest {
 	public static void main(String[] args) {
 		final int N = 5;

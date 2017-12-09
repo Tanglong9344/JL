@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * HashMap vs HashTable
+ * @author 唐龙
+ */
 public class HashMapAndHashTable {
 	public static void main(String[] args) {
 		//HashMap和Hashtable都实现了Map接口，都是键值对保存数据的方式
@@ -18,7 +22,7 @@ public class HashMapAndHashTable {
 		//Hashtable不能用null作key，不能用null作value
 		//hashtable.put(null, "123");
 		//hashtable.put("123", null);
-		final int N =10;
+		final int N = 5;
 		for(int i=0;i<N;i++){
 			hashMap.put(String.valueOf(i), "hashMap"+i);
 		}
@@ -33,6 +37,5 @@ public class HashMapAndHashTable {
 
 		System.out.println("健:"+keys);
 		System.out.println("值:"+values);
-
 	}
 }

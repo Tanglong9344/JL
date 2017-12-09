@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * ArrayList 和 LinkedList 数据定位对比
+ * ArrayList 和  LinkedList数据定位对比
+ * @author 唐龙
  */
-
 public class ArrayListLocationTest {
 	public static void main(String[] args) {
 		List<Integer> intList;
@@ -17,6 +17,8 @@ public class ArrayListLocationTest {
 		intList = new LinkedList<>();
 		modify(intList, "LinkedList");
 	}
+
+	// 测试方法
 	private static void modify(List<Integer> intList, String type) {
 		int total = 100 * 1000;
 		int index = total/2;

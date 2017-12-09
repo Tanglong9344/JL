@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * ArrayList 和 LinkedList 在中间插入数据对比
+ * ArrayList 和  LinkedList在中间插入数据对比
+ * @author 唐龙
  */
-
 public class ArrayListInsertToMiddle {
 	public static void main(String[] args) {
 		List<Integer> intList;
@@ -17,6 +17,8 @@ public class ArrayListInsertToMiddle {
 		intList = new LinkedList<>();
 		insertFirst(intList, "LinkedList");
 	}
+
+	// 测试方法
 	private static void insertFirst(List<Integer> intList, String type) {
 		int total = 100 * 1000;
 		final int number = 5;

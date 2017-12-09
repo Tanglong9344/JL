@@ -2,22 +2,26 @@ package java_collection;
 
 import java.util.HashMap;
 
+/**
+ * HashMap 数据检索
+ * @author 唐龙
+ */
 public class HashMapSearch {
 	public static void main(String[] args) {
-		HashMap<String,Hero> heroMap = new HashMap<String,Hero>();
-		for (int j = 0; j < 2000000; j++) {
-			Hero h = new Hero("Hero" + j);
-			heroMap.put(h.name, h);
+		HashMap<String,String> map = new HashMap<String,String>();
+		// 初始化
+		for (int i = 1; i <= 2000000; i++) {
+			map.put("K"+i,"V"+i);
 		}
-		System.out.println("数据准备完成");
-		for (int i = 0; i < 10; i++) {
+		System.out.println("初始数据:" + map);
+
+		for (int i = 1; i <= 10; i++) {
 			long start = System.currentTimeMillis();
-			//查找名字是Hero1000000的对象
-			Hero target = heroMap.get("Hero1000000");
-			System.out.println("找到了 hero!" + target.name);
+			//查找名字是K10000的对象
+			String target = map.get("K10000");
+			System.out.println("找到目标" + target);
 			long end = System.currentTimeMillis();
-			long elapsed = end - start;
-			System.out.println("第"+(i+1)+"次,一共花了：" + elapsed + " 毫秒");
+			System.out.println("第"+ i +"次,一共花了：" + (end - start) + "毫秒");
 		}
 	}
 }

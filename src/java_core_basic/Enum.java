@@ -12,6 +12,7 @@ public class Enum {
 		System.out.println("四季：" + Arrays.toString(seasons));
 
 		System.out.println("星期：" + Arrays.toString(Weekend.values()));
+
 		//测试
 		for(Season s:seasons){
 			switch(s){
@@ -28,7 +29,6 @@ public class Enum {
 				System.out.println(s.ordinal() + ":" + s.toString() + "，大雪纷飞，一枝独秀。");
 				break;
 			default:
-				System.out.println("有意外情况发生。");
 				break;
 			}
 		}
@@ -36,5 +36,18 @@ public class Enum {
 }
 
 //枚举
-enum Season{春季,夏季,秋季,冬季}
-enum Weekend{星期日,星期一,星期二,星期三,星期四,星期五,星期六}
+enum Season{
+	春季,
+	夏季,
+	秋季,
+	冬季;
+}
+enum Weekend{
+	星期日,
+	星期一,
+	星期二,
+	星期三,
+	星期四,
+	星期五,
+	星期六;
+}

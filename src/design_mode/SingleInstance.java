@@ -11,10 +11,10 @@ package design_mode;
  */
 public class SingleInstance {
 	//静态常量实例对象
-	private static final SingleInstance singleInstance = new SingleInstance();
+	private static final SingleInstance INSTANCE = new SingleInstance();
 	//返回实例对象
 	public static SingleInstance getSingleInstance(){
-		return singleInstance;
+		return INSTANCE;
 	}
 	//私有构造方法
 	private SingleInstance(){

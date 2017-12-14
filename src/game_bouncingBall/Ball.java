@@ -12,8 +12,8 @@ import java.awt.geom.Rectangle2D;
 public class Ball {
 	private static final int XSIZE = 15;//ºáÏò°ëÖá
 	private static final int YSIZE = 15;//×ÝÏò°ëÖá
-	private double x = 0;
-	private double y = 0;
+	private double x  = 0;
+	private double y  = 0;
 	private double dx = 1;
 	private double dy = 1;
 

@@ -71,8 +71,10 @@ public class BasicTypeTransfer {
 		System.out.println("\nString ×ª»» Integer,int:");
 		String str = "123";
 		System.out.println("str="+str);
+
 		Integer integer = Integer.valueOf(str);
 		System.out.println("integer="+integer);
+
 		int intValue = Integer.valueOf(str).intValue();
 		System.out.println("intValue="+intValue);
 	}

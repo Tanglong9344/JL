@@ -17,8 +17,8 @@ import javax.swing.JPanel;
 public class BallComponent extends JPanel{
 
 	private static final long serialVersionUID = 1L;
-	private static final int DEFAULT_WIDTH = 650;
-	private static final int DEFAULT_HEIGHT = 650;
+	private static final int DEFAULT_WIDTH     = 650;
+	private static final int DEFAULT_HEIGHT    = 650;
 
 	List<Ball> balls = new ArrayList<>();
 

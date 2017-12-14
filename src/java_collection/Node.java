@@ -6,7 +6,6 @@ import java.util.List;
 /**
  * 递归实现二叉树创建以及遍历
  * @author 唐龙
- *
  */
 
 public class Node {
@@ -21,18 +20,14 @@ public class Node {
 		// 如果当前节点没有值，就把数据放在当前节点上
 		if (null == value){
 			value = v;
-		}
-		// 如果当前节点有值，就进行判断，新增的值与当前值的大小关系
-		else {
+		}else { // 如果当前节点有值，就进行判断，新增的值与当前值的大小关系
 			// 新增的值，比当前值小或者相同
 			if ((Integer) v -((Integer)value) <= 0) {
 				if (null == leftNode){
 					leftNode = new Node();
 				}
 				leftNode.add(v);
-			}
-			// 新增的值，比当前值大
-			else {
+			}else { // 新增的值，比当前值大
 				if (null == rightNode){
 					rightNode = new Node();
 				}

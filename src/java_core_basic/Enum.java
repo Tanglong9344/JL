@@ -11,10 +11,6 @@ public class Enum {
 		Season[] seasons = Season.values();
 		System.out.println("四季：" + Arrays.toString(seasons));
 
-		System.out.println(Weekend.星期一);
-		System.out.println(Weekend.星期三);
-		System.out.println(Weekend.星期六);
-
 		//测试
 		for(Season s:seasons){
 			switch(s){
@@ -43,13 +39,4 @@ enum Season{
 	夏季,
 	秋季,
 	冬季;
-}
-enum Weekend{
-	星期日,
-	星期一,
-	星期二,
-	星期三,
-	星期四,
-	星期五,
-	星期六;
 }

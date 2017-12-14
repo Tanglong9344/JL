@@ -9,7 +9,7 @@ package java_effective_constructor;
  * 解决方案：Builder 方式
  * @author 唐龙
  */
-public class JavaBean {
+public class JavaBeanConstructor {
 	private String name;           //required
 	private String sex     = "未知";//optional
 	private String age     = "未知";//optional

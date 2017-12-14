@@ -4,9 +4,9 @@ package java_effective_constructor;
  * JavaBean ≤‚ ‘¿‡
  * @author Ã∆¡˙
  */
-public class JavaBeanTest {
+public class JavaBeanConstructorTest {
 	public static void main(String[] args) {
-		JavaBean jb = new JavaBean();
+		JavaBeanConstructor jb = new JavaBeanConstructor();
 		// set name
 		jb.setName("Tanglong");
 		System.out.println(jb.toString());

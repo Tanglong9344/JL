@@ -2,6 +2,9 @@ package java_effective_constructor;
 
 /**
  * 建造者方式实例化对象
+ * 可以显式地选择需要的参数
+ *
+ * 缺点：需要额外的开销
  * @author 唐龙
  */
 public class BuilderConstructor {

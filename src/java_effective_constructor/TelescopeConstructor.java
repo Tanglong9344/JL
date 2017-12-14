@@ -1,7 +1,7 @@
 package java_effective_constructor;
 
 /**
- * 层叠构造器
+ * 重叠构造器
  *
  * 此类有四个属性，其中第一个是必须的其它是可选的
  * 采用层次递进的方式进行实例化
@@ -11,29 +11,29 @@ package java_effective_constructor;
  *
  * @author 唐龙
  */
-public class TelescopeStructor {
+public class TelescopeConstructor {
 	private String name;   //required
 	private String sex;    //optional
 	private String age;    //optional
 	private String address;//optional
 
 	/**一个参数*/
-	public TelescopeStructor(String name){
+	public TelescopeConstructor(String name){
 		this(name,"未知");
 	}
 
 	/**两个参数*/
-	public TelescopeStructor(String name,String sex){
+	public TelescopeConstructor(String name,String sex){
 		this(name,sex,"未知");
 	}
 
 	/**三个参数*/
-	public TelescopeStructor(String name,String sex,String age){
+	public TelescopeConstructor(String name,String sex,String age){
 		this(name,sex,age,"未知");
 	}
 
 	/**全部参数*/
-	public TelescopeStructor(String name,String sex,String age,String address){
+	public TelescopeConstructor(String name,String sex,String age,String address){
 		this.name = name;
 		this.sex = sex;
 		this.age = age;

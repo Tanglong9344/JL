@@ -1,4 +1,4 @@
-package java_effective;
+package java_effective_constructor;
 
 /**
  * 静态工厂方法实例化类的测试类

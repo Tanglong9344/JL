@@ -1,4 +1,4 @@
-package java_effective;
+package java_effective_constructor;
 
 /**
  * 建造者方式实例化对象

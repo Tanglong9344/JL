@@ -1,15 +1,18 @@
-package java_effective;
+package java_effective_constructor;
 
 /**
  * Java Bean
  * 使用getter和setter传递数据
  * 解决层叠构造器可读性较差的问题
+ *
+ * 缺点：调用较多，易产生不一致的问题
+ * 解决方案：Builder 方式
  * @author 唐龙
  */
 public class JavaBean {
-	private String name = "未知";   //required
-	private String sex = "未知";    //optional
-	private String age = "未知";    //optional
+	private String name;           //required
+	private String sex     = "未知";//optional
+	private String age     = "未知";//optional
 	private String address = "未知";//optional
 
 	@Override

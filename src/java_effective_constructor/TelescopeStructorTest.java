@@ -1,4 +1,4 @@
-package java_effective;
+package java_effective_constructor;
 
 /**
  * ²ãµş¹¹ÔìÆ÷²âÊÔÀà

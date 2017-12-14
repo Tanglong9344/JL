@@ -1,10 +1,13 @@
-package java_effective;
+package java_effective_constructor;
 
 /**
  * 层叠构造器
  *
  * 此类有四个属性，其中第一个是必须的其它是可选的
  * 采用层次递进的方式进行实例化
+ *
+ * 缺点：当参数较多时，可读性会变得很差，易于出错
+ * 解决办法，JavaBean(使用getter和setter方法)
  *
  * @author 唐龙
  */

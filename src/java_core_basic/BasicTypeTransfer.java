@@ -4,7 +4,7 @@ package java_core_basic;
  * 基本类型转换
  * @author 唐龙
  */
-public class BasicTypeChangeTest {
+public class BasicTypeTransfer {
 	public static void main(String[] args) {
 		//基本类型自动转换
 		System.out.println("基本类型自动转换");

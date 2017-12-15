@@ -1,7 +1,11 @@
 # [设计原则](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/principles.md)
 # [依赖注入](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/dependencyInjection.md)
 # [设计模式](https://github.com/Tanglong9344/JavaBasic/edit/master/src/design_mode)
-1. [单例模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/SingleInstance.java)
+1. 单例模式
+    + [饿汉模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/SingleInstance.java)
+    + [懒汉模式](https://github.com/Tanglong9344/jl/blob/master/src/design_mode/SingleInstanceLazy.java)
+    + [线程安全](https://github.com/Tanglong9344/jl/blob/master/src/design_mode/SingleInstanceLazySafe.java)
+    + [enum实现](https://github.com/Tanglong9344/jl/blob/master/src/design_mode/SingleInstanceEnum.java)
 1. [策略模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/StrategyMode.java)
 1. [装饰模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/DecorateMode.java)
 1. [代理模式](https://github.com/Tanglong9344/JavaBasic/blob/master/src/design_mode/ProxyMode.java)

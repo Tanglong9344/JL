@@ -1,22 +1,22 @@
-package java_effective_base_method;
+package java_effective_equals;
 
 /**
  * 一维点类(x)
  * @author 唐龙
  */
-public class PointEqualsX extends Object{
+public class PointX extends Object{
 	private double x;
 
 	/**构造方法*/
-	public PointEqualsX(double x){
+	public PointX(double x){
 		this.x = x;
 	}
 
 	/**equals*/
 	@Override
 	public boolean equals(Object o){
-		if(o instanceof PointEqualsX){
-			return x == ((PointEqualsX)o).getX();
+		if(o instanceof PointX){
+			return x -((PointX)o).getX() < Common.GAP;
 		}
 		return false;
 	}

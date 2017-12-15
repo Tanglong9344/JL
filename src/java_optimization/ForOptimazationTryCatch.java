@@ -7,7 +7,7 @@ public class ForOptimazationTryCatch {
 	static int j;
 
 	public static void main(String[] args) throws InterruptedException {
-		// 异常捕获（循环放在try内）
+		// 异常捕获
 		// 循环放在try内
 		Thread thread1 = new Thread() {
 			@Override
@@ -19,6 +19,7 @@ public class ForOptimazationTryCatch {
 						}
 					}
 				} catch (Exception e) {
+					e.printStackTrace();
 				}
 				endTime = System.nanoTime();
 				System.out.println("循环放在try内耗时：" + (endTime - startTime));
@@ -32,8 +33,8 @@ public class ForOptimazationTryCatch {
 				startTime = System.nanoTime();
 				for (i = 0; i < Constant.MAX; i++) {
 					for (j = 0; j < Constant.MIN; j++) {
-						try {
-						} catch (Exception e) {
+						try {} catch (Exception e) {
+							e.printStackTrace();
 						}
 					}
 				}

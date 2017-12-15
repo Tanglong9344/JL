@@ -1,14 +1,15 @@
-package java_effective_base_method;
+package java_effective_equals;
 
 /**
  * 三维维点类(x,y,z)
+ * 继承实现
  * @author 唐龙
  */
-public class PointEqualsXYZ extends PointEqualsXY{
+public class PointExtendsXYZ extends PointExtendsXY{
 	private double z;
 
 	/**构造方法*/
-	public PointEqualsXYZ(double x,double y,double z){
+	public PointExtendsXYZ(double x,double y,double z){
 		super(x,y);
 		this.z = z;
 	}
@@ -16,8 +17,8 @@ public class PointEqualsXYZ extends PointEqualsXY{
 	/**equals*/
 	@Override
 	public boolean equals(Object o){
-		if(o instanceof PointEqualsXYZ){
-			return super.equals(o) && z == ((PointEqualsXYZ)o).getZ();
+		if(o instanceof PointExtendsXYZ){
+			return super.equals(o) && z - ((PointExtendsXYZ)o).getZ() < Common.GAP;
 		}
 		return false;
 	}

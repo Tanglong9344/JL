@@ -9,6 +9,7 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class SingleInstanceTest {
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		/**静态实现*/
 		SingleInstance ste1 = SingleInstance.getInstance();
 
 		/**安全测试*/
@@ -19,8 +20,17 @@ public class SingleInstanceTest {
 		//实例化
 		SingleInstance ste2 = cls.newInstance();
 
-		System.out.println("---------比较开始-----------");
 		//相等判断
 		System.out.println(ste1.equals(ste2));
+
+		/**enum实现*/
+		SingleInstanceEnum.getInstance();
+		/**安全测试*/
+		// 反射获取构造器
+		Constructor<SingleInstanceEnum> clsEnum = SingleInstanceEnum.class.getDeclaredConstructor();
+		// 设为可见
+		clsEnum.setAccessible(true);
+		//实例化，禁止实例化
+		//clsEnum.newInstance();
 	}
 }

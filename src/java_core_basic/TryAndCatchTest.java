@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 /**
- * try...catch
+ * try...catch block
  * “Ï≥£¥¶¿Ì
  * @author Ã∆¡˙
  */

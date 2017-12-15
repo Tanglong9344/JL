@@ -2,8 +2,8 @@ package java_thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**测试类*/
 public class AtomicIntegerTest {
-	//This is a test
 	public static void main(String[] args) {
 		AutomicOperation ao = new AutomicOperation();
 		//原子操作
@@ -23,26 +23,20 @@ class AutomicOperation{
 	static Integer nonValue = 0;
 	AtomicInteger atomicValue =new AtomicInteger();
 
-	/**
-	 * 非原子操作
-	 */
+	/**非原子操作*/
 	public void nonAtomicOperation(){
 		threadsCreate('0');
 		System.out.printf("%d个线程进行加1操作后，数值变成:%d%n", THREAD_NUMBER,nonValue);
 	}
 
-	/**
-	 * 原子操作
-	 */
+	/**原子操作*/
 	public void atomicOperation(){
 		threadsCreate('1');
 		System.out.printf("%d个线程进行加1操作后，数值变成:%d%n", THREAD_NUMBER,atomicValue.intValue());
 	}
 
 
-	/**
-	 * @param ch ‘0’：非原子操作，‘1’：原子操作
-	 */
+	/**@param ch ‘0’：非原子操作，‘1’：原子操作*/
 	private void threadsCreate(char ch){
 		for (int i = 0; i < THREAD_NUMBER; i++) {
 			Thread t = new Thread(){

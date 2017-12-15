@@ -5,6 +5,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Stack;
 
+/**
+ * Stack 测试
+ * @author 唐龙
+ */
 public class StackTest {
 	public static void main(String argv[]) {
 		FileInputStream input;
@@ -13,12 +17,15 @@ public class StackTest {
 		Stack<Character> stack = new Stack<Character>();
 		try {
 			input = new FileInputStream(FileDescriptor.in);
-			System.out.println("入栈操作：");
+			System.out.println("入栈操作(输入'q'退出)：");
 			//入栈操作
-			while ((ch = (char) input.read()) != '\r') {
-				stack.push(Character.valueOf(ch));
+			while ((ch = (char) input.read()) != 'q') {
+				if(ch != '\r') {
+					stack.push(Character.valueOf(ch));
+				}
 			}
 			input.close();
+
 			//出栈
 			System.out.println("出栈操作：");
 			while (!stack.empty()) {

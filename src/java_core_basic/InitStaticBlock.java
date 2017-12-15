@@ -15,9 +15,7 @@ public class InitStaticBlock {
 	}
 }
 
-/**
- * 静态初始化块测试类
- */
+/**静态初始化块测试类*/
 class Tools{
 	static Tool t1 = new Tool(1);//1
 	static{
@@ -34,9 +32,7 @@ class Tools{
 	static Tool t3 = new Tool(3);//8
 }
 
-/**
- * 静态初始化块测试子类
- */
+/**静态初始化块测试子类*/
 class Tool{
 	Tool(int i){
 		System.out.println("Tool(" + i +")");

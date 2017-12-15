@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Collections.shuffle()
+ * @author 唐龙
+ */
 public class ShuffleTest {
-
 	public static void main(String[] args) {
 		//初始化集合numbers
 		List<Integer> numbers = new ArrayList<>();

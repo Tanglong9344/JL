@@ -3,7 +3,7 @@
 ### Basic in Java
 + [java program in CMD](https://github.com/Tanglong9344/JavaBasic/blob/master/cmd.md)
 + [Java core basic](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_core_basic)
-+ [Collections](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_collection_map)
++ [Collections](https://github.com/Tanglong9344/jl/tree/master/src/java_collection)
 + [Thread](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_thread)
 + [Process](https://github.com/Tanglong9344/jl/tree/master/src/java_process)
 + [Java IO](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_input_output)

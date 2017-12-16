@@ -1,4 +1,4 @@
-package hibernate_annotation_test;
+package hibernate_annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -11,4 +11,6 @@ import java.lang.annotation.Target;
  * 而不像基本注解如@Override 那种不用运行，在编译时eclipse
  * 就可以进行相关工作的编译时注解。*/
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyId {}
+public @interface MyGeneratedValue {
+	String strategy();
+}

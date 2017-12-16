@@ -1,4 +1,4 @@
-package hibernate_annotation_test;
+package hibernate_annotation;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -25,9 +25,10 @@ public class TryAndCatchTest {
 
 	@SuppressWarnings("resource")
 	private static void method2() throws FileNotFoundException {
-		File f = new File("d:/LOL.exe");
-		System.out.println("method2() 试图打开 d:/LOL.exe");
+		File f = new File("text.txt");
+		System.out.println("method2() 试图打开 text.txt");
 		new FileInputStream(f);
 		System.out.println("成功打开");
+		f.exists();
 	}
 }

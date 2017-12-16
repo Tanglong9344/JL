@@ -7,7 +7,7 @@ package bit_operation;
  * @author 唐龙
  */
 public class BitMove extends Object{
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		//乘法
 		System.out.println("9*8  = " + 9*8);
 		System.out.printf("9<<3 = %d%n",9<<3);
@@ -19,5 +19,6 @@ public class BitMove extends Object{
 		//非2的倍数
 		System.out.println("9*7  = " + 9*7);
 		System.out.printf("(9<<3)-9 = %d%n",(9<<3)-9);
+		System.out.println(new String().hashCode());
 	}
 }

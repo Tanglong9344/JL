@@ -1,4 +1,4 @@
-package hibernate_annotation_test;
+package hibernate_annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

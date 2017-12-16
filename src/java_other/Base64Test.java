@@ -1,4 +1,4 @@
-package java_core_basic;
+package java_other;
 
 import java.util.Base64;
 

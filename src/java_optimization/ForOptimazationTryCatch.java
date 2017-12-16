@@ -1,10 +1,13 @@
 package java_optimization;
 
+/**
+ * 循环放在try...catch{}块之外
+ * @author 唐龙
+ */
 public class ForOptimazationTryCatch {
 	static long startTime;// 开始时间
 	static long endTime;// 结束时间
-	static int i;
-	static int j;
+	static int i,j;
 
 	public static void main(String[] args) throws InterruptedException {
 		// 异常捕获
@@ -15,14 +18,13 @@ public class ForOptimazationTryCatch {
 				startTime = System.nanoTime();
 				try {
 					for (i = 0; i < Constant.MIN; i++) {
-						for (j = 0; j < Constant.MAX; j++) {
-						}
+						for (j = 0; j < Constant.MAX; j++) {}
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				endTime = System.nanoTime();
-				System.out.println("循环放在try内耗时：" + (endTime - startTime));
+				System.out.println("循环放在try内耗时：" + (endTime - startTime) + "ns");
 			}
 		};
 
@@ -39,10 +41,9 @@ public class ForOptimazationTryCatch {
 					}
 				}
 				endTime = System.nanoTime();
-				System.out.println("循环放在try外耗时：" + (endTime - startTime));
+				System.out.println("循环放在try外耗时：" + (endTime - startTime) + "ns");
 			}
 		};
-
 		thread1.start();
 		thread2.start();
 	}

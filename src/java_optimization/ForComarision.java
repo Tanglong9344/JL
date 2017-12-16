@@ -1,42 +1,42 @@
 package java_optimization;
 
 /**
- * 再循环之外初始化循环变量
+ * for循环
  * @author 唐龙
  */
-public class ForOptimazationInit {
+public class ForComarision {
 	static long startTime;// 开始时间
 	static long endTime;// 结束时间
+	static int i,j;
 
 	public static void main(String[] args) throws InterruptedException {
-		// 循环变量初始化
-		// 初始化再循环外
-		Thread thread1 = new Thread() {
+		// for循环
+		// 普通循环
+		Thread threadGeneral = new Thread() {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				int i, j;
 				for (i = 0; i < Constant.MIN; i++) {
 					for (j = 0; j < Constant.MAX; j++) {}
 				}
 				endTime = System.nanoTime();
-				System.out.println("初始化在循环外耗时：" + (endTime - startTime) + "ns");
+				System.out.println("普通循环耗时：" + (endTime - startTime) + "ns");
 			}
 		};
 
-		// 初始化再循环内
-		Thread thread2 = new Thread() {
+		// 简单for循环
+		Thread threadSimple = new Thread() {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (int i = 0; i < Constant.MIN; i++) {
-					for (int j = 0; j < Constant.MAX; j++) {}
+				for (i = 0; i++ < Constant.MAX;) {
+					for (j = 0; j++ < Constant.MIN;) {}
 				}
 				endTime = System.nanoTime();
-				System.out.println("初始化在循环内耗时：" + (endTime - startTime) + "ns");
+				System.out.println("简单循环耗时：" + (endTime - startTime) + "ns");
 			}
 		};
-		thread1.start();
-		thread2.start();
+		threadGeneral.start();
+		threadSimple.start();
 	}
 }

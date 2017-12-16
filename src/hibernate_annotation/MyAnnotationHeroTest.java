@@ -1,4 +1,4 @@
-package hibernate_annotation_test;
+package hibernate_annotation;
 
 @MyEntity//实体
 @MyTable(name="hero_")//对应表

@@ -10,7 +10,7 @@
  * @Documented 表示当执行javadoc的时候，本注解会生成相关文档
  */
 
-package hibernate_annotation_test;
+package hibernate_annotation;
 
 import java.lang.reflect.Method;
 

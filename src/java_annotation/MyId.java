@@ -1,4 +1,4 @@
-package java_hibernate_annotation;
+package java_annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,10 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyColumn {
-	String value();
-}
+/**
+ * Annotation for Major Key
+ *
+ * @author ÌÆÁú
+ *
+ */
+public @interface MyId {}

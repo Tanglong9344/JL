@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 模板方法模式
  * 定义一个操作中算法的骨架，而将一些实现步骤延迟到子类。
@@ -5,10 +7,10 @@
  *
  * 模板方法模式通过将一些不变行为迁移到超类
  * 去除掉子类中的重复代码。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class TemplateMethodMode {
 	//This is a test
 	public static void main(String[] args) {

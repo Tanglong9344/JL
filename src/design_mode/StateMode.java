@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 状态模式
  * 当一个对象的内在状态变化时允许改变其行为
@@ -8,10 +10,10 @@
  *
  * 状态模式的好处是将与特定状态相关的行为局部化，并且将不同状态的行为分割开来(即放在不同类中)
  * 适用场景：当一个对象的行为取决于它的状态并且必须在运行时刻根据具体状态改变它的行为时。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class StateMode {
 	//This is a test
 	public static void main(String[] args) {

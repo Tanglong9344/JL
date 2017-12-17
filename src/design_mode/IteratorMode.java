@@ -1,15 +1,16 @@
-/**
- * 迭代器模式
- * 迭代器模式提供一种方法顺序遍历访问一个聚合
- * 对象中各个元素，而又不暴露该对象的内部表示。
- *
- */
-
 package design_mode;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 迭代器模式
+ * 迭代器模式提供一种方法顺序遍历访问一个聚合
+ * 对象中各个元素，而又不暴露该对象的内部表示。
+ *
+ * @author 唐龙
+ *
+ */
 public class IteratorMode {
 	//This is a test
 	public static void main(String[] args) {

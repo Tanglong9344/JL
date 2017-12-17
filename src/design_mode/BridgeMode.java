@@ -1,13 +1,15 @@
+package design_mode;
+
 /**
  * 桥接模式
  * 将抽象部分和它的实现部分分离，使得他们可以独立的变化。
  *
  * 实现系统可能多角度分类，每一种分类都有可能变化，
  * 那么就把这种多角度分离出来让他们独立变化，减少它们之间的耦合。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class BridgeMode {
 	//This is a test
 	public static void main(String[] args) {

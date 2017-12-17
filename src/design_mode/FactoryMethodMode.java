@@ -1,3 +1,7 @@
+package design_mode;
+
+import object_oriented_programming.CommonConstants;
+
 /**
  * <strong>工厂方法模式</strong>
  * 定义一个用于创建对象的接口，
@@ -8,12 +12,10 @@
  *
  * 实现加减乘除简易计算器
  * 根据不同的操作方法分别实现相应的方法工厂
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import object_oriented_programming.CommonConstants;
-
 public class FactoryMethodMode {
 	public static void main(String[] args) {
 		double opNumA=Math.random()*CommonConstants.RANGE;//操作数1

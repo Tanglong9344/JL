@@ -1,9 +1,11 @@
-/**
- * 提取当前对象的ID
- */
-
 package design_mode;
 
+/**
+ * 提取当前对象的ID
+ *
+ * @author 唐龙
+ *
+ */
 public class ObjectSimplify {
 	static final String getObjectId(Object o){
 		String dest=o.toString();

@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 适配器模式(主要是对象适配器模式)
  * 讲一个类的接口转换成客户希望的另外一个接口
@@ -5,10 +7,10 @@
  *
  * 当系统的数据和行为都正确但接口不符时，使用适配器使得控制范围之外
  * 的一个原有对象与某个接口匹配。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class AdapterMode {
 	//This is a test
 	public static void main(String[] args) {

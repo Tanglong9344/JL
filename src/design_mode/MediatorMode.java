@@ -1,13 +1,14 @@
+package design_mode;
+
 /**
  * 中介者模式
  * 用一个中介对象来封装一系列的对象交互。
  * 中介者使各对象不需要显示地相互引用，
  * 从而降低其耦合性，而且可以独立地改变它们之间的交互。
  *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class MediatorMode {
 	//This is a test
 	public static void main(String[] args) {

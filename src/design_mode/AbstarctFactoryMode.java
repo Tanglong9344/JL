@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 抽象工厂模式
  * 提供一个创建一系列相关或互相依赖对象的接口，而无需指定它们具体的类
@@ -10,10 +12,10 @@
  * 产品的具体类名也被具体工厂的实现分离
  *
  * 使用抽象工厂模式实现简单的数据切换
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class AbstarctFactoryMode {
 	//This is a test
 	public static void main(String[] args) {

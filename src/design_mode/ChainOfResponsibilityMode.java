@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 职责链模式
  * 使多个对象都有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。
@@ -8,10 +10,10 @@
  * 结果是职责链可简化对象的相互连接，它们仅需保持一个纸箱其后继者的引用，
  * 而不需要保持它所有的候选接收者的引用。
  * 大大降低了耦合度。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class ChainOfResponsibilityMode {
 	//This is a test
 	public static void main(String[] args) {

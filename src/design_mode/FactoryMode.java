@@ -1,13 +1,15 @@
-/**
- * 工厂模式(简单工厂模式)
- * 实现加减乘除简易计算器
- * 由操作工厂根据不同运算符创建相应的操作类
- */
-
 package design_mode;
 
 import object_oriented_programming.CommonConstants;
 
+/**
+ * 工厂模式(简单工厂模式)
+ * 实现加减乘除简易计算器
+ * 由操作工厂根据不同运算符创建相应的操作类
+ *
+ * @author 唐龙
+ *
+ */
 public class FactoryMode {
 	public static void main(String[] args) {
 		double opNumA=Math.random()*CommonConstants.RANGE;//操作数1

@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 命令模式
  * 将一个请求封装为对象，从而是你可用不同的请求对客户进行参数化：
@@ -10,10 +12,10 @@
  * 4，可以容易地实现对请求的撤销和重做
  * 5，由于新增具体的命令不影响其它的类，因此新增具体命令类会更容易。
  * 6，将请求一个操作的对象与知道怎么执行一个操作的对象分割开。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class CommandMode {
 	//This is a test
 	public static void main(String[] args) {

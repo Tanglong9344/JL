@@ -1,14 +1,16 @@
-/**
- * 观察者模式(发布-订阅模式)
- * 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一通知对象。
- * 当这个通知对象的状态发生变化时，会通知所有观察者对象，使他们能够自动更新。
- */
-
 package design_mode;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 观察者模式(发布-订阅模式)
+ * 观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一通知对象。
+ * 当这个通知对象的状态发生变化时，会通知所有观察者对象，使他们能够自动更新。
+ *
+ * @author 唐龙
+ *
+ */
 public class ObseverMode {
 	//This is a test
 	public static void main(String[] args) {

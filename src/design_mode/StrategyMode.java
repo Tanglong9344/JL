@@ -1,14 +1,18 @@
+package design_mode;
+
 /**
  * 策略模式封装了变化
  * 策略模式定义了一系列算法，并将每个算法封装起来，
  * 使他们可以相互替换 且算法的变化不会影响到使用算法的客户。
  * 需要设计一个接口(或抽象类)，
  * 为一系列实现类提供统一的方法，
- * 多个实现类实现该接口，
+ * 多个实现类实现该接口。
+ *
+ * 例如：Java Comparator
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class StrategyMode {
 	public static void main(String[] args) {
 		//上下文对象

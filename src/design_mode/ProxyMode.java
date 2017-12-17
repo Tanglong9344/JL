@@ -1,3 +1,5 @@
+package design_mode;
+
 /**
  * 代理模式:为某些对象提供代理对象以实现对特定对象的访问。
  *
@@ -6,10 +8,10 @@
  * 通过这个对象来存放实例化需要很长时间的真是对象。(例如网页的延迟加载)
  * 3，安全代理：用来控制真实对象访问时的权限。
  * 4，智能指引：当调用真实对象时，使用代理处理另外一些事情。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
 public class ProxyMode {
 	//This is a test
 	public static void main(String[] args) {

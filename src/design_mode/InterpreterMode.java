@@ -1,3 +1,8 @@
+package design_mode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 解释器模式
  * 给定一个语言，定义它的文法的一种表示并定义一个解释器
@@ -19,13 +24,10 @@
  * 不足：
  * 解释器模式为文法中的每一条规则至少定义了一个类，因此包含许多规则的文法可能难以管理和维护。
  * 这个时候，可以考虑使用其他技术如语法分析程序或编译器生成器进行处理。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class InterpreterMode {
 	//This is a test
 	public static void main(String[] args) {

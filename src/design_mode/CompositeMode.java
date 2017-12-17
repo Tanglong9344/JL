@@ -1,3 +1,8 @@
+package design_mode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <strong>组合模式</strong>
  * 将对象组合成属性结构以表示‘部分-整体’的层次结构。
@@ -14,13 +19,10 @@
  *
  * 本例采用透明模式(即叶子节点和分枝节点具有相同的行为)
  * 另一种是安全模式
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class CompositeMode {
 	//This is a test
 	public static void main(String[] args) {

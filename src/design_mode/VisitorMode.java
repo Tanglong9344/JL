@@ -1,16 +1,18 @@
+package design_mode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 访问者模式
  * 表示一个作用于某对象结构中各元素的操作。
  * 可以在不改变各元素类的前提下定义作用于这些元素的新操作。
  *
  * 访问者模式适用于数据结构相对稳定的系统(例如性别)
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class VisitorMode {
 	//This is a test
 	public static void main(String[] args) {

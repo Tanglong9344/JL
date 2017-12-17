@@ -1,16 +1,18 @@
+package design_mode;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 建造者模式(生成器模式)
  * 将一个复杂对象的构建与它的表示分离
  * 使得同样的构建过程可以创建不同的表示。
  *
  * 用户只需要指定需要建造的类型而不需要知道具体的建造过程和细节。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class BuilderMode {
 	//This is a test
 	public static void main(String[] args) {

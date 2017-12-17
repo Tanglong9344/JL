@@ -1,3 +1,7 @@
+package design_mode;
+
+import java.util.Hashtable;
+
 /**
  * 享元模式
  * 运用共享技术有效地支持大量细粒度的对象
@@ -9,12 +13,10 @@
  * 如果能够发现这些实例除了几个参数外其他部分基本相同
  * 通过这些参数移到类实例的外面，在方法调用时将它们传递进来的方法，
  * 就可以通过共享大幅度地减少实例化类的数量。
+ *
+ * @author 唐龙
+ *
  */
-
-package design_mode;
-
-import java.util.Hashtable;
-
 public class FlyweightMode {
 	//This is a test
 	public static void main(String[] args) {

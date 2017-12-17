@@ -1,0 +1,4 @@
+For loop operates 500 times averagely cost          4623427 ns
+Enhanced for loop operates 500 times averagely cost 3004897 ns
+For-each loop operates 500 times averagely cost     3071013 ns
+Iterator operates 500 times averagely cost          2601524 ns

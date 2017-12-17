@@ -2,7 +2,13 @@ package java_process;
 
 import java.io.IOException;
 
-public class RunTimeTest {
+/**
+ * RunTime exec()
+ * 
+ * @author ÌÆÁú
+ *
+ */
+public class RunTimeExec {
 	public static void main(String[] args) throws IOException {
 		//´ò¿ª¼ÆËãÆ÷
 		Runtime.getRuntime().exec("calc");

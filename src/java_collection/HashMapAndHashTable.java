@@ -31,7 +31,7 @@ public class HashMapAndHashTable {
 		System.out.println("·­×ªºó:"+hashMap);
 	}
 
-	public static void mapReverse(Map<String, String> map){
+	private static void mapReverse(Map<String, String> map){
 		Set<String> keys = map.keySet();
 		Collection<String> values = map.values();
 

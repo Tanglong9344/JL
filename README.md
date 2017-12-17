@@ -11,7 +11,7 @@
 + [Serializable](https://github.com/Tanglong9344/JL/tree/master/src/java_serializable)
 + [Lamda Expression](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_lamda_expression)
 + [Java Web](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_web_programming)
-+ [Hibernate Annotation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/hibernate_annotation)
++ [Java Annotation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/Java_annotation)
 + [Optimization](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_optimization)
 + [Bit Operation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/bit_operation)
 + [Instropector](https://github.com/Tanglong9344/jl/tree/master/src/java_instropector)

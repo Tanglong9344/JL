@@ -16,8 +16,8 @@ public class ForComarision {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MIN; i++) {
-					for (j = 0; j < Constant.MAX; j++) {}
+				for (i = 0; i < CommonConstants.MIN; i++) {
+					for (j = 0; j < CommonConstants.MAX; j++) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("普通循环耗时：" + (endTime - startTime) + "ns");
@@ -29,8 +29,8 @@ public class ForComarision {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (i = 0; i++ < Constant.MAX;) {
-					for (j = 0; j++ < Constant.MIN;) {}
+				for (i = 0; i++ < CommonConstants.MAX;) {
+					for (j = 0; j++ < CommonConstants.MIN;) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("简单循环耗时：" + (endTime - startTime) + "ns");

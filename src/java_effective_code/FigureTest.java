@@ -14,7 +14,7 @@ public class FigureTest {
 		FigureTagClass recT = new FigureTagClass(3,4);
 		System.out.println(recT.toString() + ", 中持: " + recT.area());
 
-		// Hierarchy Class
+		// Class Hierarchy
 		Figure circle = new Circle(2);
 		System.out.println(circle.toString() + ", 中持: " + circle.area());
 

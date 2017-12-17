@@ -7,7 +7,7 @@ package java_effective_code;
  *
  */
 public class Circle extends Figure{
-	private double radius;
+	private final double radius;
 
 	public Circle(double radius){
 		this.radius = radius;

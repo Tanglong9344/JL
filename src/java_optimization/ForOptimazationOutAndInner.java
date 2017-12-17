@@ -16,8 +16,8 @@ public class ForOptimazationOutAndInner {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MIN; i++) {
-					for (j = 0; j < Constant.MAX; j++) {}
+				for (i = 0; i < CommonConstants.MIN; i++) {
+					for (j = 0; j < CommonConstants.MAX; j++) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("外小内大循环耗时：" + (endTime - startTime) + "ns");
@@ -29,8 +29,8 @@ public class ForOptimazationOutAndInner {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MAX; i++) {
-					for (j = 0; j < Constant.MIN; j++) {}
+				for (i = 0; i < CommonConstants.MAX; i++) {
+					for (j = 0; j < CommonConstants.MIN; j++) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("外大内小循环耗时：" + (endTime - startTime) + "ns");

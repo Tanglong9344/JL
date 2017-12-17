@@ -16,8 +16,8 @@ public class ForOptimazationInit {
 			public void run() {
 				startTime = System.nanoTime();
 				int i, j;
-				for (i = 0; i < Constant.MIN; i++) {
-					for (j = 0; j < Constant.MAX; j++) {}
+				for (i = 0; i < CommonConstants.MIN; i++) {
+					for (j = 0; j < CommonConstants.MAX; j++) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("初始化在循环外耗时：" + (endTime - startTime) + "ns");
@@ -29,8 +29,8 @@ public class ForOptimazationInit {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (int i = 0; i < Constant.MIN; i++) {
-					for (int j = 0; j < Constant.MAX; j++) {}
+				for (int i = 0; i < CommonConstants.MIN; i++) {
+					for (int j = 0; j < CommonConstants.MAX; j++) {}
 				}
 				endTime = System.nanoTime();
 				System.out.println("初始化在循环内耗时：" + (endTime - startTime) + "ns");

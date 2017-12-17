@@ -43,16 +43,16 @@ public class ForOptimazationCallMethod {
 	}
 
 	public static int getMIN() {
-		for (int i = 0; i < Constant.MAX;i++) {
+		for (int i = 0; i < CommonConstants.MAX;i++) {
 			;
 		}
-		return Constant.MIN;
+		return CommonConstants.MIN;
 	}
 
 	public static int getMAX() {
-		for (int i = 0; i < Constant.MAX;i++) {
+		for (int i = 0; i < CommonConstants.MAX;i++) {
 			;
 		}
-		return Constant.MAX;
+		return CommonConstants.MAX;
 	}
 }

@@ -18,9 +18,9 @@ public class ForOptimazationGetUnconcernExpOut {
 				@SuppressWarnings("unused")
 				int r = 0;
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MIN; i++) {
-					for (j = 0; j < Constant.MAX; j++) {
-						r *= i * j * Constant.MIN * Constant.MAX;
+				for (i = 0; i < CommonConstants.MIN; i++) {
+					for (j = 0; j < CommonConstants.MAX; j++) {
+						r *= i * j * CommonConstants.MIN * CommonConstants.MAX;
 					}
 				}
 				endTime = System.nanoTime();
@@ -32,12 +32,12 @@ public class ForOptimazationGetUnconcernExpOut {
 		Thread thread2 = new Thread() {
 			@Override
 			public void run() {
-				int m = Constant.MIN * Constant.MAX;
+				int m = CommonConstants.MIN * CommonConstants.MAX;
 				@SuppressWarnings("unused")
 				int r = 0;
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MIN; i++) {
-					for (j = 0; j < Constant.MAX; j++) {
+				for (i = 0; i < CommonConstants.MIN; i++) {
+					for (j = 0; j < CommonConstants.MAX; j++) {
 						r = i * j * m;
 					}
 				}

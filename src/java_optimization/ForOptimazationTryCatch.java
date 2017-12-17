@@ -17,8 +17,8 @@ public class ForOptimazationTryCatch {
 			public void run() {
 				startTime = System.nanoTime();
 				try {
-					for (i = 0; i < Constant.MIN; i++) {
-						for (j = 0; j < Constant.MAX; j++) {}
+					for (i = 0; i < CommonConstants.MIN; i++) {
+						for (j = 0; j < CommonConstants.MAX; j++) {}
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,8 +33,8 @@ public class ForOptimazationTryCatch {
 			@Override
 			public void run() {
 				startTime = System.nanoTime();
-				for (i = 0; i < Constant.MAX; i++) {
-					for (j = 0; j < Constant.MIN; j++) {
+				for (i = 0; i < CommonConstants.MAX; i++) {
+					for (j = 0; j < CommonConstants.MIN; j++) {
 						try {} catch (Exception e) {
 							e.printStackTrace();
 						}

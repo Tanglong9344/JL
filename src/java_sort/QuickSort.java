@@ -1,70 +1,74 @@
-/**
- * å¿«é€Ÿæ’åº
- * å¹³å‡æ—¶é—´å¤æ‚åº¦O(NlogN)ï¼Œæœ€åæ—¶é—´å¤æ‚åº¦O(N2)ï¼Œç©ºé—´å¤æ‚åº¦O(logN)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * ¿ìËÙÅÅĞò
+ * Æ½¾ùÊ±¼ä¸´ÔÓ¶ÈO(NlogN)£¬×î»µÊ±¼ä¸´ÔÓ¶ÈO(N2)£¬¿Õ¼ä¸´ÔÓ¶ÈO(logN)
+ *
+ * @author ÌÆÁú
+ */
 public class QuickSort {
-	private static int sum=0;//ç»Ÿè®¡æ“ä½œæ¬¡æ•°
+	private static int sum=0;//Í³¼Æ²Ù×÷´ÎÊı
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//å¿«é€Ÿæ’åº
+		//¿ìËÙÅÅĞò
 		quickSort(intArr,0,intArr.length-1);
 		long end = System.nanoTime();
-		System.out.printf("å¿«é€Ÿæ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//å¿«é€Ÿæ’åºå
-		System.out.println("å¿«é€Ÿæ’åºå:"+Arrays.toString(intArr));
+		System.out.printf("¿ìËÙÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//¿ìËÙÅÅĞòºó
+		System.out.println("¿ìËÙÅÅĞòºó:"+Arrays.toString(intArr));
 	}
 
-	//å¿«é€Ÿæ’åºå®ç°æ–¹æ³•
-	//é‡‡ç”¨é€’å½’æ€æƒ³
+	//¿ìËÙÅÅĞòÊµÏÖ·½·¨
+	//²ÉÓÃµİ¹éË¼Ïë
 	static void quickSort(int[] intArr,int start,int end){
-		//ç»“æŸæ ‡å¿—
+		//½áÊø±êÖ¾
 		if(start>=end){
 			return;
 		}
-		//å…·ä½“æ“ä½œ
-		int low = start;//ä½ä½
-		int high = end;//é«˜ä½
-		int key=intArr[start];//ä»¥ç¬¬ä¸€ä¸ªæ•°ä¸ºå‚è€ƒå€¼
+		//¾ßÌå²Ù×÷
+		int low = start;//µÍÎ»
+		int high = end;//¸ßÎ»
+		int key=intArr[start];//ÒÔµÚÒ»¸öÊıÎª²Î¿¼Öµ
 		while (low < high) {
-			//ä»é«˜ä½å¼€å§‹éå†æ¯”è¾ƒ
-			//è·³è¿‡å¤§äºç­‰äºå‚è€ƒå€¼çš„æ•°æ®
+			//´Ó¸ßÎ»¿ªÊ¼±éÀú±È½Ï
+			//Ìø¹ı´óÓÚµÈÓÚ²Î¿¼ÖµµÄÊı¾İ
 			while(low<high && intArr[high]>=key) {
 				high--;
 			}
-			//å°äºkeyçš„å€¼ç§»åŠ¨åˆ°keyå·¦è¾¹
+			//Ğ¡ÓÚkeyµÄÖµÒÆ¶¯µ½key×ó±ß
 			intArr[low]=intArr[high];
-			//è·³è¿‡å°äºç­‰äºå‚è€ƒå€¼çš„æ•°æ®
+			//Ìø¹ıĞ¡ÓÚµÈÓÚ²Î¿¼ÖµµÄÊı¾İ
 			while(low<high && intArr[low]<=key) {
 				low++;
 			}
-			//å¤§äºkeyçš„å€¼ç§»åŠ¨åˆ°keyå³è¾¹
+			//´óÓÚkeyµÄÖµÒÆ¶¯µ½keyÓÒ±ß
 			intArr[high]=intArr[low];
 		}
-		//å°†å‚è€ƒå€¼æ”¾å›
+		//½«²Î¿¼Öµ·Å»Ø
 		intArr[low]=key;
-		//æ˜¾ç¤ºæ¯æ¬¡æ’åºçš„ç»“æœ
+		//ÏÔÊ¾Ã¿´ÎÅÅĞòµÄ½á¹û
 		sum++;
-		System.out.printf("ç¬¬%2dæ¬¡æ“ä½œç»“æœ:%s%n",sum,Arrays.toString(intArr));
-		//é€’å½’æ“ä½œ
-		//å·¦åŠéƒ¨åˆ†
+		System.out.printf("µÚ%2d´Î²Ù×÷½á¹û:%s%n",sum,Arrays.toString(intArr));
+		//µİ¹é²Ù×÷
+		//×ó°ë²¿·Ö
 		if(low>start) {
 			quickSort(intArr, start, low-1);
 		}
-		//å³åŠéƒ¨åˆ†
+		//ÓÒ°ë²¿·Ö
 		if(high<end) {
 			quickSort(intArr, low+1, end);
 		}

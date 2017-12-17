@@ -1,34 +1,38 @@
-/**
- * äºŒåˆ†æ’å…¥æ’åº
- * æ—¶é—´å¤æ‚åº¦O(n2),ç©ºé—´å¤æ‚åº¦O(1)
- * ç›¸æ¯”äºä¸€èˆ¬æ’å…¥æ’åºï¼Œå‡å°‘äº†æ¯”è¾ƒæ¬¡æ•°ï¼Œç§»åŠ¨æ¬¡æ•°ä¸å˜ã€‚
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * ¶ş·Ö²åÈëÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(n2),¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ * Ïà±ÈÓÚÒ»°ã²åÈëÅÅĞò£¬¼õÉÙÁË±È½Ï´ÎÊı£¬ÒÆ¶¯´ÎÊı²»±ä¡£
+ *
+ * @author ÌÆÁú
+ */
 public class BinaryInsertSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æŠ˜åŠæ’å…¥æ’åº
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//ÕÛ°ë²åÈëÅÅĞò
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//æŠ˜åŠæ’å…¥æ’åº
+		//ÕÛ°ë²åÈëÅÅĞò
 		binaryInsertSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("æŠ˜åŠæ’å…¥æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//æŠ˜åŠæ’å…¥æ’åºå
-		System.out.println("æŠ˜åŠæ’å…¥æ’åºå:"+Arrays.toString(intArr));
+		System.out.printf("ÕÛ°ë²åÈëÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//ÕÛ°ë²åÈëÅÅĞòºó
+		System.out.println("ÕÛ°ë²åÈëÅÅĞòºó:"+Arrays.toString(intArr));
 	}
-	//æŠ˜åŠæŠ˜åŠæ’å…¥æ’åºå®ç°æ–¹æ³•
+	//ÕÛ°ëÕÛ°ë²åÈëÅÅĞòÊµÏÖ·½·¨
 	static void binaryInsertSort(int[] intArr){
 		int i,j;
 		int len=intArr.length;
@@ -37,7 +41,7 @@ public class BinaryInsertSort {
 			tmp=intArr[i];
 			low = 0;
 			high = i-1;
-			//æŠ˜åŠæŸ¥æ‰¾æ’å…¥ä½ç½®
+			//ÕÛ°ë²éÕÒ²åÈëÎ»ÖÃ
 			while(low<=high){
 				mid = (low+high)/2;
 				if(tmp<intArr[mid]){
@@ -46,13 +50,13 @@ public class BinaryInsertSort {
 					low = mid+1;
 				}
 			}
-			//æ•°æ®ç§»åŠ¨
+			//Êı¾İÒÆ¶¯
 			for(j=i-1;j>=high+1;j--){
 				intArr[j+1]=intArr[j];
 			}
 			intArr[high+1]=tmp;
-			//æ˜¾ç¤ºæ¯æ¬¡æ“ä½œçš„ç»“æœ
-			System.out.printf("ç¬¬%2dæ¬¡æ“ä½œï¼š%s%n",i,Arrays.toString(intArr));
+			//ÏÔÊ¾Ã¿´Î²Ù×÷µÄ½á¹û
+			System.out.printf("µÚ%2d´Î²Ù×÷£º%s%n",i,Arrays.toString(intArr));
 		}
 	}
 }

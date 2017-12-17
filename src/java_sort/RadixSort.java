@@ -1,75 +1,78 @@
-/**
- * åŸºæ•°æ’åº
- * æ—¶é—´å¤æ‚åº¦O(d(N+rd))=O(d.N),ç©ºé—´å¤æ‚åº¦O(rd)
- * d:å…³é”®å­—æ•°ç›®ï¼Œrdå…³é”®å­—å–å€¼èŒƒå›´
- *
- * åŸºæœ¬æ“ä½œè¿‡ç¨‹:æ•°æ®åˆ†é…ï¼Œæ•°æ®æ”¶é›†ã€‚
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * »ùÊıÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(d(N+rd))=O(d.N),¿Õ¼ä¸´ÔÓ¶ÈO(rd)
+ * d:¹Ø¼ü×ÖÊıÄ¿£¬rd¹Ø¼ü×ÖÈ¡Öµ·¶Î§
+ *
+ * »ù±¾²Ù×÷¹ı³Ì:Êı¾İ·ÖÅä£¬Êı¾İÊÕ¼¯¡£
+ * @author ÌÆÁú
+ */
 public class RadixSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰        ï¼š"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°        £º"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//åŸºæ•°æ’åº
+		//»ùÊıÅÅĞò
 		radixSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("åŸºæ•°æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//åŸºæ•°æ’åºå
-		System.out.println("åŸºæ•°æ’åºåï¼š"+Arrays.toString(intArr));
+		System.out.printf("»ùÊıÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//»ùÊıÅÅĞòºó
+		System.out.println("»ùÊıÅÅĞòºó£º"+Arrays.toString(intArr));
 	}
 
-	//åŸºæ•°æ’åºå®ç°æ–¹æ³•
+	//»ùÊıÅÅĞòÊµÏÖ·½·¨
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void radixSort(int[] arr){
-		//é¦–å…ˆç¡®å®šæ’åºçš„è¶Ÿæ•°;
-		//æ‰¾å‡ºæœ€å¤§å€¼
+		//Ê×ÏÈÈ·¶¨ÅÅĞòµÄÌËÊı;
+		//ÕÒ³ö×î´óÖµ
 		int max=arr[0];
 		for(int i=1;i<arr.length;i++){
 			if(arr[i]>max){
 				max=arr[i];
 			}
 		}
-		int time=0;//è®°å½•æ•°æ®æœ€å¤§ä½æ•°
-		//ä½æ•°ç»Ÿè®¡;
+		int time=0;//¼ÇÂ¼Êı¾İ×î´óÎ»Êı
+		//Î»ÊıÍ³¼Æ;
 		while(max>0){
 			max/=10;
 			time++;
 		}
-		//å»ºç«‹10ä¸ªé˜Ÿåˆ—ï¼Œåˆ†åˆ«ç”¨äºå­˜å‚¨å„ä¸ªä½æ•°æ•°å­—ä¸º0-9çš„æ•°æ®
+		//½¨Á¢10¸ö¶ÓÁĞ£¬·Ö±ğÓÃÓÚ´æ´¢¸÷¸öÎ»ÊıÊı×ÖÎª0-9µÄÊı¾İ
 		List<ArrayList> lists=new ArrayList<ArrayList>();
-		ArrayList<Integer> list = null;//ç”¨äºæš‚å­˜æ•°æ®
+		ArrayList<Integer> list = null;//ÓÃÓÚÔİ´æÊı¾İ
 		for(int i=0;i<10;i++){
 			list=new ArrayList<Integer>();
 			lists.add(list);
 		}
 		int i,j,x,k,cnt;
-		//è¿›è¡Œtimeæ¬¡åˆ†é…å’Œæ”¶é›†;
+		//½øĞĞtime´Î·ÖÅäºÍÊÕ¼¯;
 		for(i=1;i<=time;i++){
-			//åˆ†é…æ•°ç»„å…ƒç´ ;
+			//·ÖÅäÊı×éÔªËØ;
 			for(j=0;j<arr.length;j++){
-				//å¾—åˆ°æ•°å­—çš„ç¬¬timeä½æ•°;
+				//µÃµ½Êı×ÖµÄµÚtimeÎ»Êı;
 				x=(arr[j]%(int)Math.pow(10,i))/(int)Math.pow(10,i-1);
 				list=lists.get(x);
 				list.add(arr[j]);
 			}
-			//æ˜¾ç¤ºæ¯æ¬¡æ“ä½œç»“æœ
-			System.out.printf("ç¬¬%2dæ“ä½œï¼š%s%n",i,lists);
-			cnt=0;//å…ƒç´ è®¡æ•°å™¨;
-			//æ”¶é›†é˜Ÿåˆ—å…ƒç´ ;
+			//ÏÔÊ¾Ã¿´Î²Ù×÷½á¹û
+			System.out.printf("µÚ%2d²Ù×÷£º%s%n",i,lists);
+			cnt=0;//ÔªËØ¼ÆÊıÆ÷;
+			//ÊÕ¼¯¶ÓÁĞÔªËØ;
 			for(k=0;k<10;k++){
 				list=lists.get(k);
 				while(list.size()>0){

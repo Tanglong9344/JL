@@ -1,53 +1,57 @@
-/**
- * é€‰æ‹©æ’åº
- * æ—¶é—´å¤æ‚åº¦O(n2),ç©ºé—´å¤æ‚åº¦O(1)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Ñ¡ÔñÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(n2),¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ *
+ * @author ÌÆÁú
+ */
 public class SelectSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//é€‰æ‹©æ’åº
+		//Ñ¡ÔñÅÅĞò
 		selectSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("é€‰æ‹©æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//é€‰æ‹©æ’åºå
-		System.out.println("é€‰æ‹©æ’åºå:"+Arrays.toString(intArr));
+		System.out.printf("Ñ¡ÔñÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//Ñ¡ÔñÅÅĞòºó
+		System.out.println("Ñ¡ÔñÅÅĞòºó:"+Arrays.toString(intArr));
 	}
-	//é€‰æ‹©æ’åºå®ç°æ–¹æ³•
+	//Ñ¡ÔñÅÅĞòÊµÏÖ·½·¨
 	static void selectSort(int [] intArr){
 		int i,j,swap;
 		int l=intArr.length;
-		int minPos;//è®°å½•æŸä¸€è¶Ÿæ“ä½œä¸‹çš„æœ€å°å€¼ä½ç½®
-		//è¿›è¡Œn-1è¶Ÿæ“ä½œ
+		int minPos;//¼ÇÂ¼Ä³Ò»ÌË²Ù×÷ÏÂµÄ×îĞ¡ÖµÎ»ÖÃ
+		//½øĞĞn-1ÌË²Ù×÷
 		for(i=0;i<l-1;i++){
 			minPos=i;
 			for(j=i+1;j<l;j++){
-				//å‡åº
+				//ÉıĞò
 				if(intArr[j]<intArr[minPos]){
 					minPos=j;
 				}
 			}
-			//æ˜¯å¦éœ€è¦äº¤æ¢
+			//ÊÇ·ñĞèÒª½»»»
 			if(minPos != i){
 				swap=intArr[i];
 				intArr[i]=intArr[minPos];
 				intArr[minPos]=swap;
 			}
-			//æ˜¾ç¤ºæ¯è¶Ÿæ“ä½œçš„ç»“æœ
-			System.out.printf("ç¬¬%2dè¶Ÿæ“ä½œ:%s%n",i+1,Arrays.toString(intArr));
+			//ÏÔÊ¾Ã¿ÌË²Ù×÷µÄ½á¹û
+			System.out.printf("µÚ%2dÌË²Ù×÷:%s%n",i+1,Arrays.toString(intArr));
 		}
 	}
 }

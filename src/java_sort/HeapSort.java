@@ -1,81 +1,85 @@
-/**
- * å †æ’åº
- * åœ¨æœ€åæƒ…å†µä¸‹ï¼Œæ—¶é—´å¤æ‚åº¦O(NlogN)ï¼Œç©ºé—´å¤æ‚åº¦O(1)
- *
- * å®æ–½è¿‡ç¨‹ï¼š
- * 1ï¼Œæ–°å»ºå †
- * 2ï¼Œäº¤æ¢å…ƒç´ 
- * 3ï¼Œé‡å»ºå †
- *
- * ä½¿ç”¨ä¸€ç»´æ•°ç»„å­˜å‚¨äºŒå‰æ ‘
- * å…¶ä¸­èŠ‚ç‚¹içš„å·¦å­èŠ‚ç‚¹ä¸º2i+1,å³å­èŠ‚ç‚¹ä¸º2i+2
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * ¶ÑÅÅĞò
+ * ÔÚ×î»µÇé¿öÏÂ£¬Ê±¼ä¸´ÔÓ¶ÈO(NlogN)£¬¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ *
+ * ÊµÊ©¹ı³Ì£º
+ * 1£¬ĞÂ½¨¶Ñ
+ * 2£¬½»»»ÔªËØ
+ * 3£¬ÖØ½¨¶Ñ
+ *
+ * Ê¹ÓÃÒ»Î¬Êı×é´æ´¢¶ş²æÊ÷
+ * ÆäÖĞ½ÚµãiµÄ×ó×Ó½ÚµãÎª2i+1,ÓÒ×Ó½ÚµãÎª2i+2
+ *
+ * @author ÌÆÁú
+ */
 public class HeapSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//å †æ’åº
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//¶ÑÅÅĞò
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//å †æ’åº
+		//¶ÑÅÅĞò
 		heapSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("å †æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//å †æ’åºæ’åºå
-		System.out.println("å †æ’åºå:"+Arrays.toString(intArr));
+		System.out.printf("¶ÑÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//¶ÑÅÅĞòÅÅĞòºó
+		System.out.println("¶ÑÅÅĞòºó:"+Arrays.toString(intArr));
 	}
 
 	public static  void heapSort(int[] arr){
 		int len=arr.length;
-		//å¾ªç¯å»ºå †
+		//Ñ­»·½¨¶Ñ
 		for(int i=1;i<len;i++){
-			//å»ºå †
+			//½¨¶Ñ
 			buildMaxHeap(arr,len-i);
-			System.out.printf("ç¬¬%2dæ¬¡å»ºç«‹å¤§é¡¶å †    :%s%n",i,Arrays.toString(arr));
-			//äº¤æ¢å †é¡¶å’Œæœ€åç¬¬iä¸ªå…ƒç´ 
+			System.out.printf("µÚ%2d´Î½¨Á¢´ó¶¥¶Ñ    :%s%n",i,Arrays.toString(arr));
+			//½»»»¶Ñ¶¥ºÍ×îºóµÚi¸öÔªËØ
 			swap(arr,0,len-i);
-			System.out.printf("ç¬¬%2dæ¬¡äº¤æ¢å †é¡¶å…ƒç´ :%s%n",i,Arrays.toString(arr));
+			System.out.printf("µÚ%2d´Î½»»»¶Ñ¶¥ÔªËØ:%s%n",i,Arrays.toString(arr));
 		}
 	}
-	//å¯¹æ•°ç»„ä»0åˆ°lenå»ºå¤§é¡¶å †
+	//¶ÔÊı×é´Ó0µ½len½¨´ó¶¥¶Ñ
 	private static void buildMaxHeap(int[]arr, int len) {
 		int i,k,big;
-		//ä»æœ€åä¸€ä¸ªèŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹å¼€å§‹
+		//´Ó×îºóÒ»¸ö½ÚµãµÄ¸¸½Úµã¿ªÊ¼
 		for(i=(len-1)/2;i>=0;i--){
-			//kä¿å­˜æ­£åœ¨åˆ¤æ–­çš„èŠ‚ç‚¹
+			//k±£´æÕıÔÚÅĞ¶ÏµÄ½Úµã
 			k=i;
-			//å¦‚æœå½“å‰kèŠ‚ç‚¹çš„å­èŠ‚ç‚¹å­˜åœ¨
+			//Èç¹ûµ±Ç°k½ÚµãµÄ×Ó½Úµã´æÔÚ
 			if(k*2+1<=len){
-				//kèŠ‚ç‚¹çš„å·¦å­èŠ‚ç‚¹çš„ç´¢å¼•
+				//k½ÚµãµÄ×ó×Ó½ÚµãµÄË÷Òı
 				big=k*2+1;
-				//å¦‚æœbigå°äºlenï¼Œå³big+1ä»£è¡¨çš„kèŠ‚ç‚¹çš„å³å­èŠ‚ç‚¹å­˜åœ¨
+				//Èç¹ûbigĞ¡ÓÚlen£¬¼´big+1´ú±íµÄk½ÚµãµÄÓÒ×Ó½Úµã´æÔÚ
 				if(big<len){
-					//è‹¥æœå³å­èŠ‚ç‚¹çš„å€¼è¾ƒå¤§
+					//Èô¹ûÓÒ×Ó½ÚµãµÄÖµ½Ï´ó
 					if(arr[big]<arr[big+1]){
-						//bigæ€»æ˜¯è®°å½•è¾ƒå¤§å­èŠ‚ç‚¹çš„ç´¢å¼•
+						//big×ÜÊÇ¼ÇÂ¼½Ï´ó×Ó½ÚµãµÄË÷Òı
 						big=big+1;
 					}
 				}
-				//å¦‚æœkèŠ‚ç‚¹çš„å€¼å°äºå…¶è¾ƒå¤§çš„å­èŠ‚ç‚¹çš„å€¼
+				//Èç¹ûk½ÚµãµÄÖµĞ¡ÓÚÆä½Ï´óµÄ×Ó½ÚµãµÄÖµ
 				if(arr[k]<arr[big]){
-					swap(arr,k,big);//äº¤æ¢
+					swap(arr,k,big);//½»»»
 				}
 			}
 		}
 	}
 
-	//äº¤æ¢æ“ä½œ
+	//½»»»²Ù×÷
 	private static  void swap(int[] arr, int i,int j) {
 		int tmp=arr[i];
 		arr[i]=arr[j];

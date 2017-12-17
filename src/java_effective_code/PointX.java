@@ -1,4 +1,5 @@
-package java_effective_equals;
+package java_effective_code;
+import static java_effective_code.CommonConstants.GAP;
 
 /**
  * “ªŒ¨µ„¿‡(x)
@@ -16,7 +17,7 @@ public class PointX extends Object{
 	@Override
 	public boolean equals(Object o){
 		if(o instanceof PointX){
-			return x -((PointX)o).getX() < Common.GAP;
+			return x -((PointX)o).getX() < GAP;
 		}
 		return false;
 	}

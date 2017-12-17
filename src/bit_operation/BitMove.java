@@ -19,6 +19,5 @@ public class BitMove extends Object{
 		//·Ç2µÄ±¶Êý
 		System.out.println("9*7  = " + 9*7);
 		System.out.printf("(9<<3)-9 = %d%n",(9<<3)-9);
-		System.out.println(new String().hashCode());
 	}
 }

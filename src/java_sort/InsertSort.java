@@ -1,47 +1,51 @@
-/**
- * ä¸€èˆ¬æ’å…¥æ’åº
- * æ—¶é—´å¤æ‚åº¦O(n2),ç©ºé—´å¤æ‚åº¦O(1)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Ò»°ã²åÈëÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(n2),¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ *
+ * @author ÌÆÁú
+ */
 public class InsertSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æ’å…¥æ’åº
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//²åÈëÅÅĞò
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//æ’å…¥æ’åº
+		//²åÈëÅÅĞò
 		insertSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("æ’å…¥æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//æ’å…¥æ’åºå
-		System.out.println("æ’å…¥æ’åºå:"+Arrays.toString(intArr));
+		System.out.printf("²åÈëÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//²åÈëÅÅĞòºó
+		System.out.println("²åÈëÅÅĞòºó:"+Arrays.toString(intArr));
 	}
 
-	//æ’å…¥æ’åºå®ç°æ–¹æ³•
+	//²åÈëÅÅĞòÊµÏÖ·½·¨
 	static void insertSort(int[] intArr){
 		int i,j;
 		int len=intArr.length;
 		int tmp;
 		for(i=1;i<len;i++){
 			tmp=intArr[i];
-			//æ•°æ®ç§»åŠ¨
+			//Êı¾İÒÆ¶¯
 			for(j=i-1;j>=0&&intArr[j]>tmp;j--){
 				intArr[j+1]=intArr[j];
 			}
 			intArr[j+1]=tmp;
-			//æ˜¾ç¤ºæ¯æ¬¡æ“ä½œçš„ç»“æœ
-			System.out.printf("ç¬¬%2dæ¬¡æ“ä½œï¼š%s%n",i,Arrays.toString(intArr));
+			//ÏÔÊ¾Ã¿´Î²Ù×÷µÄ½á¹û
+			System.out.printf("µÚ%2d´Î²Ù×÷£º%s%n",i,Arrays.toString(intArr));
 		}
 	}
 }

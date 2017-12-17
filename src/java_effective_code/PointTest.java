@@ -1,4 +1,4 @@
-package java_effective_equals;
+package java_effective_code;
 
 /**
  * Point ≤‚ ‘¿‡

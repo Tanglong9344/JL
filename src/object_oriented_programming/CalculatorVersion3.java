@@ -1,16 +1,20 @@
+package object_oriented_programming;
+
+import static object_oriented_programming.CommonConstants.OPERATIONS;
+import static object_oriented_programming.CommonConstants.RANGE;
+
 /**
  * 实现可进行加减乘除运算的简易计算器 版本3
  * 使用封装，继承和多态思想
  * 使得代码更易于维护和扩展，增强代码复用性
+ *
+ * @author 唐龙
  */
-
-package object_oriented_programming;
-
 public class CalculatorVersion3 {
 	public static void main(String[] args) {
-		double opNumA=Math.random()*CommonFinal.RANGE;//操作数1
-		double opNumB=Math.random()*CommonFinal.RANGE;//操作数2
-		char op = CommonFinal.OPERATIONS[(int)(Math.random()*4)];//运算符
+		double opNumA=Math.random() * RANGE;//操作数1
+		double opNumB=Math.random() * RANGE;//操作数2
+		char op = OPERATIONS[(int)(Math.random()*4)];//运算符
 		Operation operation = createOperation(opNumA,opNumB,op);//获取运算对象
 		double result=operation.getResult();//运算结果
 		System.out.printf("%.2f%c%.2f=%.2f%n",opNumA,op,opNumB,result);

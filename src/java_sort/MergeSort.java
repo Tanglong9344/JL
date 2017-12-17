@@ -1,70 +1,74 @@
-/**
- * å½’å¹¶æ’åº
- * æ—¶é—´å¤æ‚åº¦O(NlogN),ç©ºé—´å¤æ‚åº¦O(N)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * ¹é²¢ÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(NlogN),¿Õ¼ä¸´ÔÓ¶ÈO(N)
+ *
+ * @author ÌÆÁú
+ */
 public class MergeSort {
-	static int cnt = 0;//è®°å½•æ“ä½œæ¬¡æ•°
+	static int cnt = 0;//¼ÇÂ¼²Ù×÷´ÎÊı
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰    ï¼š"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°    £º"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//å½’å¹¶æ’åº
+		//¹é²¢ÅÅĞò
 		mergeSort(intArr,0,intArr.length-1);
 		long end = System.nanoTime();
-		System.out.printf("å½’å¹¶æ’åºå…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//å½’å¹¶æ’åºå
-		System.out.println("å½’å¹¶æ’åºåï¼š"+Arrays.toString(intArr));
+		System.out.printf("¹é²¢ÅÅĞò¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//¹é²¢ÅÅĞòºó
+		System.out.println("¹é²¢ÅÅĞòºó£º"+Arrays.toString(intArr));
 	}
 
-	//é€’å½’å®ç°å½’å¹¶æ’åº
+	//µİ¹éÊµÏÖ¹é²¢ÅÅĞò
 	public static void mergeSort(int[] data,int left,int right) {
 		if(left<right){
-			//äºŒåˆ†
+			//¶ş·Ö
 			int center=(left+right)/2;
-			//å·¦é€’å½’
+			//×óµİ¹é
 			mergeSort(data,left,center);
-			//å³é€’å½’
+			//ÓÒµİ¹é
 			mergeSort(data,center+1,right);
-			//å·¦å³åˆå¹¶
+			//×óÓÒºÏ²¢
 			merge(data,left,center,right);
 		}
 	}
 	public static void merge(int[] data,int left,int center,int right) {
-		int [] mergeArr=new int[data.length];//åˆå¹¶æ•°ç»„
-		int rightStart=center+1;//å³è¾¹æ•°ç»„èµ·å§‹ä½ç½®
-		int index=left;//åˆå¹¶æ•°ç»„èµ·å§‹ç´¢å¼•
-		int iniPos=left;//è®°å½•åŸæ•°ç»„å¾…æ’åºéƒ¨åˆ†çš„èµ·å§‹ä½ç½®
+		int [] mergeArr=new int[data.length];//ºÏ²¢Êı×é
+		int rightStart=center+1;//ÓÒ±ßÊı×éÆğÊ¼Î»ÖÃ
+		int index=left;//ºÏ²¢Êı×éÆğÊ¼Ë÷Òı
+		int iniPos=left;//¼ÇÂ¼Ô­Êı×é´ıÅÅĞò²¿·ÖµÄÆğÊ¼Î»ÖÃ
 		while(left<=center&&rightStart<=right){
-			//ä»ä¸¤ä¸ªæ•°ç»„ä¸­å–å‡ºæœ€å°çš„æ”¾å…¥ä¸­é—´æ•°ç»„
+			//´ÓÁ½¸öÊı×éÖĞÈ¡³ö×îĞ¡µÄ·ÅÈëÖĞ¼äÊı×é
 			mergeArr[index++]=data[left]<=data[rightStart]?data[left++]:data[rightStart++];
 		}
-		//å‰©ä½™éƒ¨åˆ†ä¾æ¬¡æ”¾å…¥ä¸­é—´æ•°ç»„
-		//å·¦è¾¹æ•°æ®
+		//Ê£Óà²¿·ÖÒÀ´Î·ÅÈëÖĞ¼äÊı×é
+		//×ó±ßÊı¾İ
 		while(left<=center){
 			mergeArr[index++]=data[left++];
 		}
-		//å³è¾¹æ•°æ®
+		//ÓÒ±ßÊı¾İ
 		while(rightStart<=right){
 			mergeArr[index++]=data[rightStart++];
 		}
-		//å°†åˆå¹¶æ•°ç»„ä¸­çš„å†…å®¹å¤åˆ¶å›åŸæ•°ç»„
+		//½«ºÏ²¢Êı×éÖĞµÄÄÚÈİ¸´ÖÆ»ØÔ­Êı×é
 		while(iniPos<=right){
 			data[iniPos]=mergeArr[iniPos++];
 		}
-		//æ˜¾ç¤ºæ¯æ¬¡æ“ä½œçš„ç»“æœ
+		//ÏÔÊ¾Ã¿´Î²Ù×÷µÄ½á¹û
 		cnt++;
-		System.out.printf("ç¬¬%2dæ“ä½œï¼š%s%n",cnt,Arrays.toString(data));
+		System.out.printf("µÚ%2d²Ù×÷£º%s%n",cnt,Arrays.toString(data));
 	}
 }

@@ -4,6 +4,10 @@ import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
+/**
+ * Java ÄÚÊ¡
+ * @author ÌÆÁú
+ */
 public class IntrospectorTest {
 	private String name;
 	private int age = 18;

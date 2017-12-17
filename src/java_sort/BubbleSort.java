@@ -1,86 +1,90 @@
-/**
- * å†’æ³¡æ’åº
- * æ—¶é—´å¤æ‚åº¦O(n2),ç©ºé—´å¤æ‚åº¦O(1)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Ã°ÅİÅÅĞò
+ * Ê±¼ä¸´ÔÓ¶ÈO(n2),¿Õ¼ä¸´ÔÓ¶ÈO(1)
+ *
+ * @author ÌÆÁú
+ */
 public class BubbleSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//å†’æ³¡æ’åº1
-		//æ•°æ®åˆå§‹åŒ–
+		int [] intArr = new int [LENGTH];
+		//Ã°ÅİÅÅĞò1
+		//Êı¾İ³õÊ¼»¯
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 
 		long begin = System.nanoTime();
-		//å†’æ³¡æ’åº1
+		//Ã°ÅİÅÅĞò1
 		bubbleSort1(intArr);
 		long end = System.nanoTime();
-		System.out.printf("å†’æ³¡æ’åº1å…±è€—æ—¶%fçº³ç§’%n",(end-begin)/1.0);
-		//å†’æ³¡æ’åº1æ’åºåå
-		System.out.println("å†’æ³¡æ’åº1å:"+Arrays.toString(intArr));
+		System.out.printf("Ã°ÅİÅÅĞò1¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/1.0);
+		//Ã°ÅİÅÅĞò1ÅÅĞòºóºó
+		System.out.println("Ã°ÅİÅÅĞò1ºó:"+Arrays.toString(intArr));
 
-		//å†’æ³¡æ’åº2
-		//æ•°æ®åˆå§‹åŒ–
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		//Ã°ÅİÅÅĞò2
+		//Êı¾İ³õÊ¼»¯
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//æ’åºå‰
-		System.out.println("æ’åºå‰:"+Arrays.toString(intArr));
+		//ÅÅĞòÇ°
+		System.out.println("ÅÅĞòÇ°:"+Arrays.toString(intArr));
 		begin = System.nanoTime();
-		//å†’æ³¡æ’åº2
+		//Ã°ÅİÅÅĞò2
 		bubbleSort2(intArr);
 		end = System.nanoTime();
-		System.out.printf("å†’æ³¡æ’åº2å…±è€—æ—¶%fçº³ç§’%n",(end-begin)/10.0);
-		//å†’æ³¡æ’åº2æ’åºåå
-		System.out.println("å†’æ³¡æ’åº2å:"+Arrays.toString(intArr));
+		System.out.printf("Ã°ÅİÅÅĞò2¹²ºÄÊ±%fÄÉÃë%n",(end-begin)/10.0);
+		//Ã°ÅİÅÅĞò2ÅÅĞòºóºó
+		System.out.println("Ã°ÅİÅÅĞò2ºó:"+Arrays.toString(intArr));
 	}
-	//å†’æ³¡æ’åºå®ç°æ–¹æ³•1
+	//Ã°ÅİÅÅĞòÊµÏÖ·½·¨1
 	static void bubbleSort1(int [] intArr){
 		int i,j;
 		int len=intArr.length;
-		//è¿›è¡Œn-1è¶Ÿæ“ä½œ
+		//½øĞĞn-1ÌË²Ù×÷
 		for(i=0;i<len-1;i++){
 			for(j=len-1;j>i;j--){
-				//å‡åº
+				//ÉıĞò
 				if(intArr[j]<intArr[j-1]){
-					swap(intArr,j,j-1);//äº¤æ¢
+					swap(intArr,j,j-1);//½»»»
 				}
 			}
-			//æ˜¾ç¤ºæ¯è¶Ÿæ“ä½œçš„ç»“æœ
-			System.out.printf("ç¬¬%2dè¶Ÿæ“ä½œ:%s%n",i+1,Arrays.toString(intArr));
+			//ÏÔÊ¾Ã¿ÌË²Ù×÷µÄ½á¹û
+			System.out.printf("µÚ%2dÌË²Ù×÷:%s%n",i+1,Arrays.toString(intArr));
 		}
 	}
 
-	//å†’æ³¡æ’åºå®ç°æ–¹æ³•2ï¼Œåœ¨å®ç°æ–¹æ³•1çš„åŸºç¡€åŠ ä¸Šæœ‰åºåˆ¤æ–­
+	//Ã°ÅİÅÅĞòÊµÏÖ·½·¨2£¬ÔÚÊµÏÖ·½·¨1µÄ»ù´¡¼ÓÉÏÓĞĞòÅĞ¶Ï
 	static void bubbleSort2(int [] intArr){
 		int i,j;
 		int len=intArr.length;
-		boolean stop = false;//å¦‚æœå·²ç»æœ‰åºåˆ™åœæ­¢æ“ä½œ
-		//è¿›è¡Œn-1è¶Ÿæ“ä½œ
+		boolean stop = false;//Èç¹ûÒÑ¾­ÓĞĞòÔòÍ£Ö¹²Ù×÷
+		//½øĞĞn-1ÌË²Ù×÷
 		for(i=0;i<len-1&&!stop;i++){
 			stop=true;
 			for(j=0;j<len-i-1;j++){
-				//å‡åº
+				//ÉıĞò
 				if(intArr[j]>intArr[j+1]){
-					swap(intArr,j,j+1);//äº¤æ¢
+					swap(intArr,j,j+1);//½»»»
 					stop=false;
 				}
 			}
-			//æ˜¾ç¤ºæ¯è¶Ÿæ“ä½œçš„ç»“æœ
-			System.out.printf("ç¬¬%2dè¶Ÿæ“ä½œ:%s%n",i+1,Arrays.toString(intArr));
+			//ÏÔÊ¾Ã¿ÌË²Ù×÷µÄ½á¹û
+			System.out.printf("µÚ%2dÌË²Ù×÷:%s%n",i+1,Arrays.toString(intArr));
 		}
 	}
 
-	// äº¤æ¢æ–¹æ³•
+	// ½»»»·½·¨
 	static void swap(int[] arr,int i,int j){
 		int tmp;
 		tmp=arr[i];

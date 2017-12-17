@@ -1,4 +1,6 @@
-package java_effective_equals;
+package java_effective_code;
+
+import static java_effective_code.CommonConstants.GAP;
 
 /**
  * »˝Œ¨Œ¨µ„¿‡(x,y,z)
@@ -20,7 +22,7 @@ public class PointCompoundXYZ{
 	public boolean equals(Object o){
 		if(o instanceof PointCompoundXYZ){
 			PointCompoundXYZ pxyz = (PointCompoundXYZ)o;
-			return pointxy.equals(pxyz.pointxy) && z - pxyz.getZ() < Common.GAP;
+			return pointxy.equals(pxyz.pointxy) && z - pxyz.getZ() < GAP;
 		}
 		return false;
 	}

@@ -1,55 +1,59 @@
-/**
- * Е╦▄Е╟■Ф▌▓Е╨▐
- * Ф≈╤И≈╢Е╓█Ф²┌Е╨╕<O(n2),Г╘╨И≈╢Е╓█Ф²┌Е╨╕O(1)
- */
-
 package java_sort;
+
+import static java_sort.CommonConstants.LENGTH;
+import static java_sort.CommonConstants.RANGE;
 
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * оё╤ШеепР
+ * й╠╪Д╦╢тс╤х<O(n2),©у╪Д╦╢тс╤хO(1)
+ *
+ * @author лфаЗ
+ */
 public class ShellSort {
 	public static void main(String[] args) {
-		int [] intArr = new int [CommonFinal.LENGTH];
-		//Ф∙╟Ф█╝Е┬²Е╖▀Е▄√
+		int [] intArr = new int [LENGTH];
+		//йЩ╬щЁУй╪╩╞
 		Random rd = new Random();
-		for(int i=0;i<CommonFinal.LENGTH;i++){
-			intArr[i]=rd.nextInt(CommonFinal.RANGE);
+		for(int i=0;i<LENGTH;i++){
+			intArr[i]=rd.nextInt(RANGE);
 		}
-		//Ф▌▓Е╨▐Е┴█
-		System.out.println("Ф▌▓Е╨▐Е┴█:"+Arrays.toString(intArr));
+		//еепРг╟
+		System.out.println("еепРг╟:"+Arrays.toString(intArr));
 		long begin = System.nanoTime();
-		//Е╦▄Е╟■Ф▌▓Е╨▐
+		//оё╤ШеепР
 		shellSort(intArr);
 		long end = System.nanoTime();
-		System.out.printf("Е╦▄Е╟■Ф▌▓Е╨▐Е┘╠Х─≈Ф≈╤%fГ╨ЁГ╖▓%n",(end-begin)/1.0);
-		//Е╦▄Е╟■Ф▌▓Е╨▐Е░▌
-		System.out.println("Е╦▄Е╟■Ф▌▓Е╨▐Е░▌:"+Arrays.toString(intArr));
+		System.out.printf("оё╤ШеепР╧╡╨дй╠%fдицК%n",(end-begin)/1.0);
+		//оё╤ШеепР╨С
+		System.out.println("оё╤ШеепР╨С:"+Arrays.toString(intArr));
 	}
-	//Е╦▄Е╟■Ф▌▓Е╨▐Е╝·Г▌╟Ф√╧ФЁ∙
+	//оё╤ШеепРй╣ож╥╫╥╗
 	static void shellSort(int[] intArr){
 		int i,j,k;
 		int len=intArr.length;
-		int gap=len;//Ф╞▐Д╦╙Е┬├Г╩└И≈╢Г └Е╒·И┤▐
+		int gap=len;//ц©╦Ж╥жвИ╪Д╣дтЖа©
 		int tmp;
-		//Е┬├Г╩└И∙©Е╨╕Д╦╨1Ф≈╤Г╩┬Ф╜╒Ф⌠█Д╫°
+		//╥жвИЁ╓╤хн╙1й╠жуж╧╡ывВ
 		while(gap>1){
-			//Е╒·И┤▐Е┤▐Е█┼
+			//тЖа©╪У╟К
 			gap=(int) Math.ceil(gap/2);
-			//Е░└Д╦╙Е┬├Г╩└Д╫©Г■╗Ф▐▓Е┘╔Ф▌▓Е╨▐
+			//╦В╦Ж╥жвИй╧сц╡ЕхКеепР
 			for(k=0;k<gap;k++){
 				for(i=k+gap;i<intArr.length;i+=gap){
 					tmp=intArr[i];
-					//Г╖╩Е┼╗
+					//рф╤╞
 					for(j=i-gap;j>=k&&tmp<intArr[j];j-=gap){
 						intArr[j+gap]=intArr[j];
 					}
-					//Ф▐▓Е┘╔
+					//╡ЕхК
 					intArr[j+gap]=tmp;
 				}
 			}
-			//Ф≤╬Г╓╨Ф╞▐Ф╛║Ф⌠█Д╫°Г └Г╩⌠Ф·°
-			System.out.printf("Г╛╛%2dГ╠╩Е┬├Г╩└Ф▌▓Е╨▐Г╩⌠Ф·°О╪ %s%n",gap,Arrays.toString(intArr));
+			//отй╬ц©╢н╡ывВ╣д╫А╧Ш
+			System.out.printf("╣з%2dюЮ╥жвИеепР╫А╧Шё╨%s%n",gap,Arrays.toString(intArr));
 		}
 	}
 }

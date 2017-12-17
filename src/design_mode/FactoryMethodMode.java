@@ -12,13 +12,13 @@
 
 package design_mode;
 
-import object_oriented_programming.CommonFinal;
+import object_oriented_programming.CommonConstants;
 
 public class FactoryMethodMode {
 	public static void main(String[] args) {
-		double opNumA=Math.random()*CommonFinal.RANGE;//操作数1
-		double opNumB=Math.random()*CommonFinal.RANGE;//操作数2
-		char op = CommonFinal.OPERATIONS[(int)(Math.random()*4)];//运算符
+		double opNumA=Math.random()*CommonConstants.RANGE;//操作数1
+		double opNumB=Math.random()*CommonConstants.RANGE;//操作数2
+		char op = CommonConstants.OPERATIONS[(int)(Math.random()*4)];//运算符
 		//由操作工厂根据不同运算符创建相应的操作类
 		Factory factory = createOperation(op);
 		if(factory!=null){

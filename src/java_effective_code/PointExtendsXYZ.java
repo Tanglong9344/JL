@@ -1,4 +1,6 @@
-package java_effective_equals;
+package java_effective_code;
+
+import static java_effective_code.CommonConstants.GAP;
 
 /**
  * »˝Œ¨Œ¨µ„¿‡(x,y,z)
@@ -18,7 +20,7 @@ public class PointExtendsXYZ extends PointExtendsXY{
 	@Override
 	public boolean equals(Object o){
 		if(o instanceof PointExtendsXYZ){
-			return super.equals(o) && z - ((PointExtendsXYZ)o).getZ() < Common.GAP;
+			return super.equals(o) && z - ((PointExtendsXYZ)o).getZ() < GAP;
 		}
 		return false;
 	}

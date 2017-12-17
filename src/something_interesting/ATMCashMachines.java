@@ -1,5 +1,11 @@
 package something_interesting;
 
+/**
+ * ATM 模拟
+ *
+ * @author 唐龙
+ *
+ */
 public class ATMCashMachines {
 	public static void main(String[] args) {
 		// 实例化Bank对象
@@ -28,10 +34,7 @@ public class ATMCashMachines {
 	}
 }
 
-/**
- * 普通银行类
- * @author tanglong
- */
+/**普通银行类*/
 class Bank {
 	private double curveMoney = 174.85; // 存入银行的钱数
 
@@ -64,10 +67,7 @@ class Bank {
 	}
 }
 
-/**
- * 同步银行类
- * @author tanglong
- */
+/**同步银行类*/
 class SyncBank {
 	private double curveMoney = 174.85; // 存入银行的钱数
 

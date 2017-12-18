@@ -40,7 +40,7 @@ public final class ComplexNumber {
 		return new ComplexNumber(rp + cn.rp, ip + cn.ip);
 	}
 
-	/**add*/
+	/**substract*/
 	public ComplexNumber substract(ComplexNumber cn){
 		return new ComplexNumber(rp - cn.rp, ip - cn.ip);
 	}

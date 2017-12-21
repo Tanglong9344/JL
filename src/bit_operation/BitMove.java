@@ -9,15 +9,15 @@ package bit_operation;
 public class BitMove extends Object{
 	public static void main(String[] args) throws CloneNotSupportedException {
 		//乘法
-		System.out.println("9*8  = " + 9*8);
+		System.out.println("9*8 = " + 9*8);
 		System.out.printf("9<<3 = %d%n",9<<3);
 
 		//除法
-		System.out.println("9/4  = " + 9/4);
+		System.out.println("9/4 = " + 9/4);
 		System.out.printf("9>>2 = %d%n",9>>2);
 
 		//非2的倍数
-		System.out.println("9*7  = " + 9*7);
+		System.out.println("9*7 = " + 9*7);
 		System.out.printf("(9<<3)-9 = %d%n",(9<<3)-9);
 	}
 }

@@ -3,7 +3,6 @@ package something_interesting;
 import java.util.Scanner;
 
 public class Main {
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
@@ -25,6 +24,7 @@ public class Main {
 					numEven++;
 				}
 			}
+			sc.close();
 			if(n == (num4+numEven)){
 				System.out.println("Yes");
 			}else if(num4>=(numOdd+1) && n == (num4+numOdd)){

@@ -11,5 +11,5 @@ import org.junit.runners.Suite;
  */
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({SumJUnit.class, JUnitAnnotations.class})
-public class SuitTest {}
+@Suite.SuiteClasses({AnnotationRule.class, JUnitAnnotations.class})
+public class JUnitSuit {}

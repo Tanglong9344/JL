@@ -30,15 +30,13 @@ public class SelectSort {
 		//选择排序后
 		System.out.println("选择排序后:"+Arrays.toString(intArr));
 	}
+
 	//选择排序实现方法
 	static void selectSort(int [] intArr){
-		int i,j,swap;
-		int l=intArr.length;
-		int minPos;//记录某一趟操作下的最小值位置
 		//进行n-1趟操作
-		for(i=0;i<l-1;i++){
+		for(int i=0,len = intArr.length,j,swap,minPos;i<len-1;i++){
 			minPos=i;
-			for(j=i+1;j<l;j++){
+			for(j=i+1;j<len;j++){
 				//升序
 				if(intArr[j]<intArr[minPos]){
 					minPos=j;

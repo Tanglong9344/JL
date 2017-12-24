@@ -14,6 +14,7 @@
 + [Java Annotation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/Java_annotation)
 + [Optimization](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_optimization)
 + [Bit Operation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/bit_operation)
++ [Java Enum](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_enum)
 + [Instropector](https://github.com/Tanglong9344/jl/tree/master/src/java_instropector)
 + [Common Constant](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_common)
 + [Others](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_other)

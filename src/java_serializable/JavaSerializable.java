@@ -7,12 +7,12 @@ import java_common.TimeNow;
 
 /**
  * Java 序列化
+ *
  * 实现 Serializable 接口
  *
  * @author 唐龙
  */
 public class JavaSerializable implements Serializable{
-	//This is a test
 	public static void main(String[] args) {
 		SerializeHelper sh = new SerializeHelper();
 		JavaSerializable js = new JavaSerializable("序列化:",TimeNow.TIME_NOW);

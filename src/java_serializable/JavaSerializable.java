@@ -8,6 +8,7 @@ import java_common.TimeNow;
 /**
  * Java 序列化
  * 实现 Serializable 接口
+ *
  * @author 唐龙
  */
 public class JavaSerializable implements Serializable{

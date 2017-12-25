@@ -2,6 +2,7 @@ package java_core_basic;
 
 /**
  * 8种基本数据类型
+ *
  * @author 唐龙
  */
 public class BasicDataTypeTest {

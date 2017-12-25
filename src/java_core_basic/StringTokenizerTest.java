@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
  *
  * 与String.split()方法相比
  * StringTokenizer在截取字符串中的效率最高。
+ *
  * @author 唐龙
  */
 public class StringTokenizerTest {

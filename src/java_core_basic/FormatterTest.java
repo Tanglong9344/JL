@@ -5,6 +5,7 @@ import java.util.Formatter;
 
 /**
  * Formatter类格式化显示
+ *
  * @author 唐龙
  */
 public class FormatterTest {

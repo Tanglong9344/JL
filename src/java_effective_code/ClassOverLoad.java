@@ -1,7 +1,7 @@
 package java_effective_code;
 
 /**
- * Class OverLoad : static selection
+ * Class OverLoad : static selection-something unexpected will happen
  *
  * @author ÌÆÁú
  *

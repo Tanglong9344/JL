@@ -40,14 +40,8 @@ public class StringBufferTest {
 		System.out.println(sb.toString());
 		System.out.println(sb.capacity());//ÈÝÁ¿
 
-		sb.append("aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa"
-				+ "aaaaaaaaaaaaaaaa");
+		sb.append("aaaaaaaaaaaaaaaa");
+
 		System.out.println(sb.toString());
 		System.out.println(sb.capacity());//ÈÝÁ¿
 	}

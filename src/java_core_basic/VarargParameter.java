@@ -1,12 +1,13 @@
 package java_core_basic;
 
 /**
- * Java 多态
+ * Java 可变参数
+ *
  * @author 唐龙
  */
-public class PolymorphismAndChangedParameters {
+public class VarargParameter {
 	public static void main(String[] args) {
-		PolymorphismAndChangedParameters p = new PolymorphismAndChangedParameters();
+		VarargParameter p = new VarargParameter();
 		System.out.println("---------多态---------");
 		System.out.println(p.add(1));
 		System.out.println(p.add(1,2));

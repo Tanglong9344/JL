@@ -74,10 +74,13 @@ public class StringTest {
 		System.out.println("lastIndexOf():"+strTest.substring(strTest.lastIndexOf("T"),strTest.lastIndexOf(",")));
 		//toCharArray()
 		System.out.println("strTest.toCharArray():"+Arrays.toString(strTest.toCharArray()));
-
+		//contentEquals
+		System.out.println("aaa".contentEquals("aaa"));
 		//format
-		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\", 'c',true,32,Math.PI):\n"
-				+ String.format("ch=%c,isTrue=%b,num=%d,double=%f.", 'c',true,32,Math.PI));
+		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\""
+				+ ", 'c',true,32,Math.PI):\n"
+				+ String.format(
+						"ch=%c,isTrue=%b,num=%d,double=%f.", 'c',true,32,Math.PI));
 
 		// hashcode
 		System.out.println("hashcode:"+str1.hashCode());

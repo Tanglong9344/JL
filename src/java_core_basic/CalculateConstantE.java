@@ -2,6 +2,7 @@ package java_core_basic;
 
 /**
  * 常量E的计算
+ *
  * @author 唐龙
  */
 public class CalculateConstantE {

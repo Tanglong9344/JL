@@ -2,6 +2,7 @@ package java_core_basic;
 
 /**
  * Java Char
+ *
  * @author ÌÆÁú
  */
 public class CharTest {

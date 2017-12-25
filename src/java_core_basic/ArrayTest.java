@@ -10,6 +10,7 @@ import java.util.Arrays;
  *
  * 而集合对象的容量可以根据需要自动扩展，
  * 集合只能容纳对象而不能容纳基本数据类型数据。
+ *
  * @author 唐龙
  */
 public class ArrayTest {

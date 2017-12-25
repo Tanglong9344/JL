@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 
 /**
  * 序列化和反序列化方法
+ *
  * @author 唐龙
  */
 public class SerializeHelper {

@@ -13,9 +13,9 @@ public class ParseAnnotation {
 		Class<MyAnnotation> clazz = MyAnnotation.class;
 		MyEntity myEntity = clazz.getAnnotation(MyEntity.class);
 		if (null == myEntity) {
-			System.out.println("MyAnnotation类不是实体类");
+			System.out.println("MyAnnotation 类不是实体类");
 		} else {
-			System.out.println("MyAnnotation类是实体类");
+			System.out.println("MyAnnotation 类是实体类");
 			MyTable myTable= clazz.getAnnotation(MyTable.class);
 			String tableName = myTable.name();
 			System.out.println("表名: " + tableName);

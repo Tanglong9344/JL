@@ -1,7 +1,7 @@
 package java_annotation;
 
 @MyEntity
-@MyTable(name="hero_")
+@MyTable(name="person_")
 /**
  * Annotation Class to test Annotation
  *

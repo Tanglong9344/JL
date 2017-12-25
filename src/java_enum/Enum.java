@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * JavaÃ¶¾Ù
+ *
  * @author ÌÆÁú
  */
 public class Enum {
@@ -34,9 +35,4 @@ public class Enum {
 }
 
 /**Ã¶¾Ù*/
-enum Season{
-	´º¼¾,
-	ÏÄ¼¾,
-	Çï¼¾,
-	¶¬¼¾;
-}
+enum Season{´º¼¾, ÏÄ¼¾, Çï¼¾, ¶¬¼¾;}

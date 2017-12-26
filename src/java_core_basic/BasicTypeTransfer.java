@@ -15,7 +15,6 @@ public class BasicTypeTransfer {
 		byte b = 44;
 		System.out.println("b="+b);
 
-
 		short s = b;
 		System.out.println("s="+s);
 
@@ -78,5 +77,11 @@ public class BasicTypeTransfer {
 
 		int intValue = Integer.valueOf(str).intValue();
 		System.out.println("intValue="+intValue);
+
+		byte bb = 1;
+		byte bbb = 2;
+		// transfer byte to int before opreration
+		int iii = bb + bbb;
+		System.out.println("iii=" + iii);
 	}
 }

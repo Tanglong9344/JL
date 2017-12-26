@@ -29,7 +29,7 @@
   + [Effective Code](https://github.com/Tanglong9344/jl/tree/master/src/java_effective_code)
   + [Effective Constructor](https://github.com/Tanglong9344/jl/tree/master/src/java_effective_constructor)
 # Further to Java
-+ [JVM](https://github.com/Tanglong9344/JL/tree/master/jvm.md)
++ [JVM](https://github.com/Tanglong9344/jl/blob/master/JVM/README.md)
 + [Java LOg](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
 + [Reflection](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reflection)
 + [Java NIO](https://github.com/Tanglong9344/JL/tree/master/src/java_nio)

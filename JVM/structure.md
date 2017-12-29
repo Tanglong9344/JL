@@ -1,2 +1,2 @@
 # JVM Structure
-![JVM.png](/pictures/jvm.png)
+![JVM.png](pictures/jvm.png)

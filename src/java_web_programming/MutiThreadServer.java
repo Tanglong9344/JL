@@ -4,13 +4,20 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 多线程 网络连接-服务端
+ *
+ * @author 唐龙
+ *
+ */
 public class MutiThreadServer {
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		Socket s = null;
+		ServerSocket ss = null;
 		try {
-			ServerSocket ss = new ServerSocket(8888);
+			ss = new ServerSocket(8888);
 			System.out.println("监听在端口号:8888");
-			Socket s = ss.accept();
+			s = ss.accept();
 
 			//启动发送消息线程
 			new SendThread(s).start();
@@ -18,6 +25,9 @@ public class MutiThreadServer {
 			new ReceiveThread(s).start();
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			ss.close();
+			s.close();
 		}
 	}
 }

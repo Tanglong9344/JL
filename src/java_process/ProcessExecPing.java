@@ -1,10 +1,16 @@
-package java_web_programming;
+package java_process;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ProcessRuntimeTest {
+/**
+ * Process exec  ping
+ *
+ * @author ÌÆÁú
+ *
+ */
+public class ProcessExecPing {
 	public static void main(String[] args) throws IOException {
 		Process p = Runtime.getRuntime().exec("ping " + "127.0.0.1");
 		BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));

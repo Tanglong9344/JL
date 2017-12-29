@@ -18,9 +18,28 @@ import javax.swing.SwingUtilities;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 
+/**
+ * A simple Web Browser
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class SimpleWebBrowser extends JFrame{
-	private static final long serialVersionUID = 1L;
+	public static void main(String[] args) {
+		final int WIDTH = 512;
+		final int HEIGHT = 350;
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				SimpleWebBrowser swb = new SimpleWebBrowser("Simple Web Browers");
+				swb.setSize(WIDTH,HEIGHT);
+				swb.setVisible(true);
+				swb.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+		});
+	}
 
+	private static final long serialVersionUID = 1L;
 	private JTextField urlField = new JTextField();
 	private JButton goButton = new JButton("×ªµ½");
 	private JEditorPane editorPane = new JEditorPane();
@@ -65,20 +84,5 @@ public class SimpleWebBrowser extends JFrame{
 				}
 			}
 		});//addHyperlinkListener
-	}
-
-	//²âÊÔ
-	public static void main(String[] args) {
-		final int WIDTH = 512;
-		final int HEIGHT = 350;
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				SimpleWebBrowser swb = new SimpleWebBrowser("Simple Web Browers");
-				swb.setSize(WIDTH,HEIGHT);
-				swb.setVisible(true);
-				swb.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			}
-		});
 	}
 }

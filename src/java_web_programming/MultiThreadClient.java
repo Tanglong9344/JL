@@ -4,6 +4,12 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * 多线程 网络连接-客户端
+ *
+ * @author 唐龙
+ *
+ */
 public class MultiThreadClient {
 	public static void main(String[] args) {
 		try {

@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SocketServerScanner {
+public class SocketScannerServer {
 	public static void main(String[] args)  {
 		try {
 			//服务端打开端口8888

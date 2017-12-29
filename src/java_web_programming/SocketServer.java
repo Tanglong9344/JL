@@ -6,6 +6,12 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * Socket server
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class SocketServer {
 	public static void main(String[] args)  {
 		try {

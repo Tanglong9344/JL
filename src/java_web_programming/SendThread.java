@@ -12,20 +12,22 @@ public class SendThread extends Thread{
 	public SendThread(Socket s){
 		this.s = s;
 	}
-	@SuppressWarnings("resource")
 	@Override
 	public void run(){
+		Scanner sc = null;
 		try {
 			OutputStream os = s.getOutputStream();
 			DataOutputStream dos = new DataOutputStream(os);
 			while(true){
 				System.out.println("输入要发送的数据:");
-				Scanner sc = new Scanner(System.in);
+				sc = new Scanner(System.in);
 				String str = sc.next();
 				dos.writeUTF(str);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			sc.close();
 		}
 	}
 }

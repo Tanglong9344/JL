@@ -6,6 +6,12 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * Socket Client
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class SocketClient {
 	public static void main(String[] args)  {
 		try {

@@ -4,22 +4,29 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
+/**
+ * Decoder and Decoder in Java
+ *
+ * @author 唐龙
+ *
+ */
 public class DecoderAndEncoderTest {
-
 	public static void main(String[] args) {
-		String str = "今天真热啊!!!";
-		System.out.println("原始字符串:" + str);
-		// 编码
+		String str = "唐龙。。。";
+		System.out.println("Old str: " + str);
+
+		// encoder
 		try {
 			String strEncode = URLEncoder.encode(str, "utf-8");
-			System.out.println("编码后的字符串:" + strEncode);
+			System.out.println("After encoder: " + strEncode);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		// 解码
+
+		// decoder
 		try {
 			String strDecode = URLDecoder.decode(str, "utf-8");
-			System.out.println("解码后的字符串:" + strDecode);
+			System.out.println("After decoder: " + strDecode);
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}

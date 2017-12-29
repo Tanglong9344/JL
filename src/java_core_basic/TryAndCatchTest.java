@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 
 /**
  * try...catch block
- * “Ï≥£¥¶¿Ì
+ *
  * @author Ã∆¡˙
  */
 public class TryAndCatchTest {

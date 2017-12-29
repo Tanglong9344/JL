@@ -1,9 +1,3 @@
-/**
- * DOM4j方式解析XML 是JDOM的一种智能分支
- *
- * 需要jar：dom4j-1.6.1.jar
- */
-
 package java_xml;
 
 import java.util.Iterator;
@@ -12,7 +6,14 @@ import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-
+/**
+ * DOM4j方式解析XML 是JDOM的一种智能分支
+ *
+ * dom4j-1.6.1.jar
+ *
+ * @author 唐龙
+ *
+ */
 public class Dom4jXML {
 	private String fileName = "src/java_xml/poem.xml";
 	private Document document = null;

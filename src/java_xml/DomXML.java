@@ -1,11 +1,3 @@
-/**
- * DOM方式解析XML Dom解析是将xml文件全部载入到内存,
- * 组装成一颗dom树，m然后通过节点以及节点之间的关系来解析
- * xml文件,与平台无关,java提供的一种基础的解析XML文件
- * 的API,理解较简单，但是由于整个文档都需要载入内存,不适
- * 用于文档较大时。
- */
-
 package java_xml;
 
 import java.io.File;
@@ -27,6 +19,15 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 
+/**
+ * DOM方式解析XML Dom解析是将xml文件全部载入到内存,
+ * 组装成一颗dom树，然后通过节点以及节点之间的关系来解析xml文件,与平台无关。
+ * java提供的一种基础的解析XML文件的API,理解较简单，
+ * 但是由于整个文档都需要载入内存,不适用于较大的文档。
+ *
+ * @author 唐龙
+ *
+ */
 public class DomXML {
 	private String fileName = "src/java_xml/poem.xml";
 	private Document doc = null;

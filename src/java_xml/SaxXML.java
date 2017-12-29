@@ -1,8 +1,3 @@
-/*
- * SAX方式解析XML基于事件驱动,逐条解析,适用于只处理xml
- * 数据,不易编码,而且很难同时访问同一个文档中的多处不同数据
- */
-
 package java_xml;
 
 import java.io.IOException;
@@ -15,6 +10,13 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * SAX方式解析XML基于事件驱动,逐条解析,适用于只处理xml数据,
+ * 不易编码,而且很难同时访问同一个文档中的多处不同数据
+ *
+ * @author 唐龙
+ *
+ */
 public class SaxXML{
 	private static String fileName = "src/java_xml/poem.xml";
 	private static SAXParser parser = null;

@@ -1,9 +1,3 @@
-/**
- * JDOM方式解析XML简化与XML的交互并且比使用DOM实现
- * 更快,仅使用具体类而不使用接口因此简化了API,并且易于使用
- * jdom-2.0.6.jar
- */
-
 package java_xml;
 
 import java.io.FileInputStream;
@@ -14,6 +8,15 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
 
+/**
+ * JDOM方式解析XML简化与XML的交互并且比使用DOM实现更快,
+ * 仅使用具体类而不使用接口因此简化了API,并且易于使用
+ *
+ * jdom-2.0.6.jar
+ *
+ * @author 唐龙
+ *
+ */
 public class JDomXML {
 	private String fileName = "src/java_xml/poem.xml";
 	Document document = null;

@@ -18,9 +18,7 @@ public class Dom4jXML {
 	private String fileName = "src/java_xml/poem.xml";
 	private Document document = null;
 
-	/**
-	 * Dom4j Parse XML
-	 */
+	/**Dom4j Parse XML*/
 	public Dom4jXML(){
 		try {
 			SAXReader reader = new SAXReader();
@@ -30,9 +28,7 @@ public class Dom4jXML {
 		}
 	}
 
-	/**
-	 * print XML info
-	 */
+	/**print XML info*/
 	public void printMsg(){
 		Element poems = document.getRootElement();
 		System.out.println(poems.getName());

@@ -3,6 +3,12 @@ package java_collection;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * HashMap Java
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class HashMapTest {
 	public static void main(String[] args) {
 		Map<String,String> hm = new HashMap<>();

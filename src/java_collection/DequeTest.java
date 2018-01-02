@@ -5,6 +5,7 @@ import java.util.Deque;
 
 /**
  * к╚╤к╤сап
+ *
  * @author лфаЗ
  */
 public class DequeTest {

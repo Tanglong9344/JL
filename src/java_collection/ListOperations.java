@@ -2,8 +2,15 @@ package java_collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Java List
+ *
+ * @author 唐龙
+ *
+ */
 public class ListOperations {
 	public static void main(String[] args) {
 		final int N = 8;
@@ -41,5 +48,17 @@ public class ListOperations {
 		System.out.println("把非线程安全的List转换为线程安全的List");
 		List<Integer> synchronizedNumbers = Collections.synchronizedList(numbers);
 		System.out.println(synchronizedNumbers);
+
+		// traverse-1
+		System.out.println("\n---------tranverse-1------------\n");
+		for(int i=0,len=numbers.size();i<len;i++) {
+			System.out.print(numbers.get(i) + " ");
+		}
+
+		// traverse-2
+		System.out.println("\n---------tranverse-2------------\n");
+		for(Iterator<Integer> it=numbers.iterator();it.hasNext();) {
+			System.out.print(it.next() + " ");
+		}
 	}
 }

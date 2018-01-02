@@ -32,9 +32,7 @@ public class DomXML {
 	private String fileName = "src/java_xml/poem.xml";
 	private Document doc = null;
 
-	/**
-	 * xml文档解析
-	 */
+	/**xml文档解析*/
 	public DomXML() {
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -47,9 +45,7 @@ public class DomXML {
 		}
 	}
 
-	/**
-	 * 打印xml文档信息
-	 */
+	/** 打印xml文档信息*/
 	public void printMsg() {
 		try {
 			//根据标签名获取节点列表
@@ -84,9 +80,7 @@ public class DomXML {
 		}
 	}
 
-	/**
-	 * 添加xml诗词信息
-	 */
+	/** 添加xml诗词信息 */
 	public int addPoem(String author,String address,String titleText,String descriptionText) {
 		//是否存在检测
 		//根据标签名获取节点列表

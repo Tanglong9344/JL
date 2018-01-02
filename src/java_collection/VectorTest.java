@@ -1,16 +1,18 @@
 package java_collection;
 
+import java.util.Enumeration;
 import java.util.Vector;
 
 /**
- * Vector
+ * Java Vector
+ *
  * @author 唐龙
  */
 public class VectorTest {
 	public static void main(String[] args) {
 		// 创建一个Vector对象,容量初始化为5
 		Vector<String> vec = new Vector<String>(5);
-		//添加元素
+		// 添加元素
 		vec.addElement(new String("one"));
 		vec.addElement("three");
 		//插入元素
@@ -29,5 +31,18 @@ public class VectorTest {
 		vector.insertElementAt("two", 2);
 		System.out.println("vector:" + vector);
 		System.out.println("vector的容量为：" + vector.capacity());
+
+
+		// tranverse-1
+		System.out.println("\n---------tranverse-1------------\n");
+		for(int i=0,len=vector.size();i<len;i++) {
+			System.out.print(vector.elementAt(i) + " ");
+		}
+
+		// tranverse-2
+		System.out.println("\n---------tranverse-2------------\n");
+		for(Enumeration<String> e=vector.elements();e.hasMoreElements();) {
+			System.out.print(e.nextElement() + " ");
+		}
 	}
 }

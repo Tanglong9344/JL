@@ -48,31 +48,23 @@ public class SaxXML{
 	}
 }
 
-/**
- * Sax Parse XML Handle
- */
+/**Sax Parse XML Handle*/
 class SaxParseHandle extends DefaultHandler{
-	/**
-	 * 开始解析xml文档时调用此方法
-	 */
+	/**开始解析xml文档时调用此方法 */
 	@Override
 	public void startDocument() throws SAXException {
 		super.startDocument();
 		System.out.println("Start to Parse xml:");
 	}
 
-	/**
-	 * 文档解析完成后调用此方法
-	 */
+	/** 文档解析完成后调用此方法 */
 	@Override
 	public void endDocument() throws SAXException {
 		super.endDocument();
 		System.out.println("Parse xml end.");
 	}
 
-	/**
-	 * 开始解析节点时调用此方法
-	 */
+	/** 开始解析节点时调用此方法 */
 	@Override
 	public void startElement(String uri,String localName,String qName,Attributes attributes) throws SAXException {
 		super.startElement(uri,localName,qName,attributes);
@@ -109,9 +101,7 @@ class SaxParseHandle extends DefaultHandler{
 		}
 	}
 
-	/**
-	 * 此方法用来获取节点的值
-	 */
+	/**此方法用来获取节点的值 */
 	@Override
 	public void characters(char[] ch,int start,int length) throws SAXException {
 		super.characters(ch,start,length);

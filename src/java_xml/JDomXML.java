@@ -30,9 +30,7 @@ public class JDomXML {
 		}
 	}
 
-	/**
-	 * print XML info
-	 */
+	/**print XML info*/
 	public void printMsg(){
 		Element rootElement = document.getRootElement();
 		System.out.println(rootElement.getName());

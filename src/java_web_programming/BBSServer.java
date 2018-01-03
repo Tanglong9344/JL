@@ -1,4 +1,4 @@
-package web_server_client;
+package java_web_programming;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,11 +26,9 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
 
-import web_server_client.BBSClient.Message;
+import java_web_programming.BBSClient.Message;
 
-/**
- * 聊天室（Bulletin Board System）的服务器端程序，GUI界面
- */
+/**聊天室（Bulletin Board System）的服务器端程序，GUI界面*/
 public class BBSServer extends JFrame {
 	private static final long serialVersionUID = 1L;
 	static JLabel statusBar = new JLabel(); // 状态栏标签
@@ -133,9 +131,7 @@ public class BBSServer extends JFrame {
 		}
 	}
 
-	/**
-	 * 判断客户端是否合法。 不允许同一客户端重复登陆，所谓同一客户端是指IP和名字都相同。
-	 */
+	/**判断客户端是否合法。 不允许同一客户端重复登陆，所谓同一客户端是指IP和名字都相同 */
 	public static boolean isCheck(MessFromClient newclient) {
 		if (clientProcessors.contains(newclient)) {
 			return false;
@@ -144,16 +140,12 @@ public class BBSServer extends JFrame {
 		}
 	}
 
-	/**
-	 * 断开某个连接，并且从连接列表中删除
-	 */
+	/**断开某个连接，并且从连接列表中删除*/
 	public static void disconnect(MessFromClient client) {
 		disconnect(client, true);
 	}
 
-	/**
-	 * 断开某个连接，根据要求决定是否从连接列表中删除
-	 */
+	/** 断开某个连接，根据要求决定是否从连接列表中删除 */
 	public static synchronized void disconnect(MessFromClient client,
 			boolean toRemoveFromList) {
 		try {
@@ -176,8 +168,7 @@ public class BBSServer extends JFrame {
 		}
 	}
 
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		BBSServer chatServer1 = new BBSServer();
 		chatServer1.setVisible(true);
 		System.out.println("Server starting ...");
@@ -188,6 +179,8 @@ public class BBSServer extends JFrame {
 		} catch (IOException e) {
 			System.out.println("Error:" + e);
 			System.exit(1);
+		} finally {
+			server.close();
 		}
 		while (true) {
 			// 如果当前客户端数小于MAX_CLIENT个时接受连接请求
@@ -230,9 +223,7 @@ public class BBSServer extends JFrame {
 	}
 }
 
-/**
- * 处理客户端发送的请求的线程
- */
+/**处理客户端发送的请求的线程*/
 class MessFromClient extends Thread {
 	Socket socket; // 存储一个连接客户端的socket信息
 	String clientName; // 存储客户端的连接姓名
@@ -245,8 +236,7 @@ class MessFromClient extends Thread {
 		socket = s;
 		try {
 			// 初始化输入输出流
-			br = new BufferedReader(new InputStreamReader(socket
-					.getInputStream()));
+			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			ps = new PrintStream(socket.getOutputStream());
 			// 读取收到的信息，第一条信息是客户端的名字、IP信息
 			String clientInfo = br.readLine();

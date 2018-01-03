@@ -9,7 +9,7 @@ public class RegExpTest4 {
 	private static String REPLACE = "-";
 	public static void main(String[] args) {
 		Pattern p = Pattern.compile(REGEX);
-		// 获取 matcher 对象
+		// 获取 matcher对象
 		Matcher m = p.matcher(INPUT);
 		StringBuffer sb = new StringBuffer();
 		while(m.find()){

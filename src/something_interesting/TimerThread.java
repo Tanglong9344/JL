@@ -24,10 +24,7 @@ public class TimerThread {
 	}
 }
 
-/**
- * 继承时间任务类执行任务
- * @author 唐龙
- */
+/**继承时间任务类执行任务*/
 class MyTask extends TimerTask {
 	private int taskID = 0; // 任务编号
 	public MyTask(int id) {

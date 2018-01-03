@@ -1,4 +1,4 @@
-package web_server_client;
+package java_web_programming;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -26,9 +26,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.border.TitledBorder;
 
-/**
- * 聊天室（Bulletin Board System）的客户端程序，GUI界面。
- */
+/**聊天室（Bulletin Board System）的客户端程序，GUI界面。*/
 public class BBSClient extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	// 登陆聊天室的名字标签和输入框
@@ -282,11 +280,7 @@ public class BBSClient extends JFrame implements ActionListener {
 		}
 	}
 
-	/**
-	 * 消息类
-	 * @author 唐龙
-	 *
-	 */
+	/** 消息类 */
 	class Message {
 		public static final int SERVER_PORT = 2525;// 服务器的端口号
 		public static final int MAX_CLIENT = 10;//最大客户端

@@ -1,28 +1,29 @@
-package web_server_client;
+package java_web_programming;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPSocketServer {
-	@SuppressWarnings("unused")
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
+		Server server = null;
 		try {
-			Server server = new Server(8080);
+			server = new Server(8080);
 		} catch (Exception e) {
 			System.out.println("测试服务器端监听出错：" + e.getMessage());
+		} finally {
+			server.start();
 		}
 	}
 }
 
-/**
- * Socket服务器端
- */
+/** Socket服务器端 */
 class Server {
 	private int port; // 端口
-	public Server(int port) {
+	public Server(int port) throws IOException {
 		this.port = port;
 		start(); // 调用启动服务器端的方法
 	}
@@ -31,11 +32,13 @@ class Server {
 	public String infoUpperCase(String line) {
 		return line.toUpperCase(); // 将字符串大写
 	}
-	@SuppressWarnings("resource")
-	public void start() { // 启动服务器端
+
+	// 启动服务器端
+	public void start() throws IOException {
+		ServerSocket serverSocket = null;
 		try {
 			// 根据端口创建服务器端Socket对象
-			ServerSocket serverSocket = new ServerSocket(port);
+			serverSocket = new ServerSocket(port);
 			// 显示连接信息
 			System.out.println("服务器已启动，监听端口号为：" + port);
 			System.out.println("正在等待客户端连接.........");
@@ -65,8 +68,10 @@ class Server {
 				}
 			}
 			socketAccept.close(); // 关闭通信资源
-		} catch (Exception e) { // 捕获异常
+		} catch (Exception e) {
 			System.out.println("启动服务器端出现错误：" + e.getMessage());
+		} finally {
+			serverSocket.close();
 		}
 	}
 }

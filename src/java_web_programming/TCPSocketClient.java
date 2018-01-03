@@ -1,4 +1,4 @@
-package web_server_client;
+package java_web_programming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,9 +17,7 @@ public class TCPSocketClient {
 	}
 }
 
-/**
- * Socket客户端
- */
+/**Socket客户端*/
 class Client {
 	private String host; // IP地址（域名）
 	private int port; // 端口号

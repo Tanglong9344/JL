@@ -3,6 +3,12 @@ package java_reg_exp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Phone number matches
+ *
+ * @author 唐龙
+ *
+ */
 public class RegExpTest5 {
 	/**
 	 * 正则表达式匹配
@@ -20,6 +26,7 @@ public class RegExpTest5 {
 			return false;
 		}
 	}
+
 	//使用Pattern的compile方法和Matcher的matcher方法共同匹配
 	public static boolean usePattern(String phoneNum) {
 		Pattern p = Pattern.compile(REG_EXP);
@@ -27,6 +34,7 @@ public class RegExpTest5 {
 		Matcher m = p.matcher(phoneNum);
 		return m.matches();
 	}
+
 	public static void main(String[] args) {
 		String phoneNum = "210-12345678";
 		System.out.println(phoneNum + " 是一个合法的电话号码格式吗? "

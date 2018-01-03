@@ -3,6 +3,12 @@ package java_reg_exp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Matcher replace
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class RegExpTest3 {
 	private static String REGEX = "dog";
 	private static String INPUT = "The dog says meow. All dogs say meow.";

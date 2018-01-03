@@ -1,4 +1,4 @@
-# Java Io Stream
-+ ×Ö·ûÁ÷£º´¦Àí´¿ÎÄ±¾Êý¾Ý
-+ ×Ö½ÚÁ÷£ºÖ÷Òª´¦ÀíËùÓÐËùÓÐ·Ç´¿ÎÄ±¾µÄ´ø¸ñÊ½Êý¾Ý
+# Java IO Stream
++ å­—ç¬¦æµï¼šå¤„ç†çº¯æ–‡æœ¬æ•°æ®
++ å­—èŠ‚æµï¼šä¸»è¦å¤„ç†æ‰€æœ‰æ‰€æœ‰éžçº¯æ–‡æœ¬çš„å¸¦æ ¼å¼æ•°æ®
 ![java_io.jpg](java_io.jpg)

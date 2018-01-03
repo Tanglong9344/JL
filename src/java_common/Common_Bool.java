@@ -2,6 +2,7 @@ package java_common;
 
 /**
  * true and false
+ *
  * @author ÌÆÁú
  */
 public class Common_Bool {

@@ -1,7 +1,8 @@
 package java_core_basic;
 
 /**
- * Java标签
+ * Java 标签
+ *
  * @author 唐龙
  */
 public class LoopWithTag {
@@ -9,12 +10,16 @@ public class LoopWithTag {
 		int i=0;
 		outer:
 			for(;;){
-				System.out.println("外层循环。");
+				System.err.println("外层循环...");
+				Thread.sleep(10);//since err has no cache,so sleep 10ms
 				while(true){
-					System.out.println("内层循环。");
-					Thread.sleep(1000);
+					System.out.println("内层循环...");
+					Thread.sleep(100);// sleep 100ms
 					i++;
-					if(0 == i%5){
+					if(i>9) {
+						System.exit(0);
+					}
+					if(0 == i%3){
 						continue outer;
 					}
 				}

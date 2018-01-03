@@ -16,5 +16,20 @@ public class BitOperation{
 		System.out.println(a&2);//”Î
 		System.out.println(a|2);//ªÚ
 		System.out.println(~a);//∑«
+
+		// combination operators
+		a = 8;
+		a<<=2;
+		System.out.println(a);
+		a>>=2;
+		System.out.println(a);
+		a>>>=2;
+		System.out.println(a);
+		a^=2;
+		System.out.println(a);
+		a&=2;
+		System.out.println(a);
+		a|=2;
+		System.out.println(a);
 	}
 }

@@ -6,6 +6,7 @@ import java.io.IOException;
 
 /**
  * Stream Close
+ *
  * @author ÌÆÁú
  */
 public class StreamClose {

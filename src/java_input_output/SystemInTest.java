@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 /**
  * System.in
+ *
  * @author ÌÆÁú
  */
 public class SystemInTest {

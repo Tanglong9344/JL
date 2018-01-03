@@ -11,6 +11,7 @@ import java.nio.charset.Charset;
 
 /**
  * InputStream Encoding
+ *
  * @author ÌÆÁú
  */
 public class InputStreamEncoding {

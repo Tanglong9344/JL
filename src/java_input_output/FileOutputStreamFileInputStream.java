@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * FileOutputStream and FileInputStream
+ *
  * @author ÌÆÁú
  */
 public class FileOutputStreamFileInputStream {

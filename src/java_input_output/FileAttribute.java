@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 
 /**
  * File Attributes
+ *
  * @author ÌÆÁú
  */
 public class FileAttribute {

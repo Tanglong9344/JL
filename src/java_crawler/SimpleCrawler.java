@@ -21,7 +21,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Simple Crawler: GET data from baidu
+ * Simple Crawler: download picture from baidu
  *
  * It is just feasible to http://www.baidu.com
  *
@@ -45,8 +45,11 @@ public class SimpleCrawler {
 		String fileTxt = "src/java_crawler/baidu.txt";
 		fileIn(fileTxt,result);
 
+		// get image url
 		String regex = "src=.*>";
 		List<String> urList = regExpStr(regex, result);
+
+		// download and save picture
 		String path = "src/java_crawler/";
 		for(int i=0,len=urList.size();i<len;i++) {
 			String str = urList.get(i);

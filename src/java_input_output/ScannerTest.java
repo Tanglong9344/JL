@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 /**
  * Scanner Test
+ *
  * @author ÌÆÁú
  */
 public class ScannerTest {

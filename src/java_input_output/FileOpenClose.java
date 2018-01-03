@@ -10,6 +10,7 @@ import java.util.Date;
 
 /**
  * File Open and Close
+ *
  * @author ÌÆÁú
  */
 public class FileOpenClose {

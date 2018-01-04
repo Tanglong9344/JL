@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * String¿‡
+ *
  * @author Ã∆¡˙
  */
 public class StringTest {
@@ -77,11 +78,10 @@ public class StringTest {
 		//contentEquals
 		System.out.println("aaa".contentEquals("aaa"));
 		//format
-		System.out.println("String.format(\"ch=%c,isTrue=%b,num=%d,double=%f.\""
-				+ ", 'c',true,32,Math.PI):\n"
-				+ String.format(
-						"ch=%c,isTrue=%b,num=%d,double=%f.", 'c',true,32,Math.PI));
-
+		String info = "ch=%c,isTrue=%b,num=%d,double=%f";
+		System.out.println("Before format:\n" + info);
+		info = String.format(info, 'c',true,32,Math.PI);
+		System.out.println("After  format:\n" + info);
 		// hashcode
 		System.out.println("hashcode:"+str1.hashCode());
 	}

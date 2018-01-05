@@ -31,9 +31,9 @@ import java.util.regex.Pattern;
 public class SimpleCrawler {
 	static String http;
 	public static void main(String[] args) throws IOException{
-		// 即将访问的链接
 		String url = "http://www.baidu.com";
 		http = url.split(":")[0] + "://www";
+
 		// get result from url
 		String result = urlResult(url);
 
@@ -58,11 +58,7 @@ public class SimpleCrawler {
 		}
 	}
 
-	/**
-	 * @param urlStr
-	 *
-	 * @return
-	 */
+	/**Get result according to url*/
 	private static String urlResult(String urlStr) {
 		// 存储网页内容
 		StringBuilder sb = new StringBuilder();

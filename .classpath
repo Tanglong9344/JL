@@ -20,5 +20,11 @@
 	<classpathentry kind="lib" path="lib/jdom-2.0.6.jar"/>
 	<classpathentry kind="lib" path="lib/poi-3.8-20120326.jar"/>
 	<classpathentry kind="lib" path="lib/jedis-2.9.0.jar"/>
+	<classpathentry kind="lib" path="src/java_json/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="src/java_json/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="src/java_json/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="src/java_json/commons-logging.jar"/>
+	<classpathentry kind="lib" path="src/java_json/ezmorph-1.0.3.jar"/>
+	<classpathentry kind="lib" path="src/java_json/json-lib-2.1-jdk15.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

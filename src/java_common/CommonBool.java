@@ -5,7 +5,7 @@ package java_common;
  *
  * @author ÌÆÁú
  */
-public class Common_Bool {
+public class CommonBool {
 	public final static boolean TRUE = true;
 	public final static boolean FALSE = false;
 }

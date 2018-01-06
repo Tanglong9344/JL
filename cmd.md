@@ -100,7 +100,7 @@ Constant pool:
 SourceFile: "HelloJava.java"
 ```
 ---
-+<h3 id="compress">将Hello.java压缩为myjar.jar</h3>
++ <h3 id="compress">将Hello.java压缩为myjar.jar</h3>
 	+ jar cf myjar.jar Hello.jar(不显示处理信息)
 	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
 	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
@@ -130,7 +130,7 @@ public class Param {
 ---
 ![param.png](picture/param.png)
 ---
-+ j<h3 id="doc">生成注释文档</h3>
++ <h3 id="doc">生成注释文档</h3>
 ```
 javadoc HelloJava.java
 ```
@@ -159,5 +159,6 @@ javadoc HelloJava.java
   例如：将tree.txt 打包为tree.jar的命令，jar cvf tree.jar tree.txt
 ---
 + <h3 id="console">Java性能分析</h3>
-配置好JAVA_HOME/bin,在cmd输入jconsole
-
+	 配置好JAVA_HOME/bin，在cmd输入jconsole，点击‘本地连接’，选择一个连接进程，点击连接。
+![console.png](picture/console.png)
+---

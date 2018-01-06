@@ -101,6 +101,7 @@ SourceFile: "HelloJava.java"
 ```
 ---
 + <h3 id="compress">将Hello.java压缩为myjar.jar</h3>
++
 	+ jar cf myjar.jar Hello.jar(不显示处理信息)
 	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
 	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
@@ -109,6 +110,7 @@ SourceFile: "HelloJava.java"
 ![jar.png](picture/jar.png)
 ---
 + <h3 id="decompress">解压myjar.jar文件</h3>
++
 	+ jar xf myjar.jar(不显示解压信息)
 	+ jar xf myjar.jar(显示解压详细信息)
 ---
@@ -143,6 +145,7 @@ javadoc HelloJava.java
 我是唐龙
 ```
 + <h3 id="code">编码转换</h3>
++
 	+ native2ascii text.txt test.txt 将text.txt的内容转为本地编码并存储到test.txt文件中
 	---
 	```
@@ -155,10 +158,15 @@ javadoc HelloJava.java
 	//test.txt
 	\u6211\u662f\u5510\u9f99
 	```
-+ JDK <h3 id="pack">打包</h3>：jar cvf 目标文件名.jar 需要打包的文件
-  例如：将tree.txt 打包为tree.jar的命令，jar cvf tree.jar tree.txt
++ <h3 id="pack">打包</h3>：jar cvf 目标文件名.jar 需要打包的文件
+```
+将tree.txt 打包为tree.jar的命令，jar cvf tree.jar tree.txt
+```
 ---
 + <h3 id="console">Java性能分析</h3>
-	 配置好JAVA_HOME/bin，在cmd输入jconsole，点击‘本地连接’，选择一个连接进程，点击连接。
++
+	+ 配置好JAVA_HOME/bin，在cmd输入jconsole，点击‘本地连接’，选择一个连接进程，点击连接。<br/>
+	+ [Jconsole 官方文档](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)
+---
 ![console.png](picture/console.png)
 ---

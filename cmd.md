@@ -20,11 +20,20 @@ public class HelloJava {
 }
 ```
 ---
-+ Compile:<h3 id="compile">编译</h3>HelloJava.java文件 javac HelloJava.java
-+ Interpret:<h3 id="interpret">解释</h3>HelloJava.class文件 java HelloJava
-+ View code of HelloJava.class:<h3 id="view">查看</h3>HelloJava.class内容 javap -verbose HelloJava.class
++ <h3 id="compile">编译HelloJava.java文件</h3> 
+```
+javac HelloJava.java
+```
++ <h3 id="interpret">解释HelloJava.class文件</h3> 
+```
+java HelloJava
+```
++ <h3 id="view">查看HelloJava.class内容</h3> 
+```
+javap -verbose HelloJava.class
+```
 ---
-![HelloJava.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/HelloJava.png)
+![HelloJava.png](picture/HelloJava.png)
 ```
 Classfile /F:/HelloJava.class
   Last modified 2017-10-26; size 423 bytes
@@ -91,19 +100,19 @@ Constant pool:
 SourceFile: "HelloJava.java"
 ```
 ---
-+ Compress:将Hello.java<h3 id="compress">压缩</h3>为myjar.jar
++<h3 id="compress">将Hello.java压缩为myjar.jar</h3>
 	+ jar cf myjar.jar Hello.jar(不显示处理信息)
 	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
 	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
 	+ jar tvf myjar.jar Hello.jar(显示jar文件目录和文件列表信息和文件大小，创建时间详细信息)
 ---
-![jar.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/jar.png)
+![jar.png](picture/jar.png)
 ---
-+ Decompression:<h3 id="decompress">解压</h3>myjar.jar文件
++ <h3 id="decompress">解压myjar.jar文件</h3>
 	+ jar xf myjar.jar(不显示解压信息)
 	+ jar xf myjar.jar(显示解压详细信息)
 ---
-![decompression.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/decompression.png)
+![decompression.png](picture/decompression.png)
 ---
 + 带参执行
 ---
@@ -119,11 +128,14 @@ public class Param {
 }
 ```
 ---
-![param.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/param.png)
+![param.png](picture/param.png)
 ---
-+ javadoc <h3 id="doc">生成注释文档</h3>:javadoc HelloJava.java
++ j<h3 id="doc">生成注释文档</h3>
+```
+javadoc HelloJava.java
+```
 ---
-![javadoc.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/javadoc.png)
+![javadoc.png](picture/javadoc.png)
 ---
 ### 源文件text.txt
 ```

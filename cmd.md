@@ -1,4 +1,13 @@
 # java program in cmd
++ [编译](#compile)
++ [解释](#interpret)
++ [class文件查看](#view)
++ [压缩](#compress)
++ [解压](#decompress)
++ [生成注释文档](#doc)
++ [编码转换](#code)
++ [打包](#pack)
++ [Java性能分析工具](#console)
 ---
 ### The first program in Java
 ---
@@ -11,9 +20,9 @@ public class HelloJava {
 }
 ```
 ---
-+ Compile:编译HelloJava.java文件 javac HelloJava.java
-+ Interpret:解释HelloJava.class文件 java HelloJava
-+ View code of HelloJava.class:查看HelloJava.class内容 javap -verbose HelloJava.class
++ Compile:<h3 id="compile">编译</h3>HelloJava.java文件 javac HelloJava.java
++ Interpret:<h3 id="interpret">解释</h3>HelloJava.class文件 java HelloJava
++ View code of HelloJava.class:<h3 id="view">查看</h3>HelloJava.class内容 javap -verbose HelloJava.class
 ---
 ![HelloJava.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/HelloJava.png)
 ```
@@ -82,7 +91,7 @@ Constant pool:
 SourceFile: "HelloJava.java"
 ```
 ---
-+ Compress:将Hello.java压缩为myjar.jar
++ Compress:将Hello.java<h3 id="compress">压缩</h3>为myjar.jar
 	+ jar cf myjar.jar Hello.jar(不显示处理信息)
 	+ jar cvf myjar.jar Hello.jar(显示打包详细信息)
 	+ jar tf myjar.jar Hello.jar(显示jar文件目录和文件列表信息)
@@ -90,7 +99,7 @@ SourceFile: "HelloJava.java"
 ---
 ![jar.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/jar.png)
 ---
-+ Decompression:解压myjar.jar文件
++ Decompression:<h3 id="decompress">解压</h3>myjar.jar文件
 	+ jar xf myjar.jar(不显示解压信息)
 	+ jar xf myjar.jar(显示解压详细信息)
 ---
@@ -112,7 +121,7 @@ public class Param {
 ---
 ![param.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/param.png)
 ---
-+ javadoc 生成注释文档:javadoc HelloJava.java
++ javadoc <h3 id="doc">生成注释文档</h3>:javadoc HelloJava.java
 ---
 ![javadoc.png](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/javadoc.png)
 ---
@@ -121,18 +130,22 @@ public class Param {
 //text.txt
 我是唐龙
 ```
-+ native2ascii text.txt test.txt 将text.txt的内容转为本地编码并存储到test.txt文件中
----
-```
-//test.txt
-\u6211\u662f\u5510\u9f99
-```
----
-+ native2ascii -encoding gbk text.txt test.txt 将text.txt的内容转换为gbk编码并存储到test.txt文件中(此时本地编码是gbk)
-```
-//test.txt
-\u6211\u662f\u5510\u9f99
-```
-+ JDK 打包命令：jar cvf 目标文件名.jar 需要打包的文件
++ <h3 id="code">编码转换</h3>
+	+ native2ascii text.txt test.txt 将text.txt的内容转为本地编码并存储到test.txt文件中
+	---
+	```
+	//test.txt
+	\u6211\u662f\u5510\u9f99
+	```
+	---
+	+ native2ascii -encoding gbk text.txt test.txt 将text.txt的内容转换为gbk编码并存储到test.txt文件中(此时本地编码是gbk)
+	```
+	//test.txt
+	\u6211\u662f\u5510\u9f99
+	```
++ JDK <h3 id="pack">打包</h3>：jar cvf 目标文件名.jar 需要打包的文件
   例如：将tree.txt 打包为tree.jar的命令，jar cvf tree.jar tree.txt
 ---
++ <h3 id="console">Java性能分析</h3>
+配置好JAVA_HOME/bin,在cmd输入jconsole
+

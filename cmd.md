@@ -164,7 +164,9 @@ javadoc HelloJava.java
 ```
 ---
 + <h3 id="console">Java性能分析</h3>
-	 配置好JAVA_HOME/bin，在cmd输入jconsole，点击‘本地连接’，选择一个连接进程，点击连接。
++
+	+ 配置好JAVA_HOME/bin，在cmd输入jconsole，点击‘本地连接’，选择一个连接进程，点击连接。<br/>
+	+ [Jconsole 官方文档](https://docs.oracle.com/javase/8/docs/technotes/guides/management/jconsole.html)
 ---
 ![console.png](picture/console.png)
 ---

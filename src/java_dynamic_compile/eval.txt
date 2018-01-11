@@ -1,0 +1,6 @@
+class Temp{
+	public static String call(String[] ss) {
+		System.out.println("Hello Eval");
+		return "return str";
+	}
+}

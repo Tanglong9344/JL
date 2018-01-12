@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import java_common.TimeNow;
+import java_common.CommonMethod;
 
 /**
  * 序列化对象并存储到文件
@@ -17,7 +17,7 @@ import java_common.TimeNow;
 public class SerializeToFile {
 	public static void main(String[] args) throws IOException {
 		String file = "src/java_serializable/SerializeObject.txt";
-		SerializableObject so = new SerializableObject("Tanglong", TimeNow.TIME_NOW);
+		SerializableObject so = new SerializableObject("Tanglong", CommonMethod.TIME_NOW);
 		System.out.println("对象：\n" + so);
 
 		// 序列化

@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
-import java_common.TimeNow;
+import java_common.CommonMethod;
 
 /**
  * 序列化和反序列化方法
@@ -17,7 +17,7 @@ import java_common.TimeNow;
 public class SerializeToArray {
 	public static void main(String[] args) {
 		SerializeToArray sh = new SerializeToArray();
-		SerializableObject js = new SerializableObject("序列化:",TimeNow.TIME_NOW);
+		SerializableObject js = new SerializableObject("序列化:",CommonMethod.TIME_NOW);
 
 		//序列化
 		byte[] serializableObject=sh.Serialize(js);

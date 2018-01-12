@@ -1,4 +1,4 @@
-package java_core_basic;
+package java_effective_code;
 
 /**
  * The memory of JVM

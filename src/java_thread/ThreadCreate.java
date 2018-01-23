@@ -21,6 +21,7 @@ public class ThreadCreate {
 
 /**
  * 实现java.lang.Runnable接口定义线程
+ *
  * @author 唐龙
  */
 class ThreadX implements Runnable {
@@ -31,10 +32,7 @@ class ThreadX implements Runnable {
 	}
 }
 
-/**
- * 继承java.lang.Thread类定义线程
- * @author 唐龙
- */
+/** 继承java.lang.Thread类定义线程 */
 class ThreadY extends Thread {
 	private boolean isRunState = false;//标记线程是否需要运行
 	@Override

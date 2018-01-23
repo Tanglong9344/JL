@@ -1,5 +1,11 @@
 package java_thread;
 
+/**
+ * Dead lock
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class ThreadDeadLock {
 	//This is a test
 	public static void main(String[] args) {
@@ -33,6 +39,7 @@ class DeadLockThread extends Thread{
 
 		}
 	};
+
 	//Ïß³Ìt2
 	Thread t2 = new Thread(){
 		@Override

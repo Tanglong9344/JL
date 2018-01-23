@@ -20,10 +20,11 @@ public class ThreadInterrupt extends Thread {
 
 /**
  * 线程唤醒测试
+ *
  * @author 唐龙
  */
 class Interrupt extends Thread{
-	//在程序中假设1秒钟=1小时
+	//在程序中假设1秒钟<=>1小时
 	private DateFormat df = new SimpleDateFormat("ss:SS");
 	@Override
 	public void run() {

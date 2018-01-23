@@ -3,6 +3,12 @@ package java_thread;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Thread priority
+ *
+ * @author å”é¾™
+ *
+ */
 public class ThreadPriority {
 	//This is a test
 	public static void main(String[] args) {
@@ -10,30 +16,40 @@ public class ThreadPriority {
 		List<ThreadP> tList = new ArrayList<ThreadP>();
 		for(int i=1;i<=N;i++){
 			ThreadP tp = new ThreadP("Thread"+i);
-			//ÉèÖÃÓÅÏÈ¼¶
+			//è®¾ç½®ä¼˜å…ˆçº§
 			tp.setPriority((new java.util.Random().nextInt(N)+1));
 			tList.add(tp);
 		}
-		//Æô¶¯
+		//å¯åŠ¨
 		tList.forEach(tp->tp.start());
 	}
 }
 
-/**Ïß³ÌÀà*/
+/**çº¿ç¨‹ç±»*/
 class ThreadP extends Thread{
 	public ThreadP(String name){
 		super(name);
 	}
+
 	@Override
 	public void run(){
 		int a=6;
 		while((a--)>0){
-			System.out.println("Ïß³ÌÃû£º"+this.getName()+" ÓÅÏÈ¼¶£º"+this.getPriority());
+			System.out.println("çº¿ç¨‹åï¼š" + this.getName()+" ä¼˜å…ˆçº§ï¼š" + stars(this.getPriority()));
 			try {
-				Thread.sleep(1000);//ĞİÃß1s
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	/**get some stars*/
+	private String stars(long num) {
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<num;i++) {
+			sb.append("â˜º");
+		}
+		return sb.toString();
 	}
 }

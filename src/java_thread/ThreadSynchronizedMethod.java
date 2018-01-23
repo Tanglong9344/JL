@@ -17,6 +17,7 @@ public class ThreadSynchronizedMethod {
 
 /**
  * 支付宝 用于网上买卖交易
+ *
  * @author 唐龙
  */
 class Alipay {

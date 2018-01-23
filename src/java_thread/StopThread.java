@@ -9,18 +9,6 @@ import java.util.concurrent.TimeUnit;
  *
  */
 public class StopThread {
-	private static boolean stopRequested = false;
-
-	/**set stopRequested's value to true*/
-	private static synchronized void requestStop(){
-		stopRequested = true;
-	}
-
-	/**return stopRequested's value*/
-	private static synchronized boolean stopRequested(){
-		return stopRequested;
-	}
-
 	public static void main(String[] args) throws InterruptedException{
 		Thread thread = new Thread(new Runnable(){
 			@Override
@@ -35,7 +23,19 @@ public class StopThread {
 			}
 		});
 		thread.start();
-		TimeUnit.MILLISECONDS.sleep(100);//sleep for 100ms
+		TimeUnit.MILLISECONDS.sleep(100); //sleep for 100ms
 		requestStop();
+	}
+
+	private static boolean stopRequested = false;
+
+	/**set stopRequested's value to true*/
+	private static synchronized void requestStop(){
+		stopRequested = true;
+	}
+
+	/**return stopRequested's value*/
+	private static synchronized boolean stopRequested(){
+		return stopRequested;
 	}
 }

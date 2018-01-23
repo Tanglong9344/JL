@@ -4,6 +4,9 @@ import java.util.LinkedList;
 
 /**
  * 自定义线程池
+ *
+ * @author 唐龙
+ *
  */
 public class ThreadPoolSelfDefined {
 	// 线程池大小

@@ -6,7 +6,8 @@ import java.util.Date;
 import java.util.Vector;
 
 /**
- * 操作线程让步的类
+ * 线程让步(yield)
+ *
  * @author 唐龙
  */
 public class ThreadYield {
@@ -18,17 +19,14 @@ public class ThreadYield {
 	}
 }
 
-/**
- * 线程让步类
- * @author 唐龙
- */
+/** 线程让步类  */
 class Yield extends Thread {
 	private Vector<String> vector;
-	private DateFormat dateFormat = new SimpleDateFormat("HH-mm-ss:SSSS");//日期格式
+	private DateFormat dateFormat = new SimpleDateFormat("HH-mm-ss:SSSS"); //日期格式
 	private boolean isFlag = false;
 	public Yield(Vector<String> vector) {
-		super("接收文件");//设置线程名称
-		this.setDaemon(true);//如果SendFile线程结束，则该线程自动结束
+		super("接收文件"); //设置线程名称
+		this.setDaemon(true); //如果SendFile线程结束，则该线程自动结束
 		this.vector=vector;
 	}
 	@Override
@@ -51,10 +49,7 @@ class Yield extends Thread {
 	}
 }
 
-/**
- * 发送文件
- * @author 唐龙
- */
+/** 发送文件 */
 class SendFile extends Thread {
 	private String[] files = new String[] {"新闻文件", "国内旅游向导", "山水名画欣赏", "发家致富说明"};
 	private Vector<String> vector;

@@ -1,5 +1,11 @@
 package java_thread;
 
+/**
+ * ThreadPoolSelfDefined test
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class ThreadPoolSelfDefinedTest {
 	public static void main(String[] args) throws InterruptedException {
 		ThreadPoolSelfDefined pool = new ThreadPoolSelfDefined();

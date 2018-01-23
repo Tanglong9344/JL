@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 线程安全的自增，自减方法
+ *
  * @author 唐龙
  */
 public class AtomicIntegerDemo {

@@ -1,3 +1,8 @@
+package java_thread;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Lock和synchronized的区别
  * 1. Lock是一个接口，而synchronized是Java中的关键字，
@@ -7,13 +12,10 @@
  * 借助Lock的这个特性，就能够规避死锁，synchronized必须通过谨慎和良好的设计，才能减少死锁的发生。
  * 3. synchronized在发生异常和同步块结束的时候，会自动释放锁。
  * 而Lock必须手动释放， 所以如果忘记了释放锁，一样会造成死锁。
+ *
+ * @author 唐龙
+ *
  */
-
-package java_thread;
-
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class ThreadLock {
 	//This is a test
 	public static void main(String[] args) {

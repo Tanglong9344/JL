@@ -2,7 +2,7 @@ package java_thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**测试类*/
+/** 测试类 */
 public class AtomicIntegerTest {
 	public static void main(String[] args) {
 		AutomicOperation ao = new AutomicOperation();
@@ -15,6 +15,7 @@ public class AtomicIntegerTest {
 
 /**
  * 原子操作与非原子操作对比
+ *
  * @author 唐龙
  */
 class AutomicOperation{

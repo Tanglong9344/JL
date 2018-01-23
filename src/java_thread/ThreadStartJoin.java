@@ -1,5 +1,11 @@
 package java_thread;
 
+/**
+ * Thread join
+ *
+ * @author 唐龙
+ *
+ */
 public class ThreadStartJoin {
 	public static void main(String[] args) throws InterruptedException {
 		final int MARRY_NUMBER = 100;//匹配对数
@@ -12,9 +18,7 @@ public class ThreadStartJoin {
 	}
 }
 
-/**
- * 测试匹配结婚的类
- */
+/** 测试匹配结婚的类 */
 class MatchMarry extends Thread {
 	private String name;//人员名称
 	private String otherName;//结婚对象
@@ -39,7 +43,7 @@ class MatchMarry extends Thread {
 			}
 			Thread.sleep(10);//线程休眠10ms
 		} catch (InterruptedException e) {
-			System.out.println("唤醒异常：" + e.getMessage());
+			System.out.println(e.getMessage());
 		}
 	}
 }

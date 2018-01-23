@@ -3,6 +3,12 @@ package java_thread;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * ThreadPool test
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class ThreadPoolTest {
 	public static void main(String[] args) throws InterruptedException {
 		final int N = 10;

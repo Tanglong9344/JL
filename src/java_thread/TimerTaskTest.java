@@ -15,7 +15,11 @@ public class TimerTaskTest {
 
 /**
  * 待执行的任务
+ *
  * 继承TimerTask
+ *
+ * @author 唐龙
+ *
  */
 class ScheduleTask extends TimerTask{
 	private String msg;

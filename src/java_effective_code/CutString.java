@@ -11,10 +11,11 @@ import java.util.Random;
  *
  */
 public class CutString {
-	static final int SIZE = 100;
+	static final int LEN = 60;
 	public static void main(String[] args) {
-		String str = getString(SIZE); // get a string that length is SIZE
-		//System.out.println("str: " + str);
+		String str = getString(LEN); // get a string that length is LEN
+		//String str2 = UUID.randomUUID().toString(); // get a string using UUID.randomUUID()
+		System.out.println("str: " + str);
 
 		long start, end;
 		final int LOOP_TIME = 3;
@@ -41,28 +42,32 @@ public class CutString {
 	}
 
 	/**
-	 * subString get a substring length is 10
+	 * subString get a substring length is 1/5 of the length of string
 	 *
 	 * @param str
 	 * @return
 	 */
 	private static String subString(String str) {
-		Random r = new Random();
-		int beginIndex = r.nextInt(SIZE-10);
-		return str.substring(beginIndex, beginIndex + 10);
+		Random r   = new Random();
+		int len    = str.length();
+		int subLen = len/5;
+		int beginIndex = r.nextInt(len-subLen);
+		return str.substring(beginIndex, beginIndex + subLen);
 	}
 
 	/**
-	 * array copy get a substring length is 10
+	 * array copy get a substring length is 1/5 of the length of string
 	 *
 	 * @param str
 	 * @return
 	 */
 	private static String arraycopy(String str) {
-		Random r = new Random();
-		int beginIndex = r.nextInt(SIZE-10);
-		char[] subStr = new char[10];
-		System.arraycopy(str.toCharArray(), beginIndex, subStr, 0, 10);
+		Random r   = new Random();
+		int len    = str.length();
+		int subLen = len/5;
+		int beginIndex = r.nextInt(len-(subLen));
+		char[] subStr = new char[subLen];
+		System.arraycopy(str.toCharArray(), beginIndex, subStr, 0, (subLen));
 		return String.valueOf(subStr);
 	}
 }

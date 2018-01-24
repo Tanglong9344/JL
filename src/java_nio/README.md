@@ -1,5 +1,5 @@
 # Java NIO
-### ºËĞÄ×é³É
+### æ ¸å¿ƒç»„æˆ
 + Channels
 	+ FileChannel
 	+ DatagramChannel
@@ -14,12 +14,12 @@
 	+ LongBuffer
 	+ ShortBuffer
 	```
-	Êı¾İ¿ÉÒÔ´ÓChannel¶Áµ½BufferÖĞ£¬Ò²¿ÉÒÔ´ÓBuffer Ğ´µ½ChannelÖĞ
+	æ•°æ®å¯ä»¥ä»Channelè¯»åˆ°Bufferä¸­ï¼Œä¹Ÿå¯ä»¥ä»Buffer å†™åˆ°Channelä¸­
 	```
 	---
 	![channel-buffer.png](channel-buffer.png)
 	---
-+ Selectors(SelectorÔÊĞíµ¥Ïß³Ì´¦Àí¶à¸ö Channel)
++ Selectors(Selectorå…è®¸å•çº¿ç¨‹å¤„ç†å¤šä¸ª Channel)
 ---
 ![selector.png](selector.png)
 ---

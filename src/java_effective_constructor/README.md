@@ -1,5 +1,5 @@
 # Effective Constructor
-+ [¾²Ì¬¹¤³§¹¹ÔìÆ÷](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/StaticFactoryConstructor.java)
-+ [JavaBean¹¹ÔìÆ÷](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/JavaBeanConstructor.java)
-+ [ÖØµþ¹¹ÔìÆ÷](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/TelescopeConstructor.java)
-+ [½¨ÔìÕß¹¹Ôì](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/BuilderConstructor.java)
++ [é™æ€å·¥åŽ‚æž„é€ å™¨](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/StaticFactoryConstructor.java)
++ [JavaBeanæž„é€ å™¨](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/JavaBeanConstructor.java)
++ [é‡å æž„é€ å™¨](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/TelescopeConstructor.java)
++ [å»ºé€ è€…æž„é€ ](https://github.com/Tanglong9344/jl/blob/master/src/java_effective_constructor/BuilderConstructor.java)

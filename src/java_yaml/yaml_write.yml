@@ -1,0 +1,6 @@
+--- 
+new_k2: !java.lang.String[]
+  - new_v21
+  - new_v22
+  - new_v23
+new_k1: new_v1

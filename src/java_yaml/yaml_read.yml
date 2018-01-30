@@ -1,0 +1,17 @@
+--- 
+date: 2018/01/30
+title: Yaml test
+object: {o1: v1, o2: v2, o3: v3}
+arr1: [a11, a12, a13]
+arr2:
+  - a21
+  - a22
+  - a23
+number1: 3.14
+number2: !!str 3.14
+bool1: true
+bool2: !!str true
+empoty1: ~
+empoty2: null
+str1: 'string1'
+str2: "string2"

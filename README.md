@@ -1,5 +1,4 @@
 # Java Learning ![java.jpg](https://github.com/Tanglong9344/JavaBasic/blob/master/picture/java.jpg)
----
 ### Basic in Java
 + [java program in CMD](https://github.com/Tanglong9344/JavaBasic/blob/master/cmd.md)
 + [Java core basic](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_core_basic)
@@ -30,7 +29,7 @@
   + [Effective Constructor](https://github.com/Tanglong9344/jl/tree/master/src/java_effective_constructor)
 # Further to Java
 + [JVM](https://github.com/Tanglong9344/jl/blob/master/JVM/README.md)
-+ [Java LOg](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
++ [Java Log](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_log)
 + [Reflection](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_reflection)
 + [Java NIO](https://github.com/Tanglong9344/JL/tree/master/src/java_nio)
 + [Java Generic](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_generic)

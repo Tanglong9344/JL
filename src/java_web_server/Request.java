@@ -31,7 +31,7 @@ public class Request {
 		for (int j = 0; j < i; j++) {
 			request.append((char) buffer[j]);
 		}
-		System.out.print(request.toString());
+		System.err.println(request.toString());
 		uri = parseUri(request.toString());
 	}
 
@@ -42,7 +42,8 @@ public class Request {
 	 * Connection: keep-alive
 	 * Cache-Control: max-age=0
 	 * ...
-	 * 该函数目的就是为了获取/index.html字符串
+	 *
+	 * 获取资源URI
 	 */
 	private String parseUri(String requestString) {
 		int index1, index2;

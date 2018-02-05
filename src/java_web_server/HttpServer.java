@@ -15,9 +15,7 @@ import java.net.Socket;
  */
 public class HttpServer {
 	/** 指定HTML和其它文件存放的目录  */
-	public static final String WEB_ROOT = "src\\java_web_server\\index.html";
-	// 关闭命令
-	private static final String SHUTDOWN = "/shutdown";
+	public static final String WEB_ROOT = "src/java_web_server";
 
 	public static void main(String[] args) {
 		System.out.println(WEB_ROOT);
@@ -27,6 +25,7 @@ public class HttpServer {
 	}
 
 	/** 等待链接  */
+	@SuppressWarnings("resource")
 	public void await() {
 		ServerSocket serverSocket = null;
 		int port = 8080;
@@ -53,10 +52,7 @@ public class HttpServer {
 				// 创建Request对象并解析
 				Request request = new Request(is);
 				request.parse();
-				// 检查是否是关闭服务命令
-				if (request.getUri().equals(SHUTDOWN) || request.getUri().equals(SHUTDOWN.toUpperCase())) {
-					break;
-				}
+
 				// 创建 Response 对象
 				Response response = new Response(os);
 				response.setRequest(request);

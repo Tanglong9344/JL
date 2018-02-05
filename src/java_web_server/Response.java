@@ -12,7 +12,7 @@ import java.io.OutputStream;
  *
  */
 public class Response {
-	private static final int BUFFER_SIZE = 1024;
+	private static final int BUFFER_SIZE = 100;
 	Request request;
 	OutputStream os;
 
@@ -30,7 +30,8 @@ public class Response {
 		FileInputStream fis = null;
 		try {
 			//将web文件写入到OutputStream字节流中
-			File file = new File(HttpServer.WEB_ROOT, request.getUri());
+			String path = HttpServer.WEB_ROOT + request.getUri();
+			File file = new File(path);
 			if (file.exists()) {
 				fis = new FileInputStream(file);
 				int ch = fis.read(bytes, 0, BUFFER_SIZE);

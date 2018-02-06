@@ -1,12 +1,9 @@
 package java_lamda_expression;
 
 import static java_lamda_expression.CommonConstant.N;
-import static java_lamda_expression.CommonConstant.RANGE;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 /**
  * 聚合操作-管道源
@@ -15,11 +12,7 @@ import java.util.Random;
  */
 public class AggregateStream {
 	public static void main(String[] args) {
-		Random r = new Random();
-		List<String> strList = new ArrayList<String>();
-		for (int i = 0; i < N; i++) {
-			strList.add("String" + r.nextInt(RANGE));
-		}
+		List<String> strList = java_common.CommonUtils.getList(N);
 		System.out.println("初始化后的集合:\n" + strList);
 		//管道源是集合
 		System.out.println("管道源是集合:");

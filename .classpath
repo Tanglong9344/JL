@@ -28,5 +28,6 @@
 	<classpathentry kind="lib" path="src/java_json/json-lib-2.1-jdk15.jar"/>
 	<classpathentry kind="lib" path="lib/commons-net-3.3.jar"/>
 	<classpathentry kind="lib" path="lib/jyaml-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/rxjava-2.1.0.jar" sourcepath="D:/360安全浏览器下载/rxjava-2.1.0-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

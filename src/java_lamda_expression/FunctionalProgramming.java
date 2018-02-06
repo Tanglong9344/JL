@@ -13,7 +13,7 @@ import java.util.function.Function;
 public class FunctionalProgramming {
 	public static void main(String[] args) {
 		// 无参构造器
-		Runnable r = () -> System.out.println("No arguments,Hello World");
+		Runnable r = () -> System.out.println("No arguments...");
 		r.run();
 
 		// 一个参数
@@ -31,7 +31,8 @@ public class FunctionalProgramming {
 		// 多语句
 		Runnable multiStatement = () -> {
 			System.out.print("Hello");
-			System.out.println(" World");
+			System.out.print(" functional");
+			System.out.println(" programming!");
 		};
 		multiStatement.run();
 

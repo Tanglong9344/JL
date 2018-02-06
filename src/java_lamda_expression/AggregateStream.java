@@ -1,6 +1,6 @@
 package java_lamda_expression;
 
-import static java_lamda_expression.CommonConstant.N;
+import static java_common.CommonValue.N;
 
 import java.util.Arrays;
 import java.util.List;

@@ -10,7 +10,7 @@ import java.util.List;
 public class Checker{
 	/**check whether the last char of the String is even number*/
 	public boolean check(String str){
-		return (str.charAt(str.length()-1))%2 == 0;
+		return (str.charAt(str.length()-1)) % 2 == 0;
 	}
 
 	/**

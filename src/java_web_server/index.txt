@@ -1,10 +1,9 @@
 <!DOCTYPE HTML>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Java Web Server index page</title>
 </head>
 <body>
-<h1>Hello Java Web Server...</h1>
+	<h1>Hello Java Web Server...</h1>
 </body>
 </html>

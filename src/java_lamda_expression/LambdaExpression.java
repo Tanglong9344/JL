@@ -6,6 +6,11 @@ import java.util.function.BinaryOperator;
 /**
  * Lambda expression in java8
  *
+ * These functions are first-class citizens;
+ * we can code our logic using only functions,
+ * chaining them,and handling our data, transforming,
+ * filtering, or accumulating it into a result.
+ *
  * @author ÌÆÁú
  *
  */

@@ -12,8 +12,8 @@ import rx.Observable.OnSubscribe;
 import rx.Observer;
 import rx.Subscriber;
 import rx.functions.Func1;
-import rx.functions.Func2;
 import rx.observables.ConnectableObservable;
+import rx.subjects.BehaviorSubject;
 
 /**
  * Reactive sum
@@ -21,13 +21,13 @@ import rx.observables.ConnectableObservable;
  * @author ÌÆÁú
  *
  */
-public class ReactiveSum {
+public class ReactiveSum3 {
 	public static void main(String[] args) {
 		ConnectableObservable<String> input = from(System.in);
 		Observable<Double> a = varStream("a", input);
 		Observable<Double> b = varStream("b", input);
-		ReactiveDoSum sum = new ReactiveDoSum(a, b);
-		System.out.println(sum.getSum());
+		ReactiveDoSum3 sum = new ReactiveDoSum3(a, b);
+		System.out.println(sum.getC());
 		input.connect();
 	}
 
@@ -102,36 +102,33 @@ public class ReactiveSum {
 }
 
 /** ReactiveDoSum class */
-final class ReactiveDoSum implements Observer<Double> {
-	private double sum;
-	public ReactiveDoSum(Observable<Double> a, Observable<Double> b) {
-		this.sum = 0;
-		Observable.combineLatest(a, b, new Func2<Double, Double,Double>() {
-			@Override
-			public Double call(Double a, Double b) {
-				return a + b;
-			}
-		}).subscribe(this);
+final class ReactiveDoSum3 implements Observer<Double> {
+	private BehaviorSubject<Double> c = BehaviorSubject.create(0.0);
+
+	public ReactiveDoSum3(Observable<Double> a, Observable<Double> b) {
+		Observable.combineLatest(a, b, (x, y) -> x + y).subscribe(c);
+	}
+
+	public double getC() {
+		return c.getValue();
+	}
+
+	public Observable<Double> obsC() {
+		return c.asObservable();
 	}
 
 	@Override
 	public void onCompleted() {
-		System.out.println("Exiting last sum was : " + this.sum);
+		System.out.println("Completed...");
 	}
 
 	@Override
-	public void onError(Throwable e) {
-		System.err.println("Got an error!");
-		e.printStackTrace();
+	public void onError(Throwable arg0) {
+		System.out.println("Error...");
 	}
 
 	@Override
-	public void onNext(Double sum) {
-		this.sum = sum;
-		System.out.println("update : a + b = " + sum);
-	}
-
-	public double getSum() {
-		return sum;
+	public void onNext(Double arg0) {
+		System.out.println("Next...");
 	}
 }

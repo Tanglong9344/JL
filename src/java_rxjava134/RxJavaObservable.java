@@ -73,11 +73,16 @@ public class RxJavaObservable {
 			public void call(Subscriber<? super T> subscriber) {
 				try {
 					for(Iterator<T> i = iterable.iterator();i.hasNext();) {
+						if(subscriber.isUnsubscribed()) { return; }
 						subscriber.onNext(i.next());
 					}
-					subscriber.onCompleted();
+					if( !subscriber.isUnsubscribed()) {
+						subscriber.onCompleted();
+					}
 				} catch (Exception e) {
-					subscriber.onError(e);
+					if(!subscriber.isUnsubscribed()) {
+						subscriber.onError(e);
+					}
 				}
 			}
 		});

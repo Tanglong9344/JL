@@ -12,7 +12,7 @@ import rx.Observable;
  * Observable factory methods
  * 1. from
  * 2. just
- * 3.
+ * 3. create
  *
  * @author ÌÆÁú
  *
@@ -32,7 +32,7 @@ public class RxJavaObservableFactoryMethods {
 		/** creating the Observable instances from object using <method>just</method> */
 		// The <method>just</method> method emits its parameter(s) as OnNext
 		// notifications, and after that, it emits an OnCompleted notification
-		//one letter:
+		// one letter:
 		Observable.just('S').subscribe(System.out::println);
 		// a sequence of letters:
 		Observable
@@ -48,42 +48,32 @@ public class RxJavaObservableFactoryMethods {
 		.map(s->("Length of '"+ s + "': " + s.length())) // process
 		.subscribe(System.out::println); // action
 		/** The Observable.create method */
-
 		/** another method */
-		subscribePrint(
+		CommonMethod.subscribePrint(
 				Observable.interval(500L, TimeUnit.MILLISECONDS),
 				"Interval Observable"
 				);
-		subscribePrint(
+		CommonMethod.subscribePrint(
 				Observable.timer(0L, 1L, TimeUnit.SECONDS),
 				"Timed Interval Observable"
 				);
-		subscribePrint(
+		CommonMethod.subscribePrint(
 				Observable.timer(1L, TimeUnit.SECONDS),
 				"Timer Observable"
 				);
-		subscribePrint(
+		CommonMethod.subscribePrint(
 				Observable.error(new Exception("Test Error!")),
 				"Error Observable"
 				);
-		subscribePrint(Observable.empty(), "Empty Observable");
-		subscribePrint(Observable.never(), "Never Observable");
-		subscribePrint(Observable.range(1, 3), "Range Observable");
+		CommonMethod.subscribePrint(Observable.empty(), "Empty Observable");
+		CommonMethod.subscribePrint(Observable.never(), "Never Observable");
+		CommonMethod.subscribePrint(Observable.range(1, 3), "Range Observable");
 
-		// sleep for 2s
+		// sleep 2s
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}
-
-	/** subscribe an Observable object with a label 'name' */
-	static <T> void subscribePrint(Observable<T> observable, String name) {
-		observable.subscribe(
-				(v) -> System.out.println("'" + name + "' : " + v),
-				(e) -> System.err.println("Error from '" + name + "':" + e.getMessage()),
-				()  -> System.out.println("'" + name + "' ended!")
-				);
 	}
 }

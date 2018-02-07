@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 
 import rx.Observable;
+import rx.Observable.OnSubscribe;
+import rx.Subscriber;
 import rx.functions.Action0;
 import rx.functions.Action1;
 
@@ -42,7 +44,7 @@ public class RxJavaObservable {
 		});
 	}
 
-	/** Add error catch and completed methods */
+	/** Add methods to show error and completed messages */
 	public static void helloErrorCompleted(List<String> list) {
 		Observable.from(list).subscribe(
 				new Action1<String>() {
@@ -61,5 +63,23 @@ public class RxJavaObservable {
 						System.out.println("Finnished!");
 					}
 				});
+	}
+
+	/** implement of Observable's <method>from</method> */
+	@SuppressWarnings("deprecation")
+	public static <T> Observable<T> fromIterable(final Iterable<T> iterable) {
+		return Observable.create(new OnSubscribe<T>() {
+			@Override
+			public void call(Subscriber<? super T> subscriber) {
+				try {
+					for(Iterator<T> i = iterable.iterator();i.hasNext();) {
+						subscriber.onNext(i.next());
+					}
+					subscriber.onCompleted();
+				} catch (Exception e) {
+					subscriber.onError(e);
+				}
+			}
+		});
 	}
 }

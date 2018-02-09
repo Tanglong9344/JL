@@ -3,12 +3,16 @@ package java_rxjava134;
 import rx.Observable;
 
 /**
- * Common methods
+ * Common methods or Constant
  *
  * @author ÌÆÁú
  *
  */
-public class CommonMethod {
+public class Commons {
+	// common constant
+	public static int DEFAULT_VALUE = -1;
+
+	// common methods
 	/** subscribe an Observable object with a label 'name' */
 	public static <T> void subscribePrint(Observable<T> observable, String name) {
 		observable.subscribe(

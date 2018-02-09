@@ -49,25 +49,25 @@ public class RxJavaObservableFactoryMethods {
 		.subscribe(System.out::println); // action
 		/** The Observable.create method */
 		/** another method */
-		CommonMethod.subscribePrint(
+		Commons.subscribePrint(
 				Observable.interval(500L, TimeUnit.MILLISECONDS),
 				"Interval Observable"
 				);
-		CommonMethod.subscribePrint(
+		Commons.subscribePrint(
 				Observable.timer(0L, 1L, TimeUnit.SECONDS),
 				"Timed Interval Observable"
 				);
-		CommonMethod.subscribePrint(
+		Commons.subscribePrint(
 				Observable.timer(1L, TimeUnit.SECONDS),
 				"Timer Observable"
 				);
-		CommonMethod.subscribePrint(
+		Commons.subscribePrint(
 				Observable.error(new Exception("Test Error!")),
 				"Error Observable"
 				);
-		CommonMethod.subscribePrint(Observable.empty(), "Empty Observable");
-		CommonMethod.subscribePrint(Observable.never(), "Never Observable");
-		CommonMethod.subscribePrint(Observable.range(1, 3), "Range Observable");
+		Commons.subscribePrint(Observable.empty(), "Empty Observable");
+		Commons.subscribePrint(Observable.never(), "Never Observable");
+		Commons.subscribePrint(Observable.range(1, 3), "Range Observable");
 
 		// sleep 2s
 		try {

@@ -30,7 +30,7 @@ public class ObservableGroup {
 		Observable
 		.from(list)
 		.groupBy(e -> e.split(" ").length) // group the elements by it's length
-		.subscribe(e -> CommonMethod.subscribePrint(e, e.getKey() + " word(s)"));
+		.subscribe(e -> Commons.subscribePrint(e, e.getKey() + " word(s)"));
 	}
 
 	/** Another test for groupBy */
@@ -41,6 +41,6 @@ public class ObservableGroup {
 				e -> e.replaceAll("[^mM]", "").length(),
 				e -> e.replaceAll("[mM]", "*")
 				)
-		.subscribe(e -> CommonMethod.subscribePrint(e, e.getKey() + " Occurences of m"));
+		.subscribe(e -> Commons.subscribePrint(e, e.getKey() + " Occurences of m"));
 	}
 }

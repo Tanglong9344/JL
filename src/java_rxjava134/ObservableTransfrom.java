@@ -70,7 +70,7 @@ public class ObservableTransfrom {
 				.flatMap(
 						v -> Observable.range(v + 1, 3),
 						(x, y) -> x + y);
-		CommonMethod.subscribePrint(flatMapped, "flatMap");
+		Commons.subscribePrint(flatMapped, "flatMap");
 	}
 
 	/** merge two list using list and traverse them with flatMapIterable */
@@ -81,7 +81,7 @@ public class ObservableTransfrom {
 						Arrays.asList("Two", "Four")
 						).
 				flatMapIterable(list -> list);
-		CommonMethod.subscribePrint(fmi, "FlatMapIterable");
+		Commons.subscribePrint(fmi, "FlatMapIterable");
 	}
 
 	/** test for switchMap */
@@ -93,7 +93,7 @@ public class ObservableTransfrom {
 						.timer(0L, 50L, TimeUnit.MILLISECONDS)
 						.map(u -> "Observable <" + (v + 1) + "> : " + (v + u))
 						);
-		CommonMethod.subscribePrint(obs, "switchMap");
+		Commons.subscribePrint(obs, "switchMap");
 		try {
 			Thread.sleep(1000L); // sleep 1s
 		} catch (InterruptedException e) {
@@ -107,7 +107,7 @@ public class ObservableTransfrom {
 		Observable<Integer> Iobs = Observable
 				.from(list)
 				.cast(Integer.class); //.map(e->Integer.class.cast(e));
-		CommonMethod.subscribePrint(Iobs, "ObservableCast");
+		Commons.subscribePrint(Iobs, "ObservableCast");
 	}
 
 	/** test for 'timestamp' */
@@ -116,7 +116,7 @@ public class ObservableTransfrom {
 		Observable<Timestamped<Number>> timestamp = Observable
 				.from(list)
 				.timestamp(); // add timestamp to every element
-		CommonMethod.subscribePrint(timestamp, "Timestamps");
+		Commons.subscribePrint(timestamp, "Timestamps");
 	}
 
 	/** test for 'timeInterval'
@@ -129,6 +129,6 @@ public class ObservableTransfrom {
 		Observable<TimeInterval<Number>> timesInterval = Observable
 				.from(list)
 				.timeInterval(); // add time interval to every element
-		CommonMethod.subscribePrint(timesInterval, "TimeInterval");
+		Commons.subscribePrint(timesInterval, "TimeInterval");
 	}
 }

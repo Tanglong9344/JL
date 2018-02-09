@@ -23,6 +23,6 @@ public class ObservableFilter {
 		Observable<Integer> filter = Observable
 				.from(list)
 				.filter(n -> n % 2 == 0);
-		CommonMethod.subscribePrint(filter, "FilterEven");
+		Commons.subscribePrint(filter, "FilterEven");
 	}
 }

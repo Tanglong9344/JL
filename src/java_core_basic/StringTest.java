@@ -84,5 +84,8 @@ public class StringTest {
 		System.out.println("After  format:\n" + info);
 		// hashcode
 		System.out.println("hashcode:"+str1.hashCode());
+		//
+		System.out.println("startWith: " + str1.startsWith("the")); // return boolean value
+
 	}
 }

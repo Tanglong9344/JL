@@ -1,5 +1,11 @@
 package java_thread;
 
+/**
+ * current thread test
+ *
+ * @author ÌÆÁú
+ *
+ */
 public class CurrentThreadTest extends Thread {
 	public static void main(String args[]) {
 		CurrentThreadTest ctt = new CurrentThreadTest();

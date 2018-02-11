@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class StopThreadVolatile {
 	private static volatile boolean stopRequested = false;
-
 	public static void main(String[] args) throws InterruptedException{
 		Thread thread = new Thread(new Runnable(){
 			@Override
@@ -25,7 +24,7 @@ public class StopThreadVolatile {
 			}
 		});
 		thread.start();
-		TimeUnit.MILLISECONDS.sleep(100);//sleep for 100ms
+		TimeUnit.MILLISECONDS.sleep(100); //sleep for 100ms
 		stopRequested = true;
 	}
 }

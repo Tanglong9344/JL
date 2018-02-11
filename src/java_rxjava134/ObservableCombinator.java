@@ -222,6 +222,7 @@ public class ObservableCombinator {
 	 *
 	 * A custom function for 'combineLatest'
 	 */
+	@SuppressWarnings("hiding")
 	public <T, R> T onlyFirstArg(T arg1, R arg2) {
 		return arg1;
 	}

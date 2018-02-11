@@ -26,6 +26,7 @@ public class ObservableGroup {
 	}
 
 	/** Test for groupBy */
+	@SuppressWarnings("hiding")
 	private static <T> void testGroupBy(List<String> list) {
 		Observable
 		.from(list)
@@ -34,6 +35,7 @@ public class ObservableGroup {
 	}
 
 	/** Another test for groupBy */
+	@SuppressWarnings("hiding")
 	private static <T> void testGroupBy2(List<String> list) {
 		Observable
 		.from(list)

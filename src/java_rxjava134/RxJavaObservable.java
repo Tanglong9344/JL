@@ -66,7 +66,7 @@ public class RxJavaObservable {
 	}
 
 	/** implement of Observable's <method>from</method> */
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({ "deprecation", "hiding" })
 	public static <T> Observable<T> fromIterable(final Iterable<T> iterable) {
 		return Observable.create(new OnSubscribe<T>() {
 			@Override

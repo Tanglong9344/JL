@@ -34,6 +34,7 @@ public class ObservableUnsubcribe {
 	 * by calling its publish() method. In other words, the
 	 * publish() method can turn any cold Observable into a hot one
 	 * */
+	@SuppressWarnings("hiding")
 	private static <T> void testPublish(Observable<T> observable) {
 		ConnectableObservable<T> published = observable.publish(); // publish
 		Subscription sub1 = subscribePrint(published, "PublishFirst");
@@ -62,6 +63,7 @@ public class ObservableUnsubcribe {
 	 * : all the subscribers, whenever they subscribe, will receive all the
 	 * notifications (the previous notifications will arrive in order and synchronously)
 	 * */
+	@SuppressWarnings("hiding")
 	private static <T> void testReply(Observable<T> observable) {
 		ConnectableObservable<T> published = observable.replay(); // replay
 		Subscription sub1 = subscribePrint(published, "ReplyFirst");
@@ -81,6 +83,7 @@ public class ObservableUnsubcribe {
 	}
 
 	/** test share */
+	@SuppressWarnings("hiding")
 	private static <T> void testShare(Observable<T> observable) {
 		// Observable<T> published = observable.publish().refCount(); // refCount
 		// '.share()' is an alias for '.publish().refCount()'
@@ -114,6 +117,7 @@ public class ObservableUnsubcribe {
 	 * 3. BehaviorSubject
 	 * 4. AsyncSubject
 	 * */
+	@SuppressWarnings("hiding")
 	private static <T> void testSubject(Observable<T> observable) {
 		Subject<T, T> publishSubject = PublishSubject.create();
 		observable.subscribe(publishSubject);
@@ -134,6 +138,7 @@ public class ObservableUnsubcribe {
 
 	/** subscribe an Observable object with a label 'name'
 	 * @return */
+	@SuppressWarnings("hiding")
 	public static <T> Subscription subscribePrint(Observable<T> observable, String name) {
 		return observable.subscribe(
 				(v) -> System.out.println("'" + name + "' : " + v), // OnNext

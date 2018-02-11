@@ -11,7 +11,10 @@
 	7. 并发(Concurrent)
 	8. 函数式编程(Functional Programming)
 	9. 面向对象编程(Object Oriented Programming)
-	10. 
+	10. 背压(backpressure)
+```
+the ability to notify the upstream that the amount of data can't be handled is called backpressure.
+```
 + 要求
 	+ 模块化(Modular)-事件驱动(event-driven)-使用通知(notification: 变化的异步数据流)交流
 	+ 伸缩性(Scalable)-随变化的数据而变化

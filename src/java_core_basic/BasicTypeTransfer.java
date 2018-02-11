@@ -83,5 +83,8 @@ public class BasicTypeTransfer {
 		// transfer byte to int before opreration
 		int iii = bb + bbb;
 		System.out.println("iii=" + iii);
+
+		int a = 97; // a:97, A:65(²Î¿¼µã)
+		System.out.println(a + ": " + Character.toChars(a)[0]);
 	}
 }

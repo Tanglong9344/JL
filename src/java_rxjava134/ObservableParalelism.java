@@ -7,6 +7,7 @@ import rx.schedulers.Schedulers;
 
 /**
  * Observable parallelism
+ *
  * @author ÌÆÁú
  *
  */

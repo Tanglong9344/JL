@@ -6,6 +6,7 @@ import java.util.UUID;
 
 /**
  * Java UUID
+ *
  * @author ÌÆÁú
  */
 public class UUIDTest {

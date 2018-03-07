@@ -6,7 +6,10 @@ import java.util.Random;
 
 /**
  * transform numbers to chinese numbers
- * e.g: '123' to '一百二十三'
+ * e.g:
+ *    '1992694160'
+ *      to
+ *    '一十九亿九千二百六十九万四千一百六十'
  * coment: the largest unit is '亿'
  *
  * @author tanglong

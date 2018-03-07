@@ -16,13 +16,13 @@ public class BasicDataTypeTest {
 
 		final int NUMBER = 32767;
 
-		Double dNum = new Double(NUMBER);//8 bytes
-		Float  fNum = new Float(NUMBER);//4 bytes
+		Double dNum = new Double(NUMBER); //8 bytes
+		Float  fNum = new Float(NUMBER); //4 bytes
 
-		Long   lNum = new Long(NUMBER);//8 bytes (-2^47)~(2^47-)
-		Integer    iNum = new Integer(NUMBER);//4 bytes (-2^31)~(2^31-1)
-		Short      sNum = new Short((short)NUMBER);//2 bytes,(-2^15)~(2^15-1)
-		Byte       bNum = new Byte((byte)NUMBER);//1 byte, (-2^7)~(2^7-1)
+		Long   lNum = new Long(NUMBER); //8 bytes (-2^47)~(2^47-)
+		Integer    iNum = new Integer(NUMBER); //4 bytes (-2^31)~(2^31-1)
+		Short      sNum = new Short((short)NUMBER); //2 bytes,(-2^15)~(2^15-1)
+		Byte       bNum = new Byte((byte)NUMBER); //1 byte, (-2^7)~(2^7-1)
 
 		Character       cc   = new Character('H');
 

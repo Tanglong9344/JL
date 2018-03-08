@@ -15,35 +15,39 @@ package design_mode;
 public class ProxyMode {
 	//This is a test
 	public static void main(String[] args) {
-		Proxysubject proxysubject = new Proxysubject();
-		proxysubject.realSubject = new RealSubject();
-		proxysubject.resuest();
+		Proxysubject proxysubject = new Proxysubject(new RealSubject());
+		proxysubject.request();
 	}
 }
 
 //对象接口
 interface Subject{
-	public void resuest();
+	public void request();
 }
 
 //实际对象
 class RealSubject implements Subject{
 	@Override
-	public void resuest() {
+	public void request() {
 		System.out.println("实际对象的实际请求。");
 	}
 }
 
-//代理对象
+/** 代理对象 */
 class Proxysubject implements Subject{
 	RealSubject realSubject = null;
+
+	public Proxysubject(RealSubject realSubject) {
+		this.realSubject = realSubject;
+	}
+
 	@Override
-	public void resuest() {
+	public void request() {
 		if(realSubject==null){
 			realSubject=new RealSubject();
 		}
 		System.out.println("代理对象的代理请求。");
 		//调用实际对象的请求
-		realSubject.resuest();
+		realSubject.request();
 	}
 }

@@ -54,9 +54,11 @@ class InterfaceRootProxy implements InvocationHandler {
 	// 包装调用方法
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		Object result=null;
+		System.out.println("method: " + method);
+		System.out.println("args:   " + args);
+		Object result = null;
 		System.out.println("Before invoke");
-		result=method.invoke(target, args);
+		result = method.invoke(target, args);
 		System.out.println("After invoke");
 		return result;
 	}

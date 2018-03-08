@@ -6,7 +6,7 @@
 + 内存
 	+ 方法区(Method Area): 方法相关代码
 	+ 堆区(Heap): 所有对象，数组，多线程共享
-	+ 栈区(Stack): 局部变量，每个线程独有
+	+ 栈区(Stack): 局部变量，基本类型，对象引用，每个线程独有
 	+ 程序计数寄存器(PC Registers): 虚拟机指令，每个线程独有
 	+ 本地方法栈(Native Method Stacks): 本地代码指令
 	+ 执行引擎(Execution Engine)

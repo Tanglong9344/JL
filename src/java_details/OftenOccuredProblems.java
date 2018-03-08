@@ -53,5 +53,13 @@ public class OftenOccuredProblems {
 		byte b2 = (byte)i2;
 		System.out.println("i2: " + i2);
 		System.out.println("b2: " + b2);
+
+		// 整型字面量的值介于-128到127之间，就不会new一个新的Integer对象
+		// 而是直接引用常量池中的Integer对象
+		Integer a = 128,b=128;
+		Integer c = 127,d=127;
+
+		System.out.println(a==b);
+		System.out.println(c==d);
 	}
 }

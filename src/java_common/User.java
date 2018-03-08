@@ -16,10 +16,13 @@ import java.util.List;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String name = null;
+	private String name = "Tanglong";
 	private int age  = 18;
 	private boolean sex = false; // true: boy, false: girl
 	private List<User> friends = null;
+
+	// constructors
+	public User() {}
 
 	public User(String name) {
 		this.name = name;

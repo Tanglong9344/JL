@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * ArrayList 和  LinkedList在最后插入数据对比
+ *
  * @author 唐龙
  */
 public class ArrayListInsertToLast {

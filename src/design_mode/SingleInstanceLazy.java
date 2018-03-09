@@ -3,6 +3,7 @@ package design_mode;
 /**
  * 单例模式:通过隐藏构造方法实现(懒汉模式，延迟加载)
  * 缺点，非线程安全
+ *
  * @author 唐龙
  */
 public class SingleInstanceLazy {

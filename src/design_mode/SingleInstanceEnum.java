@@ -6,6 +6,7 @@ package design_mode;
  * 1.线程安全
  * 2.防止反射强行调用构造器
  * 3.提供了自动序列化机制，防止反序列化的时候创建新的实例
+ *
  * @author 唐龙
  */
 public abstract class SingleInstanceEnum {

@@ -13,6 +13,7 @@ package design_mode;
  * 1.线程安全
  * 2.延迟加载
  * 3.序列化与反序列化安全
+ *
  * @author 唐龙
  */
 public class SingleInstance {

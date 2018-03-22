@@ -24,6 +24,9 @@ public class BasicDataTypeTest {
 		Short      sNum = new Short((short)NUMBER); //2 bytes,(-2^15)~(2^15-1)
 		Byte       bNum = new Byte((byte)NUMBER); //1 byte, (-2^7)~(2^7-1)
 
+		// char ch = 'h';
+		// char 和 short 使用utf-16编码，长度都是2个字节
+		// 从Character类中的'public static final char MAX_VALUE = '\uFFFF';'可知
 		Character       cc   = new Character('H');
 
 		Boolean         bb   = new Boolean(true);

@@ -12,6 +12,7 @@
 + [Java Web](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_web_programming)
 + [Java Annotation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/Java_annotation)
 + [Optimization](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_optimization)
++ [Java Encode](https://github.com/Tanglong9344/jl/blob/master/src/java_encoding/Readme.md)
 + [Bit Operation](https://github.com/Tanglong9344/JavaBasic/tree/master/src/bit_operation)
 + [Java Enum](https://github.com/Tanglong9344/JavaBasic/tree/master/src/java_enum)
 + [Instropector](https://github.com/Tanglong9344/jl/tree/master/src/java_instropector)

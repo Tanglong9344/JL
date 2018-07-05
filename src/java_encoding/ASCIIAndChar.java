@@ -1,7 +1,7 @@
 package java_encoding;
 
 /**
- * ascii(0-127) ÂëÓë×Ö·û¼äµÄ×ª»¯
+ * ascii(0-127) ä¸ charä¹‹é—´ç›¸äº’è½¬æ¢
  * @author tanglong
  *
  */

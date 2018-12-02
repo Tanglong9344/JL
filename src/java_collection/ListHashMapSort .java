@@ -1,7 +1,10 @@
-  public static void main(String[] args) {
-        final int SiZE = 3;
+import java.util.*;
+
+public class ListHashMapSort {
+    static final int SIZE = 3;
+    public static void listHashMapSort(){
         List<HashMap<String,Object>> list = new ArrayList<>();
-        for(int i=1;i<=SiZE;i++){
+        for(int i=1;i<=SIZE;i++){
             HashMap<String,Object> hp = new HashMap<>();
             hp.put("科目"+i,"科目" + i);
             hp.put("分数",(int)(Math.random()*100));
@@ -19,3 +22,4 @@
         });
         System.out.print("\n排序后：\n" + list);
     }
+}

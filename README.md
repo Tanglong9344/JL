@@ -48,5 +48,8 @@
 + [Yaml in Java](https://github.com/Tanglong9344/jl/tree/master/src/java_yaml)
 + [JSON　in Java](https://github.com/Tanglong9344/jl/tree/master/src/java_json)
 + [Java Performance](https://blog.idrsolutions.com/2014/06/java-performance-tuning-tools/)
+# noteBook
++ [比较大小](noteBook/compareNumber/README.md)
++ [集合数组列表](noteBook/collections/README.md)
 # Java平台工具类库
 + [JFreeChart](http://www.jfree.org/jfreechart/)

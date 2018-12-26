@@ -15,6 +15,6 @@
   + synchronized 关键字
   + 使用锁(Lock)接口
 + 实例
-  + [实例1](threadTest1.java)
+  + [实例1](ThreadTest1.java)
 ---
 *注：启动线程是start()方法，run()并不能启动一个新的线程*

@@ -52,5 +52,6 @@
 + [比较大小](noteBook/compareNumber/README.md)
 + [集合数组列表](noteBook/collections/README.md)
 + [奇数判断](notebook/isodd/README.md)
++ [数学运算](notebook/mathOperation/README.md)
 # Java平台工具类库
 + [JFreeChart](http://www.jfree.org/jfreechart/)

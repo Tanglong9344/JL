@@ -9,7 +9,7 @@ public class IsOdd {
         return num % 2 !=0;
     }
 
-    /** 奇数判断，位运算*/
+    /** 奇数判断，位运算（效率更高）*/
     private static boolean isOddBit(int num){
         return (num & 1) != 0;
     }

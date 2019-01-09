@@ -1,2 +1,2 @@
 # 奇数判断
-+ [isOdd](isOdd.java)
++ [isOdd](IsOdd.java)

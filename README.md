@@ -53,6 +53,7 @@
 + [集合数组列表](noteBook/collections/README.md)
 + [奇数判断](noteBook/isodd/README.md)
 + [数学运算](noteBook/mathOperation/README.md)
++ [发送邮件](sendmail/README.md)
 + [其它](noteBook/others/README.md)
 # Java平台工具类库
 + [JFreeChart](http://www.jfree.org/jfreechart/)

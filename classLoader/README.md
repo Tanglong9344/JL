@@ -7,6 +7,6 @@
 + 第三层
   + Application ClassLoader(主要加载用户定义的类)
 # 测试(JDK8)
-+ [测试代码](ClassLoader.java)
++ [测试代码](ClassLoaderTest.java)
 ---
 ![classLoader](classLoader.png)

@@ -2,13 +2,14 @@ package java_jdbc;
 
 public class ClassForNameTest {
 	public static void main(String[] args) {
-		// ³õÊ¼»¯Çı¶¯
+		// åˆå§‹åŒ–é©±åŠ¨
 		try {
-			// Çı¶¯Ààcom.mysql.jdbc.Driver
-			// ¾ÍÔÚ mysql-connector-java-5.0.8-bin.jarÖĞ
-			// Èç¹ûÍü¼ÇÁËµÚÒ»¸ö²½ÖèµÄµ¼°ü£¬¾Í»áÅ×³öClassNotFoundException
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			System.out.println("Êı¾İ¿âÇı¶¯¼ÓÔØ³É¹¦ £¡");
+			// é©±åŠ¨ç±»com.mysql.jdbc.Driver
+			// å°±åœ¨ mysql-connector-java-5.0.8-bin.jarä¸­
+			// å¦‚æœå¿˜è®°äº†ç¬¬ä¸€ä¸ªæ­¥éª¤çš„å¯¼åŒ…ï¼Œå°±ä¼šæŠ›å‡ºClassNotFoundException
+			//Class.forName("com.mysql.jdbc.Driver").newInstance();//JDK9å·²æ ‡ä½è¿‡æ—¶
+			Class.forName("com.mysql.jdbc.Driver").getDeclaredConstructor().newInstance();
+			System.out.println("æ•°æ®åº“é©±åŠ¨åŠ è½½æˆåŠŸ ï¼");
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
 		}

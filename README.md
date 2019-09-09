@@ -42,7 +42,7 @@
 + [Reference](reference/)
 # Others related with Java
 + [JUnit](src/java_junit)
-+ [Maven](https://github.com/Tanglong9344/jl/edit/master/maven.md)
++ [Maven](maven.md)
 + [*JDBC](src/java_jdbc)
 + [Excel IO](src/java_excel)
 + [*XML IO](src/java_xml)

@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ConectionAuroCloseTest {
+public class ConectionAutoCloseTest {
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -16,10 +16,10 @@ public class ConectionAuroCloseTest {
 				+ "test?characterEncoding=UTF-8",
 				"root", "12345678");
 				Statement s = c.createStatement();){
-			//插入数据
-			String sql = "insert into hero values(null," + "'提莫'" + "," + 313.0f + "," + 50 + ")";
+			//鎻掑叆鏁版嵁
+			String sql = "insert into hero values(null," + "'鎻愯帿'" + "," + 313.0f + "," + 50 + ")";
 			s.execute(sql);
-			System.out.println("插入数据成功!");
+			System.out.println("鎻掑叆鏁版嵁鎴愬姛!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

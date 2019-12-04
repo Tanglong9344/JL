@@ -1,4 +1,4 @@
-# 面向对象的基本设计原则(SOLID-d)
+# 面向对象的基本设计原则(SOLID)
 ### 1.单一职能原则(SRP-Single responsibility principle)
 + 描述
 	+ 一个类只负责一项职责(只有一个改变的原因)
@@ -7,6 +7,10 @@
 	+ 便于扩展和复用
 	+ 提高的可读性、可维护性
 	+ 降低变更引起的风险
++ 说明
+```
+要注意职能扩散
+```
 ### 2.开放-封闭原则(OCP-Open Closed Principle)
 + 描述
 	+ 类、模块等对于扩展是开放的(Open for extension)
